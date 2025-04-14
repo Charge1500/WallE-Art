@@ -1,0 +1,7183 @@
+fileFormatVersion: 2
+guid: 6159a21127066c9449d69af902759e0d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8790128859879741877
+    second: WallE  Eve highresReady_0
+  - first:
+      213: -479584519922311831
+    second: WallE  Eve highresReady_1
+  - first:
+      213: -4032845968105959607
+    second: WallE  Eve highresReady_2
+  - first:
+      213: 563183140923203423
+    second: WallE  Eve highresReady_3
+  - first:
+      213: 4587077210974136118
+    second: WallE  Eve highresReady_4
+  - first:
+      213: -7902096797759846104
+    second: WallE  Eve highresReady_5
+  - first:
+      213: 4462404646946506769
+    second: WallE  Eve highresReady_6
+  - first:
+      213: -195072816263279467
+    second: WallE  Eve highresReady_7
+  - first:
+      213: -5016454787259192804
+    second: WallE  Eve highresReady_8
+  - first:
+      213: 6288268445698156241
+    second: WallE  Eve highresReady_9
+  - first:
+      213: -3887289229150119046
+    second: WallE  Eve highresReady_10
+  - first:
+      213: 4149005039249246384
+    second: WallE  Eve highresReady_11
+  - first:
+      213: -8593150896307204819
+    second: WallE  Eve highresReady_12
+  - first:
+      213: 6365387804109712323
+    second: WallE  Eve highresReady_13
+  - first:
+      213: -5675621452823058354
+    second: WallE  Eve highresReady_14
+  - first:
+      213: -737435230323372719
+    second: WallE  Eve highresReady_15
+  - first:
+      213: -3418783373072427213
+    second: WallE  Eve highresReady_16
+  - first:
+      213: 3552227313971546179
+    second: WallE  Eve highresReady_17
+  - first:
+      213: -7206094767661533385
+    second: WallE  Eve highresReady_18
+  - first:
+      213: 3111541526518536517
+    second: WallE  Eve highresReady_19
+  - first:
+      213: 7223204418175717816
+    second: WallE  Eve highresReady_20
+  - first:
+      213: 1421949175587689569
+    second: WallE  Eve highresReady_21
+  - first:
+      213: -135014873851204776
+    second: WallE  Eve highresReady_22
+  - first:
+      213: -2245182731988072329
+    second: WallE  Eve highresReady_23
+  - first:
+      213: -7588232367507154690
+    second: WallE  Eve highresReady_24
+  - first:
+      213: -1376927058906564054
+    second: WallE  Eve highresReady_25
+  - first:
+      213: -233176019452494459
+    second: WallE  Eve highresReady_26
+  - first:
+      213: -4420753985539259746
+    second: WallE  Eve highresReady_27
+  - first:
+      213: -3161665053026507538
+    second: WallE  Eve highresReady_28
+  - first:
+      213: -3648578711098581774
+    second: WallE  Eve highresReady_29
+  - first:
+      213: -6745799910228567917
+    second: WallE  Eve highresReady_30
+  - first:
+      213: -4272326153140966019
+    second: WallE  Eve highresReady_31
+  - first:
+      213: -2377573142947456866
+    second: WallE  Eve highresReady_32
+  - first:
+      213: 535242631606627779
+    second: WallE  Eve highresReady_33
+  - first:
+      213: -9184414011472755638
+    second: WallE  Eve highresReady_34
+  - first:
+      213: -5233097653941992951
+    second: WallE  Eve highresReady_35
+  - first:
+      213: 2460610182253736551
+    second: WallE  Eve highresReady_36
+  - first:
+      213: 9117906102422625743
+    second: WallE  Eve highresReady_37
+  - first:
+      213: 2632047113425459277
+    second: WallE  Eve highresReady_38
+  - first:
+      213: -1503661245215853625
+    second: WallE  Eve highresReady_39
+  - first:
+      213: 1674201656970033396
+    second: WallE  Eve highresReady_40
+  - first:
+      213: -1540548400488928982
+    second: WallE  Eve highresReady_41
+  - first:
+      213: 5449341303970360410
+    second: WallE  Eve highresReady_42
+  - first:
+      213: -2513195346814573083
+    second: WallE  Eve highresReady_43
+  - first:
+      213: 8673783744475631265
+    second: WallE  Eve highresReady_44
+  - first:
+      213: 354596739754262878
+    second: WallE  Eve highresReady_45
+  - first:
+      213: 1532863795532822838
+    second: WallE  Eve highresReady_46
+  - first:
+      213: 7046121921085531276
+    second: WallE  Eve highresReady_47
+  - first:
+      213: -4327239571534281508
+    second: WallE  Eve highresReady_48
+  - first:
+      213: -5358123731197940707
+    second: WallE  Eve highresReady_49
+  - first:
+      213: -826923926863142805
+    second: WallE  Eve highresReady_50
+  - first:
+      213: -8822193909479460407
+    second: WallE  Eve highresReady_51
+  - first:
+      213: -839834552801901649
+    second: WallE  Eve highresReady_52
+  - first:
+      213: 3147793649113879022
+    second: WallE  Eve highresReady_53
+  - first:
+      213: 9038972164534455436
+    second: WallE  Eve highresReady_54
+  - first:
+      213: -4290804655772595890
+    second: WallE  Eve highresReady_55
+  - first:
+      213: -7100619723818713960
+    second: WallE  Eve highresReady_56
+  - first:
+      213: -2570241551968032733
+    second: WallE  Eve highresReady_57
+  - first:
+      213: -6438704489896485944
+    second: WallE  Eve highresReady_58
+  - first:
+      213: -920177908117839298
+    second: WallE  Eve highresReady_59
+  - first:
+      213: 3233143048690602439
+    second: WallE  Eve highresReady_60
+  - first:
+      213: -5912020224728972604
+    second: WallE  Eve highresReady_61
+  - first:
+      213: -6538650853458275504
+    second: WallE  Eve highresReady_62
+  - first:
+      213: 7696264271223803644
+    second: WallE  Eve highresReady_63
+  - first:
+      213: -7508942443038355909
+    second: WallE  Eve highresReady_64
+  - first:
+      213: 3286813029325608077
+    second: WallE  Eve highresReady_65
+  - first:
+      213: 8088602644350049987
+    second: WallE  Eve highresReady_66
+  - first:
+      213: 7407458645258148045
+    second: WallE  Eve highresReady_67
+  - first:
+      213: -7193880008605144797
+    second: WallE  Eve highresReady_68
+  - first:
+      213: -8992129730780992876
+    second: WallE  Eve highresReady_69
+  - first:
+      213: 5444191465972842341
+    second: WallE  Eve highresReady_70
+  - first:
+      213: 6472985167039032711
+    second: WallE  Eve highresReady_71
+  - first:
+      213: -793899590555907565
+    second: WallE  Eve highresReady_72
+  - first:
+      213: 3255130243872244014
+    second: WallE  Eve highresReady_73
+  - first:
+      213: -8822881482521036862
+    second: WallE  Eve highresReady_74
+  - first:
+      213: 1808474676239858135
+    second: WallE  Eve highresReady_75
+  - first:
+      213: 8711233102850410997
+    second: WallE  Eve highresReady_76
+  - first:
+      213: 4204593413487604765
+    second: WallE  Eve highresReady_77
+  - first:
+      213: 2593944028081675701
+    second: WallE  Eve highresReady_78
+  - first:
+      213: 3647604725774346666
+    second: WallE  Eve highresReady_79
+  - first:
+      213: 8376283370408696719
+    second: WallE  Eve highresReady_80
+  - first:
+      213: 4406508672697082047
+    second: WallE  Eve highresReady_81
+  - first:
+      213: 5337339948570063412
+    second: WallE  Eve highresReady_82
+  - first:
+      213: -2094241493350615352
+    second: WallE  Eve highresReady_83
+  - first:
+      213: -3645985965892904407
+    second: WallE  Eve highresReady_84
+  - first:
+      213: -2652991383574808774
+    second: WallE  Eve highresReady_85
+  - first:
+      213: 627407448215098104
+    second: WallE  Eve highresReady_86
+  - first:
+      213: 4350654441184051380
+    second: WallE  Eve highresReady_87
+  - first:
+      213: 6880528453634756162
+    second: WallE  Eve highresReady_88
+  - first:
+      213: -8186052449176819033
+    second: WallE  Eve highresReady_89
+  - first:
+      213: 3484148358220113597
+    second: WallE  Eve highresReady_90
+  - first:
+      213: 8610850966710721599
+    second: WallE  Eve highresReady_91
+  - first:
+      213: 7034524203426613318
+    second: WallE  Eve highresReady_92
+  - first:
+      213: 492907891755353472
+    second: WallE  Eve highresReady_93
+  - first:
+      213: -3795620139060894832
+    second: WallE  Eve highresReady_94
+  - first:
+      213: -2965577663270469683
+    second: WallE  Eve highresReady_95
+  - first:
+      213: 2362431587598181072
+    second: WallE  Eve highresReady_96
+  - first:
+      213: 9066973162772578927
+    second: WallE  Eve highresReady_97
+  - first:
+      213: 575054877553430409
+    second: WallE  Eve highresReady_98
+  - first:
+      213: -8401344593861841456
+    second: WallE  Eve highresReady_99
+  - first:
+      213: -843175109357388378
+    second: WallE  Eve highresReady_100
+  - first:
+      213: -2342166063920236117
+    second: WallE  Eve highresReady_101
+  - first:
+      213: -6620543182170790484
+    second: WallE  Eve highresReady_102
+  - first:
+      213: -7968317975562816691
+    second: WallE  Eve highresReady_103
+  - first:
+      213: 6491134615847578734
+    second: WallE  Eve highresReady_104
+  - first:
+      213: 648704423869107102
+    second: WallE  Eve highresReady_105
+  - first:
+      213: -5182558646550020940
+    second: WallE  Eve highresReady_106
+  - first:
+      213: -5420281339971520338
+    second: WallE  Eve highresReady_107
+  - first:
+      213: -1225495214943663733
+    second: WallE  Eve highresReady_108
+  - first:
+      213: -2718178724798106819
+    second: WallE  Eve highresReady_109
+  - first:
+      213: 6140377974072687572
+    second: WallE  Eve highresReady_110
+  - first:
+      213: -8754534341238062558
+    second: WallE  Eve highresReady_111
+  - first:
+      213: -5725605361490241195
+    second: WallE  Eve highresReady_112
+  - first:
+      213: -438413183633744726
+    second: WallE  Eve highresReady_113
+  - first:
+      213: 3249159785966536518
+    second: WallE  Eve highresReady_114
+  - first:
+      213: -8988126874141862712
+    second: WallE  Eve highresReady_115
+  - first:
+      213: 7267326158214310383
+    second: WallE  Eve highresReady_116
+  - first:
+      213: -9127993687379425424
+    second: WallE  Eve highresReady_117
+  - first:
+      213: 7248931675443671711
+    second: WallE  Eve highresReady_118
+  - first:
+      213: -859145668148394299
+    second: WallE  Eve highresReady_119
+  - first:
+      213: 3864304037998489997
+    second: WallE  Eve highresReady_120
+  - first:
+      213: 1002996072011566040
+    second: WallE  Eve highresReady_121
+  - first:
+      213: 9092739279900326776
+    second: WallE  Eve highresReady_122
+  - first:
+      213: 8961940168665082503
+    second: WallE  Eve highresReady_123
+  - first:
+      213: -2559583479785424855
+    second: WallE  Eve highresReady_124
+  - first:
+      213: 3279029263739803387
+    second: WallE  Eve highresReady_125
+  - first:
+      213: 1807577371514214368
+    second: WallE  Eve highresReady_126
+  - first:
+      213: 740376374866047952
+    second: WallE  Eve highresReady_127
+  - first:
+      213: -123649539002685450
+    second: WallE  Eve highresReady_128
+  - first:
+      213: -5089698406411738248
+    second: WallE  Eve highresReady_129
+  - first:
+      213: -4568371694904578180
+    second: WallE  Eve highresReady_130
+  - first:
+      213: -4305910029318060312
+    second: WallE  Eve highresReady_131
+  - first:
+      213: -6600057208954396474
+    second: WallE  Eve highresReady_132
+  - first:
+      213: 8672578064314948657
+    second: WallE  Eve highresReady_133
+  - first:
+      213: -1266278558098205968
+    second: WallE  Eve highresReady_134
+  - first:
+      213: 7376842695690776620
+    second: WallE  Eve highresReady_135
+  - first:
+      213: 3555587358366607860
+    second: WallE  Eve highresReady_136
+  - first:
+      213: -5672592679650256546
+    second: WallE  Eve highresReady_137
+  - first:
+      213: 265833737412209263
+    second: WallE  Eve highresReady_138
+  - first:
+      213: 8705016476483421586
+    second: WallE  Eve highresReady_139
+  - first:
+      213: -3315028226954342585
+    second: WallE  Eve highresReady_140
+  - first:
+      213: 6384285528902346814
+    second: WallE  Eve highresReady_141
+  - first:
+      213: -6911880202130515412
+    second: WallE  Eve highresReady_142
+  - first:
+      213: 4411268372471304491
+    second: WallE  Eve highresReady_143
+  - first:
+      213: 4222429919890760490
+    second: WallE  Eve highresReady_144
+  - first:
+      213: -2715649616864519999
+    second: WallE  Eve highresReady_145
+  - first:
+      213: 6626541462239066080
+    second: WallE  Eve highresReady_146
+  - first:
+      213: -6013397497717393413
+    second: WallE  Eve highresReady_147
+  - first:
+      213: -2189526387999248202
+    second: WallE  Eve highresReady_148
+  - first:
+      213: 900237798643772317
+    second: WallE  Eve highresReady_149
+  - first:
+      213: -5683161098264887814
+    second: WallE  Eve highresReady_150
+  - first:
+      213: -3965016204932703351
+    second: WallE  Eve highresReady_151
+  - first:
+      213: -7728310147228555067
+    second: WallE  Eve highresReady_152
+  - first:
+      213: 861592207171998990
+    second: WallE  Eve highresReady_153
+  - first:
+      213: 6066507468122767445
+    second: WallE  Eve highresReady_154
+  - first:
+      213: 6803380401806408029
+    second: WallE  Eve highresReady_155
+  - first:
+      213: 5331098121932745828
+    second: WallE  Eve highresReady_156
+  - first:
+      213: -7595117802596214879
+    second: WallE  Eve highresReady_157
+  - first:
+      213: 6388383246605720462
+    second: WallE  Eve highresReady_158
+  - first:
+      213: 8650047798874414350
+    second: WallE  Eve highresReady_159
+  - first:
+      213: 906068424864797847
+    second: WallE  Eve highresReady_160
+  - first:
+      213: 8632030155730024207
+    second: WallE  Eve highresReady_161
+  - first:
+      213: 185119465306904417
+    second: WallE  Eve highresReady_162
+  - first:
+      213: -4212456846899744861
+    second: WallE  Eve highresReady_163
+  - first:
+      213: -2613349415669977680
+    second: WallE  Eve highresReady_164
+  - first:
+      213: -5129558646853902301
+    second: WallE  Eve highresReady_165
+  - first:
+      213: 6641752686564673458
+    second: WallE  Eve highresReady_166
+  - first:
+      213: 8084794151785976445
+    second: WallE  Eve highresReady_167
+  - first:
+      213: 8865212707750383198
+    second: WallE  Eve highresReady_168
+  - first:
+      213: 2936354020165449531
+    second: WallE  Eve highresReady_169
+  - first:
+      213: -3090978203315824732
+    second: WallE  Eve highresReady_170
+  - first:
+      213: 7865212533880936257
+    second: WallE  Eve highresReady_171
+  - first:
+      213: -4400094766886674390
+    second: WallE  Eve highresReady_172
+  - first:
+      213: -6915259262437879004
+    second: WallE  Eve highresReady_173
+  - first:
+      213: 677612984427492966
+    second: WallE  Eve highresReady_174
+  - first:
+      213: -1897669698257061015
+    second: WallE  Eve highresReady_175
+  - first:
+      213: 7781305319870546997
+    second: WallE  Eve highresReady_176
+  - first:
+      213: 4237189338076375830
+    second: WallE  Eve highresReady_177
+  - first:
+      213: 4716028541143622458
+    second: WallE  Eve highresReady_178
+  - first:
+      213: -4570861957689733553
+    second: WallE  Eve highresReady_179
+  - first:
+      213: 4421873699269187121
+    second: WallE  Eve highresReady_180
+  - first:
+      213: -2258867040201687339
+    second: WallE  Eve highresReady_181
+  - first:
+      213: -4899440849161175577
+    second: WallE  Eve highresReady_182
+  - first:
+      213: 7710814422770092139
+    second: WallE  Eve highresReady_183
+  - first:
+      213: -8202824454017123071
+    second: WallE  Eve highresReady_184
+  - first:
+      213: 6991407586350601187
+    second: WallE  Eve highresReady_185
+  - first:
+      213: -9187517792803749720
+    second: WallE  Eve highresReady_186
+  - first:
+      213: 3771376955919192928
+    second: WallE  Eve highresReady_187
+  - first:
+      213: -2589957184815279895
+    second: WallE  Eve highresReady_188
+  - first:
+      213: -491671260105300570
+    second: WallE  Eve highresReady_189
+  - first:
+      213: 2555576588909459566
+    second: WallE  Eve highresReady_190
+  - first:
+      213: -2623832821257976262
+    second: WallE  Eve highresReady_191
+  - first:
+      213: 6996904026522907770
+    second: WallE  Eve highresReady_192
+  - first:
+      213: 6502001921357702907
+    second: WallE  Eve highresReady_193
+  - first:
+      213: -6288656998594742008
+    second: WallE  Eve highresReady_194
+  - first:
+      213: -700272057896425317
+    second: WallE  Eve highresReady_195
+  - first:
+      213: -8748009020542222877
+    second: WallE  Eve highresReady_196
+  - first:
+      213: -4394814791308967663
+    second: WallE  Eve highresReady_197
+  - first:
+      213: -6742448846419846382
+    second: WallE  Eve highresReady_198
+  - first:
+      213: 2090411983134494139
+    second: WallE  Eve highresReady_199
+  - first:
+      213: 8433277032978282070
+    second: WallE  Eve highresReady_200
+  - first:
+      213: 6306496173192779715
+    second: WallE  Eve highresReady_201
+  - first:
+      213: 7040499294731464002
+    second: WallE  Eve highresReady_202
+  - first:
+      213: 8913010314428064597
+    second: WallE  Eve highresReady_203
+  - first:
+      213: 1990557704871955911
+    second: WallE  Eve highresReady_204
+  - first:
+      213: -7753306996956992898
+    second: WallE  Eve highresReady_205
+  - first:
+      213: 6314863008645920221
+    second: WallE  Eve highresReady_206
+  - first:
+      213: -2831309664072365448
+    second: WallE  Eve highresReady_207
+  - first:
+      213: 4279945582086996336
+    second: WallE  Eve highresReady_208
+  - first:
+      213: -5770218564681076809
+    second: WallE  Eve highresReady_209
+  - first:
+      213: -4078037515886977126
+    second: WallE  Eve highresReady_210
+  - first:
+      213: -5321657180957262009
+    second: WallE  Eve highresReady_211
+  - first:
+      213: -4764443017935458721
+    second: WallE  Eve highresReady_212
+  - first:
+      213: -6298315811767885755
+    second: WallE  Eve highresReady_213
+  - first:
+      213: -8567744063106731535
+    second: WallE  Eve highresReady_214
+  - first:
+      213: -5221707217031394317
+    second: WallE  Eve highresReady_215
+  - first:
+      213: -1873457336845796643
+    second: WallE  Eve highresReady_216
+  - first:
+      213: -3217407965345860042
+    second: WallE  Eve highresReady_217
+  - first:
+      213: -3676531152687098369
+    second: WallE  Eve highresReady_218
+  - first:
+      213: 5952409741783914533
+    second: WallE  Eve highresReady_219
+  - first:
+      213: 8986542433299980446
+    second: WallE  Eve highresReady_220
+  - first:
+      213: -4090964775163628237
+    second: WallE  Eve highresReady_221
+  - first:
+      213: 1763514826973698967
+    second: WallE  Eve highresReady_222
+  - first:
+      213: 2670712174287072779
+    second: WallE  Eve highresReady_223
+  - first:
+      213: 4111810151437597237
+    second: WallE  Eve highresReady_224
+  - first:
+      213: 7259073370803697710
+    second: WallE  Eve highresReady_225
+  - first:
+      213: 1885312069165101850
+    second: WallE  Eve highresReady_226
+  - first:
+      213: 8549097192794871448
+    second: WallE  Eve highresReady_227
+  - first:
+      213: 5116698320949956676
+    second: WallE  Eve highresReady_228
+  - first:
+      213: 1309490356368631776
+    second: WallE  Eve highresReady_229
+  - first:
+      213: -306497541769821480
+    second: WallE  Eve highresReady_230
+  - first:
+      213: -5935861927992553017
+    second: WallE  Eve highresReady_231
+  - first:
+      213: 1992138607126713053
+    second: WallE  Eve highresReady_232
+  - first:
+      213: 6969831810563257810
+    second: WallE  Eve highresReady_233
+  - first:
+      213: -7679562515296115509
+    second: WallE  Eve highresReady_234
+  - first:
+      213: -2301226603870577335
+    second: WallE  Eve highresReady_235
+  - first:
+      213: -2173041531422506116
+    second: WallE  Eve highresReady_236
+  - first:
+      213: -8421272903327766183
+    second: WallE  Eve highresReady_237
+  - first:
+      213: 8716482974469418478
+    second: WallE  Eve highresReady_238
+  - first:
+      213: 5717762068121871824
+    second: WallE  Eve highresReady_239
+  - first:
+      213: 7555400242606571527
+    second: WallE  Eve highresReady_240
+  - first:
+      213: 6261326134285658244
+    second: WallE  Eve highresReady_241
+  - first:
+      213: -7945378428746125128
+    second: WallE  Eve highresReady_242
+  - first:
+      213: 8563565033286643935
+    second: WallE  Eve highresReady_243
+  - first:
+      213: 742713765171682021
+    second: WallE  Eve highresReady_244
+  - first:
+      213: 1883917782359877507
+    second: WallE  Eve highresReady_245
+  - first:
+      213: 7327532089724911698
+    second: WallE  Eve highresReady_246
+  - first:
+      213: -7245335381745575372
+    second: WallE  Eve highresReady_247
+  - first:
+      213: -5509482330812042160
+    second: WallE  Eve highresReady_248
+  - first:
+      213: -4825451470737343228
+    second: WallE  Eve highresReady_249
+  - first:
+      213: -8897118142240581825
+    second: WallE  Eve highresReady_250
+  - first:
+      213: -7521504224362448722
+    second: WallE  Eve highresReady_251
+  - first:
+      213: -3051151836196103996
+    second: WallE  Eve highresReady_252
+  - first:
+      213: 708180957900056834
+    second: WallE  Eve highresReady_253
+  - first:
+      213: -1475129962697266597
+    second: WallE  Eve highresReady_254
+  - first:
+      213: -1944884084183990622
+    second: WallE  Eve highresReady_255
+  - first:
+      213: -4904156186515444908
+    second: WallE  Eve highresReady_256
+  - first:
+      213: -1665345705953224276
+    second: WallE  Eve highresReady_257
+  - first:
+      213: -66220078521894153
+    second: WallE  Eve highresReady_258
+  - first:
+      213: 4316757451343984746
+    second: WallE  Eve highresReady_259
+  - first:
+      213: -8511525753328745880
+    second: WallE  Eve highresReady_260
+  - first:
+      213: 6691525418838232036
+    second: WallE  Eve highresReady_261
+  - first:
+      213: 8082840917913143602
+    second: WallE  Eve highresReady_262
+  - first:
+      213: -5078132892268033433
+    second: WallE  Eve highresReady_263
+  - first:
+      213: 5463116418139853367
+    second: WallE  Eve highresReady_264
+  - first:
+      213: 1949804808087509615
+    second: WallE  Eve highresReady_265
+  - first:
+      213: -6056032166402359684
+    second: WallE  Eve highresReady_266
+  - first:
+      213: 6030344527350977790
+    second: WallE  Eve highresReady_267
+  - first:
+      213: 2284450104761686995
+    second: WallE  Eve highresReady_268
+  - first:
+      213: 3283584549583836607
+    second: WallE  Eve highresReady_269
+  - first:
+      213: 5638229499817877220
+    second: WallE  Eve highresReady_270
+  - first:
+      213: -4446511673720368764
+    second: WallE  Eve highresReady_271
+  - first:
+      213: 4036666488589188901
+    second: WallE  Eve highresReady_272
+  - first:
+      213: 6883184040966888903
+    second: WallE  Eve highresReady_273
+  - first:
+      213: 4251690068731117939
+    second: WallE  Eve highresReady_274
+  - first:
+      213: 3779727285345678989
+    second: WallE  Eve highresReady_275
+  - first:
+      213: 1327961868620717528
+    second: WallE  Eve highresReady_276
+  - first:
+      213: 7876929697058926846
+    second: WallE  Eve highresReady_277
+  - first:
+      213: 7911809491717529379
+    second: WallE  Eve highresReady_278
+  - first:
+      213: -3773461008829774505
+    second: WallE  Eve highresReady_279
+  - first:
+      213: 550122177603398554
+    second: WallE  Eve highresReady_280
+  - first:
+      213: -3034239185122464978
+    second: WallE  Eve highresReady_281
+  - first:
+      213: 5046244008288881759
+    second: WallE  Eve highresReady_282
+  - first:
+      213: 6894830734099690172
+    second: WallE  Eve highresReady_283
+  - first:
+      213: -8031273295172021937
+    second: WallE  Eve highresReady_284
+  - first:
+      213: -2324785888741447647
+    second: WallE  Eve highresReady_285
+  - first:
+      213: 7771264726163874331
+    second: WallE  Eve highresReady_286
+  - first:
+      213: 7556570647483231466
+    second: WallE  Eve highresReady_287
+  - first:
+      213: -3368238398729800015
+    second: WallE  Eve highresReady_288
+  - first:
+      213: 2399292162824649552
+    second: WallE  Eve highresReady_289
+  - first:
+      213: -6093312682250302136
+    second: WallE  Eve highresReady_290
+  - first:
+      213: 1775380291350504833
+    second: WallE  Eve highresReady_291
+  - first:
+      213: 3620658894698387094
+    second: WallE  Eve highresReady_292
+  - first:
+      213: 6135490646194506140
+    second: WallE  Eve highresReady_293
+  - first:
+      213: 9167406697766838516
+    second: WallE  Eve highresReady_294
+  - first:
+      213: 3430548986798323225
+    second: WallE  Eve highresReady_295
+  - first:
+      213: -4304100871132300088
+    second: WallE  Eve highresReady_296
+  - first:
+      213: 3109626017822559395
+    second: WallE  Eve highresReady_297
+  - first:
+      213: -1314686952120271944
+    second: WallE  Eve highresReady_298
+  - first:
+      213: 290648753247787542
+    second: WallE  Eve highresReady_299
+  - first:
+      213: -932132861057740637
+    second: WallE  Eve highresReady_300
+  - first:
+      213: -7424156774359068045
+    second: WallE  Eve highresReady_301
+  - first:
+      213: 2051727880378726921
+    second: WallE  Eve highresReady_302
+  - first:
+      213: 7841027166270904847
+    second: WallE  Eve highresReady_303
+  - first:
+      213: 7536122669073225255
+    second: WallE  Eve highresReady_304
+  - first:
+      213: 386241690274532681
+    second: WallE  Eve highresReady_305
+  - first:
+      213: 1458959603003290235
+    second: WallE  Eve highresReady_306
+  - first:
+      213: 1820677720023691053
+    second: WallE  Eve highresReady_307
+  - first:
+      213: -1326495915020326405
+    second: WallE  Eve highresReady_308
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 994
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4665f0cf50330680800000000000000
+      internalID: -8790128859879741877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 994
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d114a8b6c2859f0800000000000000
+      internalID: -479584519922311831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 993
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f8d2d75f37808c0800000000000000
+      internalID: -4032845968105959607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 992
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f57323514d0d700800000000000000
+      internalID: 563183140923203423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 992
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63727658b6298af30800000000000000
+      internalID: 4587077210974136118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_5
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 992
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829c5cc54dc165290800000000000000
+      internalID: -7902096797759846104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 992
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1188c413265aded30800000000000000
+      internalID: 4462404646946506769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 992
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cca41ae46fa4df0800000000000000
+      internalID: -195072816263279467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_8
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 992
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1aab9503f8f16ab0800000000000000
+      internalID: -5016454787259192804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_10
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b1e45ba039d0ac0800000000000000
+      internalID: -3887289229150119046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_12
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d874cc9cefeb880800000000000000
+      internalID: -8593150896307204819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_14
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4825e00c542c31b0800000000000000
+      internalID: -5675621452823058354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_16
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337910cb2aa0e80d0800000000000000
+      internalID: -3418783373072427213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_18
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737bbb30dfecefb90800000000000000
+      internalID: -7206094767661533385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_19
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5499300688a6e2b20800000000000000
+      internalID: 3111541526518536517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_20
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1556de52afd3460800000000000000
+      internalID: 7223204418175717816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_23
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 993
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7788204633287d0e0800000000000000
+      internalID: -2245182731988072329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_25
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a304c922c24ece0800000000000000
+      internalID: -1376927058906564054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_27
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e924a8c1ca356a2c0800000000000000
+      internalID: -4420753985539259746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_29
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 993
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc9ae54ef4ad5dc0800000000000000
+      internalID: -3648578711098581774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_31
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 992
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7deb6ddff5a5b4c0800000000000000
+      internalID: -4272326153140966019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_33
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 992
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cdee8d66509d6700800000000000000
+      internalID: 535242631606627779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 869
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9028bdde86d4067b0800000000000000
+      internalID: -5233097653941992951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_36
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 879
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76271f38ce7d52220800000000000000
+      internalID: 2460610182253736551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_37
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 887
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd544a9a4f498e70800000000000000
+      internalID: 9117906102422625743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_38
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 894
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4811db87e8e68420800000000000000
+      internalID: 2632047113425459277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_39
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 898
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c33360701ce12be0800000000000000
+      internalID: -1503661245215853625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_40
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 901
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8b1166985fb3710800000000000000
+      internalID: 1674201656970033396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_41
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 903
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29af85546fde9ae0800000000000000
+      internalID: -1540548400488928982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_42
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 903
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c640b4b03ff9b40800000000000000
+      internalID: 5449341303970360410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_43
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 903
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5e3f5c5265f1dd0800000000000000
+      internalID: -2513195346814573083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_44
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 903
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ae07042c587f5870800000000000000
+      internalID: 8673783744475631265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_45
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 903
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5180972bd7cbe400800000000000000
+      internalID: 354596739754262878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_46
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 902
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6397ac52083d54510800000000000000
+      internalID: 1532863795532822838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_47
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 900
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8465662e8ad8c160800000000000000
+      internalID: 7046121921085531276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_48
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 896
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd48fa0598e82f3c0800000000000000
+      internalID: -4327239571534281508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_49
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 890
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c2b53eade14a5b0800000000000000
+      internalID: -5358123731197940707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_50
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 883
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b602d0bd11d2684f0800000000000000
+      internalID: -826923926863142805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_51
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 874
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1bcdd9165419580800000000000000
+      internalID: -8822193909479460407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_52
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 865
+        width: 33
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3c4228cee4854f0800000000000000
+      internalID: -839834552801901649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_53
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 864
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1d9a965a53fab20800000000000000
+      internalID: 3147793649113879022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_54
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 864
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c48b90b41e07d70800000000000000
+      internalID: 9038972164534455436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_55
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 864
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49051436eff374c0800000000000000
+      internalID: -4290804655772595890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_56
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 865
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c37ac5bf7857d90800000000000000
+      internalID: -7100619723818713960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_57
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 865
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3282ffb1deaa45cd0800000000000000
+      internalID: -2570241551968032733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_58
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 865
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbd102516025a6a0800000000000000
+      internalID: -6438704489896485944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_59
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 866
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e326970611fda33f0800000000000000
+      internalID: -920177908117839298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_60
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 865
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c11a3d097e6edc20800000000000000
+      internalID: 3233143048690602439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_61
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 866
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2ca18cde844fda0800000000000000
+      internalID: -5912020224728972604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_62
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 864
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053905921bb0245a0800000000000000
+      internalID: -6538650853458275504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_63
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 864
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe43dff39f9eca60800000000000000
+      internalID: 7696264271223803644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_64
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 869
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e48d3d1a0eac790800000000000000
+      internalID: -7508942443038355909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 774
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21c2abd5bb8c2d20800000000000000
+      internalID: 3255130243872244014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_74
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c736fa8904de8580800000000000000
+      internalID: -8822881482521036862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_75
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9f096e22ef81910800000000000000
+      internalID: 1808474676239858135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_76
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 774
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9c50b5a5484e870800000000000000
+      internalID: 8711233102850410997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_77
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1430e3ce67b95a30800000000000000
+      internalID: 4204593413487604765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_78
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 774
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bddd09a95a8ff320800000000000000
+      internalID: 2593944028081675701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_79
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9e0d81c25ee9230800000000000000
+      internalID: 3647604725774346666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_80
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8bd83f88598e3470800000000000000
+      internalID: 8376283370408696719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_81
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0a9c78a40172d30800000000000000
+      internalID: 4406508672697082047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_82
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 774
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4323500a76a021a40800000000000000
+      internalID: 5337339948570063412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_83
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6f3f22572cfe2e0800000000000000
+      internalID: -2094241493350615352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_84
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ad4eec41bd66dc0800000000000000
+      internalID: -3645985965892904407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_85
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 774
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37f9dd846eae2bd0800000000000000
+      internalID: -2652991383574808774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_86
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 774
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f29b4000cff4b800800000000000000
+      internalID: 627407448215098104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_87
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 649
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0404bd921a06c30800000000000000
+      internalID: 4350654441184051380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_88
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 649
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e0ed98c2c8c7f50800000000000000
+      internalID: 6880528453634756162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_89
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 649
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa69164bac456e80800000000000000
+      internalID: -8186052449176819033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_90
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 649
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db66874d87e2a5030800000000000000
+      internalID: 3484148358220113597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_91
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 649
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c1f9cf453ef7770800000000000000
+      internalID: 8610850966710721599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_92
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 649
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64881251e76af9160800000000000000
+      internalID: 7034524203426613318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_93
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 649
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0858013bd1927d600800000000000000
+      internalID: 492907891755353472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_94
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 659
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093e4f4f79f335bc0800000000000000
+      internalID: -3795620139060894832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_95
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 667
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf3eead3d628d6d0800000000000000
+      internalID: -2965577663270469683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_96
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 674
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2a3f0230b09c020800000000000000
+      internalID: 2362431587598181072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_97
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 678
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f624f0b7d0c54dd70800000000000000
+      internalID: 9066973162772578927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_98
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 681
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f8de64d510bf700800000000000000
+      internalID: 575054877553430409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_99
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 683
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd6737aa9d686b80800000000000000
+      internalID: -8401344593861841456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_100
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 683
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad3d4394b07c44f0800000000000000
+      internalID: -843175109357388378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_101
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 683
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba93f0bcf54fe7fd0800000000000000
+      internalID: -2342166063920236117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_102
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 683
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5639e8d0b1f14a0800000000000000
+      internalID: -6620543182170790484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_103
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 679
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43f739e409da6190800000000000000
+      internalID: -7968317975562816691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 554
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c26d6aa84251a50800000000000000
+      internalID: 6491134615847578734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_105
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 553
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b41fc8c39a00900800000000000000
+      internalID: 648704423869107102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_106
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 553
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcb1cc8e5ad318b0800000000000000
+      internalID: -5182558646550020940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_107
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 552
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8b154d6da47c4b0800000000000000
+      internalID: -5420281339971520338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_108
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 551
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89875f489a2efee0800000000000000
+      internalID: -1225495214943663733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_109
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 551
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d337260f9d6174ad0800000000000000
+      internalID: -2718178724798106819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_110
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 551
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db3c3bfb31073550800000000000000
+      internalID: 6140377974072687572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_111
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 552
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2220c807665a18680800000000000000
+      internalID: -8754534341238062558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_112
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 552
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5595d4062409a80b0800000000000000
+      internalID: -5725605361490241195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_113
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 552
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac99a448817ae9f0800000000000000
+      internalID: -438413183633744726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_114
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 552
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647050d4c95571d20800000000000000
+      internalID: 3249159785966536518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_115
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 551
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4d1a6aa32c34380800000000000000
+      internalID: -8988126874141862712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_116
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 551
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9a44f03aabad460800000000000000
+      internalID: 7267326158214310383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_117
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 553
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077cdbf7a1ad25180800000000000000
+      internalID: -9127993687379425424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_118
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 553
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92b5ebc3f0699460800000000000000
+      internalID: 7248931675443671711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_119
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 554
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c603b71193b314f0800000000000000
+      internalID: -859145668148394299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_120
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 552
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81f1017c04c0a530800000000000000
+      internalID: 3864304037998489997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_121
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db8c570d9b5bed00800000000000000
+      internalID: 1002996072011566040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_122
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 568
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b33bd1336ef2e70800000000000000
+      internalID: 9092739279900326776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_123
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 552
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a269bd9153f5c70800000000000000
+      internalID: 8961940168665082503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_124
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 569
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9287e6ae2688a7cd0800000000000000
+      internalID: -2559583479785424855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_125
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 554
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf652590eb3718d20800000000000000
+      internalID: 3279029263739803387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_126
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 554
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7932dda0ec51910800000000000000
+      internalID: 1807577371514214368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_127
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 554
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d37bf7e368564a00800000000000000
+      internalID: 740376374866047952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_128
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 554
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7aa1f3665b84ef0800000000000000
+      internalID: -123649539002685450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_129
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 554
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873e4f70442cd59b0800000000000000
+      internalID: -5089698406411738248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_130
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 553
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f6343d522e990c0800000000000000
+      internalID: -4568371694904578180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_131
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 553
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e684bb54a55e34c0800000000000000
+      internalID: -4305910029318060312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_132
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 553
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c06403efe2e764a0800000000000000
+      internalID: -6600057208954396474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_133
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 553
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c565adccf2b5870800000000000000
+      internalID: 8672578064314948657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_134
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 554
+        width: 32
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2dcd54c564d6ee0800000000000000
+      internalID: -1266278558098205968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_135
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 554
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c207598f85fcf5660800000000000000
+      internalID: 7376842695690776620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_136
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 564
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9af473ddbf75130800000000000000
+      internalID: 3555587358366607860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_137
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5917f53307e641b0800000000000000
+      internalID: -5672592679650256546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_138
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ae4cf206e60b300800000000000000
+      internalID: 265833737412209263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_139
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 473
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29587bc3d5e6ec870800000000000000
+      internalID: 8705016476483421586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_140
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 473
+        width: 63
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f4eff2467aef1d0800000000000000
+      internalID: -3315028226954342585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_141
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 471
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3824e6fcd9899850800000000000000
+      internalID: 6384285528902346814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_142
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 470
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a94fda3911410a0800000000000000
+      internalID: -6911880202130515412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_143
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 470
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21511e7639f73d30800000000000000
+      internalID: 4411268372471304491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_144
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 470
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23e11804a5199a30800000000000000
+      internalID: 4222429919890760490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_145
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 471
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c85d54cf03105ad0800000000000000
+      internalID: -2715649616864519999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_146
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 470
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7382ad95436fb50800000000000000
+      internalID: 6626541462239066080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_147
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 470
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7f45f06de1c8ca0800000000000000
+      internalID: -6013397497717393413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_148
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 470
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0f5f8c95d3d91e0800000000000000
+      internalID: -2189526387999248202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_149
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 471
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9baa8912894e7c00800000000000000
+      internalID: 900237798643772317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_150
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 471
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd3a90871b5121b0800000000000000
+      internalID: -5683161098264887814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_151
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 471
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b9158e4ce69f8c0800000000000000
+      internalID: -3965016204932703351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_152
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 472
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c825601ed68fb490800000000000000
+      internalID: -7728310147228555067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_153
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 474
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e055bb92c8df4fb00800000000000000
+      internalID: 861592207171998990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_155
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 472
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d597689fd667a6e50800000000000000
+      internalID: 6803380401806408029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_156
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 474
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46cad8c1f7ddbf940800000000000000
+      internalID: 5331098121932745828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_158
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 474
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b9df637b818a850800000000000000
+      internalID: 6388383246605720462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_160
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 474
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794934e8e60039c00800000000000000
+      internalID: 906068424864797847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_162
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 474
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167d0a24c2da19200800000000000000
+      internalID: 185119465306904417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_163
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 474
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afe0e8f0d85a85c0800000000000000
+      internalID: -4212456846899744861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_164
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 474
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd24057d848bbbd0800000000000000
+      internalID: -2613349415669977680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_165
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 474
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3206db7969520d8b0800000000000000
+      internalID: -5129558646853902301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_166
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 474
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b70fa001ee3c2c50800000000000000
+      internalID: 6641752686564673458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_167
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 473
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72db5b2275f23070800000000000000
+      internalID: 8084794151785976445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_168
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 473
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e8dbfdcff870b70800000000000000
+      internalID: 8865212707750383198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_169
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 473
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3770c28c6600c820800000000000000
+      internalID: 2936354020165449531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_170
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 473
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a792e663b3aa15d0800000000000000
+      internalID: -3090978203315824732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_171
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 474
+        width: 32
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1475cecb029d62d60800000000000000
+      internalID: 7865212533880936257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_172
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 474
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a202aa94f19bfe2c0800000000000000
+      internalID: -4400094766886674390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_173
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 484
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42319a4e6501800a0800000000000000
+      internalID: -6915259262437879004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_179
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e8e8654490190c0800000000000000
+      internalID: -4570861957689733553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_180
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 383
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136159e83b6ad5d30800000000000000
+      internalID: 4421873699269187121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_181
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 383
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5deb0f91564e6a0e0800000000000000
+      internalID: -2258867040201687339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_182
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 383
+        width: 61
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7edb5bb8180b10cb0800000000000000
+      internalID: -4899440849161175577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_183
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 383
+        width: 61
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b688b262dd0520b60800000000000000
+      internalID: 7710814422770092139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_184
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 381
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dfb679e96b92e80800000000000000
+      internalID: -8202824454017123071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_185
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 380
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e316606828760160800000000000000
+      internalID: 6991407586350601187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_186
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 380
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a00a58be316f7080800000000000000
+      internalID: -9187517792803749720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_187
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 380
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06358ab1c5f965430800000000000000
+      internalID: 3771376955919192928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_188
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 380
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e05d9f99af9e0cd0800000000000000
+      internalID: -2589957184815279895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_189
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 380
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5a72b089b3d29f0800000000000000
+      internalID: -491671260105300570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_190
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 380
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68b04a1e5b377320800000000000000
+      internalID: 2555576588909459566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_191
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 380
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3648e263f5469bd0800000000000000
+      internalID: -2623832821257976262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_192
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 380
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74f564142ff91160800000000000000
+      internalID: 6996904026522907770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_193
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 380
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6ee636c40cb3a50800000000000000
+      internalID: 6502001921357702907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_194
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 380
+        width: 56
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8097c7c47c33ab8a0800000000000000
+      internalID: -6288656998594742008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_195
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 382
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98a3f606422846f0800000000000000
+      internalID: -700272057896425317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_196
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 384
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edfaae0524d89680800000000000000
+      internalID: -8748009020542222877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_199
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 384
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbd83f88f92a20d10800000000000000
+      internalID: 2090411983134494139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_200
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 384
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6567123b7c4090570800000000000000
+      internalID: 8433277032978282070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_201
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 384
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c714843bdc258750800000000000000
+      internalID: 6306496173192779715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_202
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 384
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d6bdf6ec0e4b160800000000000000
+      internalID: 7040499294731464002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_203
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 383
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553a0e668af51bb70800000000000000
+      internalID: 8913010314428064597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_204
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 383
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd4fc7afa1ef9b10800000000000000
+      internalID: 1990557704871955911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_205
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 383
+        width: 67
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ae3d37d58b66490800000000000000
+      internalID: -7753306996956992898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_206
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 383
+        width: 55
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd53893e276e2a750800000000000000
+      internalID: 6314863008645920221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_207
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 384
+        width: 33
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a06d78cda25b8d0800000000000000
+      internalID: -2831309664072365448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_208
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 384
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0714c4ea4db656b30800000000000000
+      internalID: 4279945582086996336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_209
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 394
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bfe1df89c01cefa0800000000000000
+      internalID: -5770218564681076809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_210
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 382
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f17d45c76e767c0800000000000000
+      internalID: -4078037515886977126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_211
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 387
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fb2a04dfca526b0800000000000000
+      internalID: -5321657180957262009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_212
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 32
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5eed5b715c41edb0800000000000000
+      internalID: -4764443017935458721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_213
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 258
+        width: 33
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540695c9323e798a0800000000000000
+      internalID: -6298315811767885755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_214
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 257
+        width: 34
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1bf002b22491980800000000000000
+      internalID: -8567744063106731535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_215
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 257
+        width: 33
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb00cfa3f4c887b0800000000000000
+      internalID: -5221707217031394317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_216
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 257
+        width: 39
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddaf4776a742006e0800000000000000
+      internalID: -1873457336845796643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_217
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 257
+        width: 33
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6363c0880887953d0800000000000000
+      internalID: -3217407965345860042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_218
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 257
+        width: 43
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff59d6e45665afcc0800000000000000
+      internalID: -3676531152687098369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_219
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 257
+        width: 39
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528da987f153b9250800000000000000
+      internalID: 5952409741783914533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_220
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 257
+        width: 44
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90e1d7fabc96bc70800000000000000
+      internalID: 8986542433299980446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_221
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 257
+        width: 44
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3357cbb3639f937c0800000000000000
+      internalID: -4090964775163628237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_222
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 257
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bd6e14463497810800000000000000
+      internalID: 1763514826973698967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_223
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 257
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e21bd8296401520800000000000000
+      internalID: 2670712174287072779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_224
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 257
+        width: 38
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a78442c85101930800000000000000
+      internalID: 4111810151437597237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_225
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 257
+        width: 42
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28704145c86db460800000000000000
+      internalID: 7259073370803697710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_226
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 257
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13b75d8659f92a10800000000000000
+      internalID: 1885312069165101850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_227
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 257
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896d3de0a9e74a670800000000000000
+      internalID: 8549097192794871448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_228
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 257
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4405f03730a220740800000000000000
+      internalID: 5116698320949956676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_229
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 257
+        width: 59
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7e6288a8e3c2210800000000000000
+      internalID: 1309490356368631776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_230
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 257
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d287421c1a1fbbf0800000000000000
+      internalID: -306497541769821480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_231
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 257
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c11d3aa6059f9da0800000000000000
+      internalID: -5935861927992553017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_232
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 257
+        width: 37
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd21125228f75ab10800000000000000
+      internalID: 1992138607126713053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_233
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 257
+        width: 45
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d537dc9a11d9b060800000000000000
+      internalID: 6969831810563257810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_234
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 258
+        width: 33
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4ae559496bc6590800000000000000
+      internalID: -7679562515296115509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_235
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 258
+        width: 33
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d9d90a8966010e0800000000000000
+      internalID: -2301226603870577335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_236
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 257
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73046d8d3ec7d1e0800000000000000
+      internalID: -2173041531422506116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_237
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 257
+        width: 33
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959a68889e0a12b80800000000000000
+      internalID: -8421272903327766183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_238
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 257
+        width: 33
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed6df7551b27f870800000000000000
+      internalID: 8716482974469418478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_239
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 259
+        width: 33
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d56b949e42995f40800000000000000
+      internalID: 5717762068121871824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_240
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 319
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700077c8d7c2ad860800000000000000
+      internalID: 7555400242606571527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_241
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 289
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48867f8f1f2b4e650800000000000000
+      internalID: 6261326134285658244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_253
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 259
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209245044d6f3d900800000000000000
+      internalID: 708180957900056834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_254
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 128
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ae4ef4d19478be0800000000000000
+      internalID: -1475129962697266597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_255
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 139
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aef6e8da326205e0800000000000000
+      internalID: -1944884084183990622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_256
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 149
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b66b38eefe0fbb0800000000000000
+      internalID: -4904156186515444908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_257
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 158
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca99f6067e083e8e0800000000000000
+      internalID: -1665345705953224276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_258
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 164
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa34be703db41ff0800000000000000
+      internalID: -66220078521894153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_259
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 169
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68f0e4e70438eb30800000000000000
+      internalID: 4316757451343984746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_260
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 172
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86240406c6cf0e980800000000000000
+      internalID: -8511525753328745880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_261
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 174
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb895b4ae21ddc50800000000000000
+      internalID: 6691525418838232036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_262
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 174
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23984387df40c2070800000000000000
+      internalID: 8082840917913143602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_263
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 172
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a03222a09d689b0800000000000000
+      internalID: -5078132892268033433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_264
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 165
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73294ddff63e0db40800000000000000
+      internalID: 5463116418139853367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_265
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 155
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a976774291f0b10800000000000000
+      internalID: 1949804808087509615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_266
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e7f35b4d6a4fba0800000000000000
+      internalID: -6056032166402359684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_267
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 114
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4d9f1c56610b350800000000000000
+      internalID: 6030344527350977790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_268
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 114
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db9c69444ff3bf10800000000000000
+      internalID: 2284450104761686995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_269
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 114
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5d7eb20c2a19d20800000000000000
+      internalID: 3283584549583836607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_270
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 114
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eed5c28bd30f3e40800000000000000
+      internalID: 5638229499817877220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_271
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 114
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481154ef031da42c0800000000000000
+      internalID: -4446511673720368764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_272
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 114
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ff411c8ce150830800000000000000
+      internalID: 4036666488589188901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_273
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 114
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd1875aa6bf58f50800000000000000
+      internalID: 6883184040966888903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_274
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 144
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37146c15799010b30800000000000000
+      internalID: 4251690068731117939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_275
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 134
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8671eea0f9447430800000000000000
+      internalID: 3779727285345678989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_276
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 114
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddd66e984edd6210800000000000000
+      internalID: 1327961868620717528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_277
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 114
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef03ce163d9705d60800000000000000
+      internalID: 7876929697058926846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_278
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f136c60d46ccd60800000000000000
+      internalID: 7911809491717529379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_279
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7550ae28439f1abc0800000000000000
+      internalID: -3773461008829774505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_280
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b6d13b43d62a700800000000000000
+      internalID: 550122177603398554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_281
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 0
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b6437898734e5d0800000000000000
+      internalID: -3034239185122464978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_282
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 0
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c800c703cd70640800000000000000
+      internalID: 5046244008288881759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_283
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 0
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb23574b50c5faf50800000000000000
+      internalID: 6894830734099690172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_284
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 0
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41d0335d7f2b8090800000000000000
+      internalID: -8031273295172021937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_285
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 39
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128a9ba2d83bcbfd0800000000000000
+      internalID: -2324785888741447647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_286
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 0
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b126582381419db60800000000000000
+      internalID: 7771264726163874331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_287
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeca16ba7f45ed860800000000000000
+      internalID: 7556570647483231466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_288
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 0
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b631e4a50d9141d0800000000000000
+      internalID: -3368238398729800015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_289
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 0
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bba85928ffb4120800000000000000
+      internalID: 2399292162824649552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_290
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d86153664307ba0800000000000000
+      internalID: -6093312682250302136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_291
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1852d27f7fa63a810800000000000000
+      internalID: 1775380291350504833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_292
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 0
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6961b57e41a2f3230800000000000000
+      internalID: 3620658894698387094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_293
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99c7294c34a52550800000000000000
+      internalID: 6135490646194506140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_294
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0ede312db293f70800000000000000
+      internalID: 9167406697766838516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_295
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916b0bea022cb9f20800000000000000
+      internalID: 3430548986798323225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_296
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccb5b2df03c444c0800000000000000
+      internalID: -4304100871132300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_297
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac40a0436c972b20800000000000000
+      internalID: 3109626017822559395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_298
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 0
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbb70cbe2b41cde0800000000000000
+      internalID: -1314686952120271944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_299
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a9ebb4087980400800000000000000
+      internalID: 290648753247787542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_300
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a05f2df9166013f0800000000000000
+      internalID: -932132861057740637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_301
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3729483afb818f890800000000000000
+      internalID: -7424156774359068045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_302
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a3dbdf2a3397c10800000000000000
+      internalID: 2051727880378726921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_303
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 0
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ad3c70aace0dc60800000000000000
+      internalID: 7841027166270904847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_304
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726d0e1b3afa59860800000000000000
+      internalID: 7536122669073225255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_305
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 4
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d824a55c43c5500800000000000000
+      internalID: 386241690274532681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_306
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 19
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72f7ae67044f3410800000000000000
+      internalID: 1458959603003290235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallE  Eve highresReady_308
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 0
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf9e43d4ef6579de0800000000000000
+      internalID: -1326495915020326405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 00bb11b9362073045b142530b6a64a41
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WallE  Eve highresReady_0: -8790128859879741877
+      WallE  Eve highresReady_1: -479584519922311831
+      WallE  Eve highresReady_10: -3887289229150119046
+      WallE  Eve highresReady_100: -843175109357388378
+      WallE  Eve highresReady_101: -2342166063920236117
+      WallE  Eve highresReady_102: -6620543182170790484
+      WallE  Eve highresReady_103: -7968317975562816691
+      WallE  Eve highresReady_104: 6491134615847578734
+      WallE  Eve highresReady_105: 648704423869107102
+      WallE  Eve highresReady_106: -5182558646550020940
+      WallE  Eve highresReady_107: -5420281339971520338
+      WallE  Eve highresReady_108: -1225495214943663733
+      WallE  Eve highresReady_109: -2718178724798106819
+      WallE  Eve highresReady_11: 4149005039249246384
+      WallE  Eve highresReady_110: 6140377974072687572
+      WallE  Eve highresReady_111: -8754534341238062558
+      WallE  Eve highresReady_112: -5725605361490241195
+      WallE  Eve highresReady_113: -438413183633744726
+      WallE  Eve highresReady_114: 3249159785966536518
+      WallE  Eve highresReady_115: -8988126874141862712
+      WallE  Eve highresReady_116: 7267326158214310383
+      WallE  Eve highresReady_117: -9127993687379425424
+      WallE  Eve highresReady_118: 7248931675443671711
+      WallE  Eve highresReady_119: -859145668148394299
+      WallE  Eve highresReady_12: -8593150896307204819
+      WallE  Eve highresReady_120: 3864304037998489997
+      WallE  Eve highresReady_121: 1002996072011566040
+      WallE  Eve highresReady_122: 9092739279900326776
+      WallE  Eve highresReady_123: 8961940168665082503
+      WallE  Eve highresReady_124: -2559583479785424855
+      WallE  Eve highresReady_125: 3279029263739803387
+      WallE  Eve highresReady_126: 1807577371514214368
+      WallE  Eve highresReady_127: 740376374866047952
+      WallE  Eve highresReady_128: -123649539002685450
+      WallE  Eve highresReady_129: -5089698406411738248
+      WallE  Eve highresReady_13: 6365387804109712323
+      WallE  Eve highresReady_130: -4568371694904578180
+      WallE  Eve highresReady_131: -4305910029318060312
+      WallE  Eve highresReady_132: -6600057208954396474
+      WallE  Eve highresReady_133: 8672578064314948657
+      WallE  Eve highresReady_134: -1266278558098205968
+      WallE  Eve highresReady_135: 7376842695690776620
+      WallE  Eve highresReady_136: 3555587358366607860
+      WallE  Eve highresReady_137: -5672592679650256546
+      WallE  Eve highresReady_138: 265833737412209263
+      WallE  Eve highresReady_139: 8705016476483421586
+      WallE  Eve highresReady_14: -5675621452823058354
+      WallE  Eve highresReady_140: -3315028226954342585
+      WallE  Eve highresReady_141: 6384285528902346814
+      WallE  Eve highresReady_142: -6911880202130515412
+      WallE  Eve highresReady_143: 4411268372471304491
+      WallE  Eve highresReady_144: 4222429919890760490
+      WallE  Eve highresReady_145: -2715649616864519999
+      WallE  Eve highresReady_146: 6626541462239066080
+      WallE  Eve highresReady_147: -6013397497717393413
+      WallE  Eve highresReady_148: -2189526387999248202
+      WallE  Eve highresReady_149: 900237798643772317
+      WallE  Eve highresReady_15: -737435230323372719
+      WallE  Eve highresReady_150: -5683161098264887814
+      WallE  Eve highresReady_151: -3965016204932703351
+      WallE  Eve highresReady_152: -7728310147228555067
+      WallE  Eve highresReady_153: 861592207171998990
+      WallE  Eve highresReady_154: 6066507468122767445
+      WallE  Eve highresReady_155: 6803380401806408029
+      WallE  Eve highresReady_156: 5331098121932745828
+      WallE  Eve highresReady_157: -7595117802596214879
+      WallE  Eve highresReady_158: 6388383246605720462
+      WallE  Eve highresReady_159: 8650047798874414350
+      WallE  Eve highresReady_16: -3418783373072427213
+      WallE  Eve highresReady_160: 906068424864797847
+      WallE  Eve highresReady_161: 8632030155730024207
+      WallE  Eve highresReady_162: 185119465306904417
+      WallE  Eve highresReady_163: -4212456846899744861
+      WallE  Eve highresReady_164: -2613349415669977680
+      WallE  Eve highresReady_165: -5129558646853902301
+      WallE  Eve highresReady_166: 6641752686564673458
+      WallE  Eve highresReady_167: 8084794151785976445
+      WallE  Eve highresReady_168: 8865212707750383198
+      WallE  Eve highresReady_169: 2936354020165449531
+      WallE  Eve highresReady_17: 3552227313971546179
+      WallE  Eve highresReady_170: -3090978203315824732
+      WallE  Eve highresReady_171: 7865212533880936257
+      WallE  Eve highresReady_172: -4400094766886674390
+      WallE  Eve highresReady_173: -6915259262437879004
+      WallE  Eve highresReady_174: 677612984427492966
+      WallE  Eve highresReady_175: -1897669698257061015
+      WallE  Eve highresReady_176: 7781305319870546997
+      WallE  Eve highresReady_177: 4237189338076375830
+      WallE  Eve highresReady_178: 4716028541143622458
+      WallE  Eve highresReady_179: -4570861957689733553
+      WallE  Eve highresReady_18: -7206094767661533385
+      WallE  Eve highresReady_180: 4421873699269187121
+      WallE  Eve highresReady_181: -2258867040201687339
+      WallE  Eve highresReady_182: -4899440849161175577
+      WallE  Eve highresReady_183: 7710814422770092139
+      WallE  Eve highresReady_184: -8202824454017123071
+      WallE  Eve highresReady_185: 6991407586350601187
+      WallE  Eve highresReady_186: -9187517792803749720
+      WallE  Eve highresReady_187: 3771376955919192928
+      WallE  Eve highresReady_188: -2589957184815279895
+      WallE  Eve highresReady_189: -491671260105300570
+      WallE  Eve highresReady_19: 3111541526518536517
+      WallE  Eve highresReady_190: 2555576588909459566
+      WallE  Eve highresReady_191: -2623832821257976262
+      WallE  Eve highresReady_192: 6996904026522907770
+      WallE  Eve highresReady_193: 6502001921357702907
+      WallE  Eve highresReady_194: -6288656998594742008
+      WallE  Eve highresReady_195: -700272057896425317
+      WallE  Eve highresReady_196: -8748009020542222877
+      WallE  Eve highresReady_197: -4394814791308967663
+      WallE  Eve highresReady_198: -6742448846419846382
+      WallE  Eve highresReady_199: 2090411983134494139
+      WallE  Eve highresReady_2: -4032845968105959607
+      WallE  Eve highresReady_20: 7223204418175717816
+      WallE  Eve highresReady_200: 8433277032978282070
+      WallE  Eve highresReady_201: 6306496173192779715
+      WallE  Eve highresReady_202: 7040499294731464002
+      WallE  Eve highresReady_203: 8913010314428064597
+      WallE  Eve highresReady_204: 1990557704871955911
+      WallE  Eve highresReady_205: -7753306996956992898
+      WallE  Eve highresReady_206: 6314863008645920221
+      WallE  Eve highresReady_207: -2831309664072365448
+      WallE  Eve highresReady_208: 4279945582086996336
+      WallE  Eve highresReady_209: -5770218564681076809
+      WallE  Eve highresReady_21: 1421949175587689569
+      WallE  Eve highresReady_210: -4078037515886977126
+      WallE  Eve highresReady_211: -5321657180957262009
+      WallE  Eve highresReady_212: -4764443017935458721
+      WallE  Eve highresReady_213: -6298315811767885755
+      WallE  Eve highresReady_214: -8567744063106731535
+      WallE  Eve highresReady_215: -5221707217031394317
+      WallE  Eve highresReady_216: -1873457336845796643
+      WallE  Eve highresReady_217: -3217407965345860042
+      WallE  Eve highresReady_218: -3676531152687098369
+      WallE  Eve highresReady_219: 5952409741783914533
+      WallE  Eve highresReady_22: -135014873851204776
+      WallE  Eve highresReady_220: 8986542433299980446
+      WallE  Eve highresReady_221: -4090964775163628237
+      WallE  Eve highresReady_222: 1763514826973698967
+      WallE  Eve highresReady_223: 2670712174287072779
+      WallE  Eve highresReady_224: 4111810151437597237
+      WallE  Eve highresReady_225: 7259073370803697710
+      WallE  Eve highresReady_226: 1885312069165101850
+      WallE  Eve highresReady_227: 8549097192794871448
+      WallE  Eve highresReady_228: 5116698320949956676
+      WallE  Eve highresReady_229: 1309490356368631776
+      WallE  Eve highresReady_23: -2245182731988072329
+      WallE  Eve highresReady_230: -306497541769821480
+      WallE  Eve highresReady_231: -5935861927992553017
+      WallE  Eve highresReady_232: 1992138607126713053
+      WallE  Eve highresReady_233: 6969831810563257810
+      WallE  Eve highresReady_234: -7679562515296115509
+      WallE  Eve highresReady_235: -2301226603870577335
+      WallE  Eve highresReady_236: -2173041531422506116
+      WallE  Eve highresReady_237: -8421272903327766183
+      WallE  Eve highresReady_238: 8716482974469418478
+      WallE  Eve highresReady_239: 5717762068121871824
+      WallE  Eve highresReady_24: -7588232367507154690
+      WallE  Eve highresReady_240: 7555400242606571527
+      WallE  Eve highresReady_241: 6261326134285658244
+      WallE  Eve highresReady_242: -7945378428746125128
+      WallE  Eve highresReady_243: 8563565033286643935
+      WallE  Eve highresReady_244: 742713765171682021
+      WallE  Eve highresReady_245: 1883917782359877507
+      WallE  Eve highresReady_246: 7327532089724911698
+      WallE  Eve highresReady_247: -7245335381745575372
+      WallE  Eve highresReady_248: -5509482330812042160
+      WallE  Eve highresReady_249: -4825451470737343228
+      WallE  Eve highresReady_25: -1376927058906564054
+      WallE  Eve highresReady_250: -8897118142240581825
+      WallE  Eve highresReady_251: -7521504224362448722
+      WallE  Eve highresReady_252: -3051151836196103996
+      WallE  Eve highresReady_253: 708180957900056834
+      WallE  Eve highresReady_254: -1475129962697266597
+      WallE  Eve highresReady_255: -1944884084183990622
+      WallE  Eve highresReady_256: -4904156186515444908
+      WallE  Eve highresReady_257: -1665345705953224276
+      WallE  Eve highresReady_258: -66220078521894153
+      WallE  Eve highresReady_259: 4316757451343984746
+      WallE  Eve highresReady_26: -233176019452494459
+      WallE  Eve highresReady_260: -8511525753328745880
+      WallE  Eve highresReady_261: 6691525418838232036
+      WallE  Eve highresReady_262: 8082840917913143602
+      WallE  Eve highresReady_263: -5078132892268033433
+      WallE  Eve highresReady_264: 5463116418139853367
+      WallE  Eve highresReady_265: 1949804808087509615
+      WallE  Eve highresReady_266: -6056032166402359684
+      WallE  Eve highresReady_267: 6030344527350977790
+      WallE  Eve highresReady_268: 2284450104761686995
+      WallE  Eve highresReady_269: 3283584549583836607
+      WallE  Eve highresReady_27: -4420753985539259746
+      WallE  Eve highresReady_270: 5638229499817877220
+      WallE  Eve highresReady_271: -4446511673720368764
+      WallE  Eve highresReady_272: 4036666488589188901
+      WallE  Eve highresReady_273: 6883184040966888903
+      WallE  Eve highresReady_274: 4251690068731117939
+      WallE  Eve highresReady_275: 3779727285345678989
+      WallE  Eve highresReady_276: 1327961868620717528
+      WallE  Eve highresReady_277: 7876929697058926846
+      WallE  Eve highresReady_278: 7911809491717529379
+      WallE  Eve highresReady_279: -3773461008829774505
+      WallE  Eve highresReady_28: -3161665053026507538
+      WallE  Eve highresReady_280: 550122177603398554
+      WallE  Eve highresReady_281: -3034239185122464978
+      WallE  Eve highresReady_282: 5046244008288881759
+      WallE  Eve highresReady_283: 6894830734099690172
+      WallE  Eve highresReady_284: -8031273295172021937
+      WallE  Eve highresReady_285: -2324785888741447647
+      WallE  Eve highresReady_286: 7771264726163874331
+      WallE  Eve highresReady_287: 7556570647483231466
+      WallE  Eve highresReady_288: -3368238398729800015
+      WallE  Eve highresReady_289: 2399292162824649552
+      WallE  Eve highresReady_29: -3648578711098581774
+      WallE  Eve highresReady_290: -6093312682250302136
+      WallE  Eve highresReady_291: 1775380291350504833
+      WallE  Eve highresReady_292: 3620658894698387094
+      WallE  Eve highresReady_293: 6135490646194506140
+      WallE  Eve highresReady_294: 9167406697766838516
+      WallE  Eve highresReady_295: 3430548986798323225
+      WallE  Eve highresReady_296: -4304100871132300088
+      WallE  Eve highresReady_297: 3109626017822559395
+      WallE  Eve highresReady_298: -1314686952120271944
+      WallE  Eve highresReady_299: 290648753247787542
+      WallE  Eve highresReady_3: 563183140923203423
+      WallE  Eve highresReady_30: -6745799910228567917
+      WallE  Eve highresReady_300: -932132861057740637
+      WallE  Eve highresReady_301: -7424156774359068045
+      WallE  Eve highresReady_302: 2051727880378726921
+      WallE  Eve highresReady_303: 7841027166270904847
+      WallE  Eve highresReady_304: 7536122669073225255
+      WallE  Eve highresReady_305: 386241690274532681
+      WallE  Eve highresReady_306: 1458959603003290235
+      WallE  Eve highresReady_307: 1820677720023691053
+      WallE  Eve highresReady_308: -1326495915020326405
+      WallE  Eve highresReady_31: -4272326153140966019
+      WallE  Eve highresReady_32: -2377573142947456866
+      WallE  Eve highresReady_33: 535242631606627779
+      WallE  Eve highresReady_34: -9184414011472755638
+      WallE  Eve highresReady_35: -5233097653941992951
+      WallE  Eve highresReady_36: 2460610182253736551
+      WallE  Eve highresReady_37: 9117906102422625743
+      WallE  Eve highresReady_38: 2632047113425459277
+      WallE  Eve highresReady_39: -1503661245215853625
+      WallE  Eve highresReady_4: 4587077210974136118
+      WallE  Eve highresReady_40: 1674201656970033396
+      WallE  Eve highresReady_41: -1540548400488928982
+      WallE  Eve highresReady_42: 5449341303970360410
+      WallE  Eve highresReady_43: -2513195346814573083
+      WallE  Eve highresReady_44: 8673783744475631265
+      WallE  Eve highresReady_45: 354596739754262878
+      WallE  Eve highresReady_46: 1532863795532822838
+      WallE  Eve highresReady_47: 7046121921085531276
+      WallE  Eve highresReady_48: -4327239571534281508
+      WallE  Eve highresReady_49: -5358123731197940707
+      WallE  Eve highresReady_5: -7902096797759846104
+      WallE  Eve highresReady_50: -826923926863142805
+      WallE  Eve highresReady_51: -8822193909479460407
+      WallE  Eve highresReady_52: -839834552801901649
+      WallE  Eve highresReady_53: 3147793649113879022
+      WallE  Eve highresReady_54: 9038972164534455436
+      WallE  Eve highresReady_55: -4290804655772595890
+      WallE  Eve highresReady_56: -7100619723818713960
+      WallE  Eve highresReady_57: -2570241551968032733
+      WallE  Eve highresReady_58: -6438704489896485944
+      WallE  Eve highresReady_59: -920177908117839298
+      WallE  Eve highresReady_6: 4462404646946506769
+      WallE  Eve highresReady_60: 3233143048690602439
+      WallE  Eve highresReady_61: -5912020224728972604
+      WallE  Eve highresReady_62: -6538650853458275504
+      WallE  Eve highresReady_63: 7696264271223803644
+      WallE  Eve highresReady_64: -7508942443038355909
+      WallE  Eve highresReady_65: 3286813029325608077
+      WallE  Eve highresReady_66: 8088602644350049987
+      WallE  Eve highresReady_67: 7407458645258148045
+      WallE  Eve highresReady_68: -7193880008605144797
+      WallE  Eve highresReady_69: -8992129730780992876
+      WallE  Eve highresReady_7: -195072816263279467
+      WallE  Eve highresReady_70: 5444191465972842341
+      WallE  Eve highresReady_71: 6472985167039032711
+      WallE  Eve highresReady_72: -793899590555907565
+      WallE  Eve highresReady_73: 3255130243872244014
+      WallE  Eve highresReady_74: -8822881482521036862
+      WallE  Eve highresReady_75: 1808474676239858135
+      WallE  Eve highresReady_76: 8711233102850410997
+      WallE  Eve highresReady_77: 4204593413487604765
+      WallE  Eve highresReady_78: 2593944028081675701
+      WallE  Eve highresReady_79: 3647604725774346666
+      WallE  Eve highresReady_8: -5016454787259192804
+      WallE  Eve highresReady_80: 8376283370408696719
+      WallE  Eve highresReady_81: 4406508672697082047
+      WallE  Eve highresReady_82: 5337339948570063412
+      WallE  Eve highresReady_83: -2094241493350615352
+      WallE  Eve highresReady_84: -3645985965892904407
+      WallE  Eve highresReady_85: -2652991383574808774
+      WallE  Eve highresReady_86: 627407448215098104
+      WallE  Eve highresReady_87: 4350654441184051380
+      WallE  Eve highresReady_88: 6880528453634756162
+      WallE  Eve highresReady_89: -8186052449176819033
+      WallE  Eve highresReady_9: 6288268445698156241
+      WallE  Eve highresReady_90: 3484148358220113597
+      WallE  Eve highresReady_91: 8610850966710721599
+      WallE  Eve highresReady_92: 7034524203426613318
+      WallE  Eve highresReady_93: 492907891755353472
+      WallE  Eve highresReady_94: -3795620139060894832
+      WallE  Eve highresReady_95: -2965577663270469683
+      WallE  Eve highresReady_96: 2362431587598181072
+      WallE  Eve highresReady_97: 9066973162772578927
+      WallE  Eve highresReady_98: 575054877553430409
+      WallE  Eve highresReady_99: -8401344593861841456
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

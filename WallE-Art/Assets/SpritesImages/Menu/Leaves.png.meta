@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: 67b66da0a8e080044a5444298a26dc31
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3664983861114067704
+    second: Leaves_0
+  - first:
+      213: -5999245757173483519
+    second: Leaves_1
+  - first:
+      213: -8532703326110650893
+    second: Leaves_2
+  - first:
+      213: 83947755850914152
+    second: Leaves_3
+  - first:
+      213: 4689631791232870842
+    second: Leaves_4
+  - first:
+      213: 2386680483698164931
+    second: Leaves_5
+  - first:
+      213: 827997436098469290
+    second: Leaves_6
+  - first:
+      213: -1711180651931834051
+    second: Leaves_7
+  - first:
+      213: 8116455009279416445
+    second: Leaves_8
+  - first:
+      213: 5701419402062966781
+    second: Leaves_9
+  - first:
+      213: -4731681345858023911
+    second: Leaves_10
+  - first:
+      213: -2141654657771513781
+    second: Leaves_11
+  - first:
+      213: 3239464354773693661
+    second: Leaves_12
+  - first:
+      213: 290627534890015195
+    second: Leaves_13
+  - first:
+      213: 2299988372352485806
+    second: Leaves_14
+  - first:
+      213: 9072201688060566901
+    second: Leaves_15
+  - first:
+      213: 5107356080526733812
+    second: Leaves_16
+  - first:
+      213: -2096147677772771710
+    second: Leaves_17
+  - first:
+      213: -6112404303268943824
+    second: Leaves_18
+  - first:
+      213: 5511134909662383566
+    second: Leaves_19
+  - first:
+      213: 4347854857278047751
+    second: Leaves_20
+  - first:
+      213: -3016058925471232367
+    second: Leaves_21
+  - first:
+      213: 6470183001999913984
+    second: Leaves_22
+  - first:
+      213: 8240464303788898323
+    second: Leaves_23
+  - first:
+      213: -624030623784293016
+    second: Leaves_24
+  - first:
+      213: -3722250200174182738
+    second: Leaves_25
+  - first:
+      213: -5783062432315952044
+    second: Leaves_26
+  - first:
+      213: 1885138799462627389
+    second: Leaves_27
+  - first:
+      213: -6360639390083472183
+    second: Leaves_28
+  - first:
+      213: -602716835917783689
+    second: Leaves_29
+  - first:
+      213: -3236202189479837025
+    second: Leaves_30
+  - first:
+      213: -1963357516842587474
+    second: Leaves_31
+  - first:
+      213: -8988225346234151794
+    second: Leaves_32
+  - first:
+      213: -3523124164710046513
+    second: Leaves_33
+  - first:
+      213: -7617557089264502044
+    second: Leaves_34
+  - first:
+      213: 5063322580026662207
+    second: Leaves_35
+  - first:
+      213: -3177492673364954983
+    second: Leaves_36
+  - first:
+      213: -325943213558442727
+    second: Leaves_37
+  - first:
+      213: -236942647612690629
+    second: Leaves_38
+  - first:
+      213: -7836062905359912426
+    second: Leaves_39
+  - first:
+      213: 2657432686753248734
+    second: Leaves_40
+  - first:
+      213: -2224246684760128085
+    second: Leaves_41
+  - first:
+      213: 5238845804559966603
+    second: Leaves_42
+  - first:
+      213: 2094033119121272511
+    second: Leaves_43
+  - first:
+      213: 3693825568369663686
+    second: Leaves_44
+  - first:
+      213: -3129358261842815540
+    second: Leaves_45
+  - first:
+      213: 3622238999126626006
+    second: Leaves_46
+  - first:
+      213: -2850421373197450636
+    second: Leaves_47
+  - first:
+      213: 2095329500134521669
+    second: Leaves_48
+  - first:
+      213: 3427803483435692430
+    second: Leaves_49
+  - first:
+      213: -2999309395026108078
+    second: Leaves_50
+  - first:
+      213: 3328664763696831095
+    second: Leaves_51
+  - first:
+      213: 6484798335767390092
+    second: Leaves_52
+  - first:
+      213: 254861190983047676
+    second: Leaves_53
+  - first:
+      213: 4713837389007045022
+    second: Leaves_54
+  - first:
+      213: -8666437249031175188
+    second: Leaves_55
+  - first:
+      213: -5095570972396257369
+    second: Leaves_56
+  - first:
+      213: -7953995231582597690
+    second: Leaves_57
+  - first:
+      213: 6748518416677613612
+    second: Leaves_58
+  - first:
+      213: 5434284943075885123
+    second: Leaves_59
+  - first:
+      213: 6504014743416445212
+    second: Leaves_60
+  - first:
+      213: 6033121124125365678
+    second: Leaves_61
+  - first:
+      213: 8433157010844770916
+    second: Leaves_62
+  - first:
+      213: 2905805827943384977
+    second: Leaves_63
+  - first:
+      213: -3254830660514328298
+    second: Leaves_64
+  - first:
+      213: -6777862396784047934
+    second: Leaves_65
+  - first:
+      213: -7093996868660808181
+    second: Leaves_66
+  - first:
+      213: 2903413282043435285
+    second: Leaves_67
+  - first:
+      213: -8818685065295698091
+    second: Leaves_68
+  - first:
+      213: 9207691628104584197
+    second: Leaves_69
+  - first:
+      213: 3416057034685579077
+    second: Leaves_70
+  - first:
+      213: 8626039448649651463
+    second: Leaves_71
+  - first:
+      213: -5150242750078929371
+    second: Leaves_72
+  - first:
+      213: -8583204126225114249
+    second: Leaves_73
+  - first:
+      213: 2457946364523694703
+    second: Leaves_74
+  - first:
+      213: 37100661275936981
+    second: Leaves_75
+  - first:
+      213: -946448930936054204
+    second: Leaves_76
+  - first:
+      213: -5111332502917026704
+    second: Leaves_77
+  - first:
+      213: 1991962828367798195
+    second: Leaves_78
+  - first:
+      213: -8272592258842498288
+    second: Leaves_79
+  - first:
+      213: -4618439119039076013
+    second: Leaves_80
+  - first:
+      213: -1037290193362681097
+    second: Leaves_81
+  - first:
+      213: -9008532546779694739
+    second: Leaves_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Leaves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa5e3d5763acd230800000000000000
+      internalID: 3664983861114067704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 375
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1481b1e64acb7404dab43cec5f574da8
+      internalID: -5999245757173483519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 375
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51b25f579216534fbe8a55d404f7f88
+      internalID: -8532703326110650893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 375
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b200e82af3af34ead25662d7dbc13b
+      internalID: 83947755850914152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74754af8102a28341abd37d82f0e87f2
+      internalID: 4689631791232870842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb0369b8c43a544a83ba72aadbcd866
+      internalID: 2386680483698164931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e69042dbd0b4ff4692ed3effdd2019a
+      internalID: 827997436098469290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88ab0d5f75b24946927455ead20df09
+      internalID: -1711180651931834051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0fa49b57a0e8bc347a2fc8339c515b65
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Leaves_0: 3664983861114067704
+      Leaves_1: -5999245757173483519
+      Leaves_2: -8532703326110650893
+      Leaves_3: 83947755850914152
+      Leaves_4: 4689631791232870842
+      Leaves_5: 2386680483698164931
+      Leaves_6: 827997436098469290
+      Leaves_7: -1711180651931834051
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
