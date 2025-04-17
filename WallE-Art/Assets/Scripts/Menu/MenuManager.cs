@@ -9,4 +9,8 @@ public class MenuManager : MonoBehaviour
     public void Editor(){
         SceneManager.LoadScene("Editor");
     }
+
+    public void Jugar(){
+        SceneManager.LoadScene("Jugar");
+    }
 }

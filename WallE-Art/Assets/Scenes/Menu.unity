@@ -255,11 +255,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onActionButtonPressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1734934944}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Jugar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   infoPanelCanvasGroup: {fileID: 1296696968}
   fadeSpeed: 2.5
-  gameObject: {fileID: 39447243}
+  key: {fileID: 39447243}
   animator: {fileID: 39447245}
+  playerIsInside: 0
 --- !u!61 &28210964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1179,8 +1192,9 @@ MonoBehaviour:
         m_CallState: 2
   infoPanelCanvasGroup: {fileID: 1774357416}
   fadeSpeed: 2.5
-  gameObject: {fileID: 39447243}
+  key: {fileID: 39447243}
   animator: {fileID: 39447245}
+  playerIsInside: 0
 --- !u!61 &807938869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1463,8 +1477,9 @@ MonoBehaviour:
       m_Calls: []
   infoPanelCanvasGroup: {fileID: 1169639917}
   fadeSpeed: 2.5
-  gameObject: {fileID: 39447243}
+  key: {fileID: 39447243}
   animator: {fileID: 39447245}
+  playerIsInside: 0
 --- !u!61 &862944877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2839,8 +2854,9 @@ MonoBehaviour:
         m_CallState: 2
   infoPanelCanvasGroup: {fileID: 990850}
   fadeSpeed: 2.5
-  gameObject: {fileID: 39447243}
+  key: {fileID: 39447243}
   animator: {fileID: 39447245}
+  playerIsInside: 0
 --- !u!61 &1598876040
 BoxCollider2D:
   m_ObjectHideFlags: 0
