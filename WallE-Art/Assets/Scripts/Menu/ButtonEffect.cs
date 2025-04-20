@@ -25,6 +25,7 @@ public class ButtonEffect : MonoBehaviour
     
         if (playerIsInside && Input.GetKeyDown(KeyCode.Return))
         {
+            if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
             onActionButtonPressed.Invoke();
         }
     }
@@ -57,10 +58,8 @@ public class ButtonEffect : MonoBehaviour
     private void FadePanel(bool fadeIn)
     {
         if (!gameObject.activeInHierarchy) return;
-        if (fadeCoroutine != null)
-        {
-            StopCoroutine(fadeCoroutine);
-        }
+        if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+        
         float targetAlpha = fadeIn ? 1f : 0f;
         fadeCoroutine = StartCoroutine(FadeCanvasGroup(infoPanelCanvasGroup, targetAlpha, fadeSpeed));
 

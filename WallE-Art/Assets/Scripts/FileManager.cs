@@ -6,6 +6,7 @@ using TMPro;
 public class FileManager : MonoBehaviour
 {
     [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private TMP_InputField compiler;
 
     public string LoadScriptFromFile()
     {
@@ -16,21 +17,16 @@ public class FileManager : MonoBehaviour
             try
             {
                 string content = File.ReadAllText(path);
-                Debug.Log($"File loaded successfully from: {path}");
                 return content;
             }
             catch (IOException ex)
             {
-                Debug.LogError($"Error loading file: {ex.Message}");
+                compiler.text = $"Error loading file: {ex.Message}";
             }
             catch (System.Exception ex)
             {
-                Debug.LogError($"An unexpected error occurred while loading file: {ex.Message}");
+                compiler.text = $"An unexpected error occurred while loading file: {ex.Message}";
             }
-        }
-        else
-        {
-            Debug.Log("File load cancelled or path was invalid.");
         }
         return null;
     }
@@ -44,21 +40,16 @@ public class FileManager : MonoBehaviour
             try
             {
                 File.WriteAllText(path, inputField.text);
-                Debug.Log($"File saved successfully to: {path}");
                 return true;
             }
             catch (IOException ex)
             {
-                Debug.LogError($"Error saving file: {ex.Message}");
+                compiler.text = $"Error saving file: {ex.Message}";
             }
             catch (System.Exception ex)
             {
-                Debug.LogError($"An unexpected error occurred while saving file: {ex.Message}");
+                compiler.text = $"An unexpected error occurred while saving file: {ex.Message}";
             }
-        }
-        else
-        {
-            Debug.Log("File save cancelled or path was invalid.");
         }
         return false;
     }
@@ -71,12 +62,7 @@ public class FileManager : MonoBehaviour
         {
             string content = File.ReadAllText(paths[0]);
             inputField.text = content;
-            Debug.Log("Archivo cargado desde: " + paths[0]);
             return paths[0];
-        }
-        else
-        {
-            Debug.Log("Carga cancelada.");
         }
 
         return null;
@@ -90,12 +76,7 @@ public class FileManager : MonoBehaviour
         {
             string content = inputField.text;
             File.WriteAllText(path, content);
-            Debug.Log("Archivo guardado en: " + path);
             return path;
-        }
-        else
-        {
-            Debug.Log("Guardado cancelado.");
         }
 
         return null;
