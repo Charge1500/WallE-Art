@@ -98,6 +98,7 @@ public class JugarManager : MonoBehaviour
         if (paths.Length > 0 && !string.IsNullOrEmpty(paths[0]))
         {
             code = File.ReadAllText(paths[0]);
+            LevelLoader.Instance.SetEditorText(code);
             address.text = paths[0];
             info.text = "Archivo cargado con éxito";
         }

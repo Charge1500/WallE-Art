@@ -38,7 +38,9 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        
+        codeEditorInput.text = LevelLoader.Instance.editorText;
+        LevelLoader.Instance.SetEditorText("");
+
         canvasController.InitializeCanvas(defaultCanvasSize);
         canvasDisplayImage.texture = canvasController.GetCanvasTexture();
         sizeInput.text = defaultCanvasSize.ToString();
@@ -99,6 +101,8 @@ public class UIManager : MonoBehaviour
 
     private void OnExecuteButtonPressed()
     {
+        canvasController.InitializeCanvas(canvasDisplayImage.texture.height);
+        canvasDisplayImage.texture = canvasController.GetCanvasTexture();
         string sourceCode = codeEditorInput.text;
         ExecuteCode(sourceCode);
     }
@@ -158,6 +162,10 @@ public class UIManager : MonoBehaviour
                 ShowError(error);
             }
         }
+        else
+        {
+            ShowStatus("(No errors)");
+        }
 
         ShowStatus("--- Parser Phase ---");
         Parser parser = new Parser(tokens); 
@@ -173,12 +181,33 @@ public class UIManager : MonoBehaviour
 
         if (astRoot.Statements != null)
         {
-            astRoot.Statements.ToString();
+            foreach (StatementNode statement in astRoot.Statements)
+            {
+                ShowStatus(statement.ToString());
+            }
         }
         else
         {
             ShowStatus("Parser finished, but no AST generated (or empty program).");
         }
+
+        ShowStatus("--- Executing Statements Phase ---");
+        Interpreter interpreter = new Interpreter(canvasDisplayImage.texture as Texture2D); 
+        Texture2D texture= interpreter.Interpret(astRoot);
+
+        if (interpreter.errors != null)
+        {
+            foreach (string error in interpreter.errors)
+            {
+                ShowError(error);
+            }
+        }
+        if(interpreter.errors == null && parser.errors == null && lexer.errors == null){
+            canvasDisplayImage.texture = texture;
+        }
+
+        ShowStatus("PROGRAM ENDS");
+        
     }
 
 }

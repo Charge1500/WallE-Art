@@ -1,10 +1,29 @@
 using System.Collections.Generic;
-using System.Linq; 
+using System.Linq;
 
-namespace Interprete{
+namespace Interprete
+{
+    public interface IAstVisitor<T>
+    {
+
+        T VisitLiteralNode<TValue>(LiteralNode<TValue> node); 
+        T VisitVariableNode(VariableNode node);
+        T VisitUnaryOpNode(UnaryOpNode node);
+        T VisitBinaryOpNode(BinaryOpNode node);
+        T VisitFunctionCallNode(FunctionCallNode node);
+        T VisitCommandNode(CommandNode node);
+
+        
+        T VisitProgramNode(ProgramNode node);
+        T VisitAssignmentNode(AssignmentNode node);
+        T VisitGoToNode(GoToNode node);
+    }
+
+
+
     public abstract class AstNode
     {
-        // public Token TokenInfo { get; protected set; } // Ejemplo
+        public abstract object Accept(IAstVisitor<object> visitor);
     }
 
     public abstract class StatementNode : AstNode { }
@@ -22,6 +41,11 @@ namespace Interprete{
             Token = token;
         }
         public override string ToString() => $"{Value}";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitLiteralNode(this); 
+        }
     }
 
     public class VariableNode : ExpressionNode
@@ -33,6 +57,11 @@ namespace Interprete{
             NameToken = nameToken;
         }
         public override string ToString() => $"{NameToken.Value}";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitVariableNode(this);
+        }
     }
 
     public class UnaryOpNode : ExpressionNode
@@ -46,6 +75,11 @@ namespace Interprete{
             Right = right;
         }
         public override string ToString() => $"({OperatorToken.Value}{Right})";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitUnaryOpNode(this);
+        }
     }
 
     public class BinaryOpNode : ExpressionNode
@@ -61,6 +95,11 @@ namespace Interprete{
             Right = right;
         }
         public override string ToString() => $"({Left} {OperatorToken.Value} {Right})";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitBinaryOpNode(this);
+        }
     }
 
     public class FunctionCallNode : ExpressionNode
@@ -74,12 +113,22 @@ namespace Interprete{
             Arguments = arguments;
         }
         public override string ToString() => $"{FunctionNameToken.Value}({string.Join(", ", Arguments)})";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitFunctionCallNode(this);
+        }
     }
 
     public class ProgramNode : AstNode
     {
         public List<StatementNode> Statements { get; } = new List<StatementNode>();
         public override string ToString() => $"Program({Statements.Count} statements)";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitProgramNode(this);
+        }
     }
 
     public class AssignmentNode : StatementNode
@@ -93,22 +142,31 @@ namespace Interprete{
             ValueExpression = valueExpression;
         }
         public override string ToString() => $"{VariableNameToken.Value} <- {ValueExpression}";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitAssignmentNode(this);
+        }
     }
 
     public class LabelNode : StatementNode
     {
-        public Token LabelToken { get; } // El IDENTIFIER que actúa como etiqueta
-
+        public Token LabelToken { get; }
         public LabelNode(Token labelToken)
         {
             LabelToken = labelToken;
         }
         public override string ToString() => $"Label: {LabelToken.Value}";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return null;
+        }
     }
 
     public class GoToNode : StatementNode
     {
-        public Token TargetLabelToken { get; } 
+        public Token TargetLabelToken { get; }
         public ExpressionNode Condition { get; }
 
         public GoToNode(Token targetLabelToken, ExpressionNode condition)
@@ -117,54 +175,24 @@ namespace Interprete{
             Condition = condition;
         }
         public override string ToString() => $"GoTo [{TargetLabelToken.Value}] ({Condition})";
+
+        public override object Accept(IAstVisitor<object> visitor)
+        {
+            return visitor.VisitGoToNode(this);
+        }
     }
 
-    public abstract class CommandNode : StatementNode
+    public class CommandNode : StatementNode
     {
         public Token CommandToken { get; }
         public List<ExpressionNode> Arguments { get; }
 
-        protected CommandNode(Token commandToken, List<ExpressionNode> arguments)
+        public CommandNode(Token commandToken, List<ExpressionNode> arguments)
         {
             CommandToken = commandToken;
             Arguments = arguments;
         }
         public override string ToString() => $"{CommandToken.Value}({string.Join(", ", Arguments)})";
-    }
-
-    public class SpawnNode : CommandNode
-    {
-        public SpawnNode(Token commandToken, List<ExpressionNode> arguments) : base(commandToken, arguments) { }
-    }
-
-    public class ColorNode : CommandNode
-    {
-        public ColorNode(Token commandToken, List<ExpressionNode> arguments) : base(commandToken, arguments) { }
-    }
-
-    public class SizeNode : CommandNode
-    {
-        public SizeNode(Token commandToken, List<ExpressionNode> arguments) : base(commandToken, arguments) { }
-    }
-
-    public class DrawLineNode : CommandNode
-    {
-        public DrawLineNode(Token commandToken, List<ExpressionNode> arguments) : base(commandToken, arguments) { }
-    }
-
-    public class DrawCircleNode : CommandNode
-    {
-        public DrawCircleNode(Token commandToken, List<ExpressionNode> arguments) : base(commandToken, arguments) { }
-    }
-
-    public class DrawRectangleNode : CommandNode
-    {
-        public DrawRectangleNode(Token commandToken, List<ExpressionNode> arguments) : base(commandToken, arguments) { }
-    }
-
-    public class FillNode : CommandNode
-    {
-        public FillNode(Token commandToken) : base(commandToken, new List<ExpressionNode>()) { }
-        public override string ToString() => $"{CommandToken.Value}()"; 
+        public override object Accept(IAstVisitor<object> visitor) { return visitor.VisitCommandNode(this); }
     }
 }

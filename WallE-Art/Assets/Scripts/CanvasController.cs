@@ -41,22 +41,4 @@ public class CanvasController : MonoBehaviour
     {
         return currentSize;
     }
-
-    /*
-    public void SetPixelColor(int x, int y, Color color)
-    public Color GetPixelColor(int x, int y) 
-    public void ApplyTextureChanges() 
-    public void DrawLine(...) 
-    public void DrawCircle(...)
-    etc.
-    */
-
-    void OnDestroy()
-    {
-        if (canvasTexture != null)
-        {
-            Destroy(canvasTexture);
-            Debug.Log("Canvas texture destroyed.");
-        }
-    }
 }

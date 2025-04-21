@@ -125,57 +125,73 @@ namespace Interprete{
 
         private CommandNode ParseCommand()
         {
-            Token commandToken = Advance();
+            List<ExpressionNode> args = new List<ExpressionNode>();
+            Token functionKeyword = Advance();
+            (functionKeyword,args) = FunctionCommandNode(functionKeyword);
+
+            return new CommandNode(functionKeyword, args);
+        }
+        private FunctionCallNode ParseFunctionCall()
+        {
+            List<ExpressionNode> args = new List<ExpressionNode>();
+            Token functionKeyword = Advance();
+            (functionKeyword,args) = FunctionCommandNode(functionKeyword);
+
+            return new FunctionCallNode(functionKeyword, args);
+        }
+
+        public (Token, List<ExpressionNode>) FunctionCommandNode(Token functionKeyword){
+            Consume(TokenType.LeftParen, $"Expected '(' after function name '{functionKeyword.Value}'.");
+
             List<ExpressionNode> args = new List<ExpressionNode>();
 
-            Consume(TokenType.LeftParen, $"Expected '(' after command '{commandToken.Value}'.");
-
-            if (commandToken.Type == TokenType.FillKeyword)
-            {
-                if (!Check(TokenType.RightParen))
-                {
-                    throw new ParseException($"Command '{commandToken.Value}' does not take arguments.", Peek());
-                }
-                Consume(TokenType.RightParen, $"Expected ')' after command '{commandToken.Value}'.");
-                return new FillNode(commandToken);
-            }
+            int expectedArgs = GetExpectedArgumentCount(functionKeyword);
 
             if (!Check(TokenType.RightParen))
             {
+                if (expectedArgs == 0)
+                {
+                    throw new ParseException($"Function '{functionKeyword.Value}' does not take arguments.", Peek());
+                }
                 do
                 {
                     args.Add(ParseExpression());
                 } while (Match(TokenType.Comma));
             }
-
-            Consume(TokenType.RightParen, $"Expected ')' or ',' after argument list for command '{commandToken.Value}'.");
-
-            int expectedArgs = -1;
-            switch (commandToken.Type)
+            else
             {
-                case TokenType.SpawnKeyword: expectedArgs = 2; break;
-                case TokenType.ColorKeyword: expectedArgs = 1; break;
-                case TokenType.SizeKeyword: expectedArgs = 1; break;
-                case TokenType.DrawLineKeyword: expectedArgs = 3; break;
-                case TokenType.DrawCircleKeyword: expectedArgs = 3; break;
-                case TokenType.DrawRectangleKeyword: expectedArgs = 5; break;
-                default:
-                    throw new ParseException($"Internal Parser Error: Unhandled command keyword '{commandToken.Value}'.", commandToken);
+                if (expectedArgs > 0) {
+                    throw new ParseException($"Function '{functionKeyword.Value}' requires arguments.", functionKeyword);
+                } 
             }
-            ValidateArgumentCount(commandToken, args, expectedArgs);
 
-            switch (commandToken.Type)
-            {
-                case TokenType.SpawnKeyword: return new SpawnNode(commandToken, args);
-                case TokenType.ColorKeyword: return new ColorNode(commandToken, args);
-                case TokenType.SizeKeyword: return new SizeNode(commandToken, args);
-                case TokenType.DrawLineKeyword: return new DrawLineNode(commandToken, args);
-                case TokenType.DrawCircleKeyword: return new DrawCircleNode(commandToken, args);
-                case TokenType.DrawRectangleKeyword: return new DrawRectangleNode(commandToken, args);
-                default: throw new InvalidOperationException("Should not reach here");
-            }
+            Consume(TokenType.RightParen, $"Expected ')' or ',' after argument list for function '{functionKeyword.Value}'.");
+
+            ValidateArgumentCount(functionKeyword, args, expectedArgs);
+            return (functionKeyword, args);
         }
 
+        private int GetExpectedArgumentCount(Token functionKeyword)
+        {
+            switch (functionKeyword.Type)
+            {
+                case TokenType.SpawnKeyword: return 2;
+                case TokenType.ColorKeyword: return 1;
+                case TokenType.SizeKeyword: return 1;
+                case TokenType.DrawLineKeyword: return 3;
+                case TokenType.DrawCircleKeyword: return 3;
+                case TokenType.DrawRectangleKeyword: return 5;
+                case TokenType.FillKeyword: return 0;
+                case TokenType.GetActualXKeyword: return 0;
+                case TokenType.GetActualYKeyword: return 0;
+                case TokenType.GetCanvasSizeKeyword: return 0;
+                case TokenType.GetColorCountKeyword: return 5; 
+                case TokenType.IsBrushColorKeyword: return 1; 
+                case TokenType.IsBrushSizeKeyword: return 1; 
+                case TokenType.IsCanvasColorKeyword: return 3;
+                default: return -1;
+            }
+        }
         private ExpressionNode ParseExpression()
         {
             return ParseLogicalOr();
@@ -317,56 +333,6 @@ namespace Interprete{
                 return expr;
             }
             throw new ParseException($"Expected expression (number, string, variable, function call, or parentheses).", Peek());
-        }
-
-        private FunctionCallNode ParseFunctionCall()
-        {
-            Token functionKeyword = Advance();
-
-            Consume(TokenType.LeftParen, $"Expected '(' after function name '{functionKeyword.Value}'.");
-
-            List<ExpressionNode> args = new List<ExpressionNode>();
-
-            int expectedArgs = GetExpectedArgumentCount(functionKeyword);
-
-            if (!Check(TokenType.RightParen))
-            {
-                if (expectedArgs == 0)
-                {
-                    throw new ParseException($"Function '{functionKeyword.Value}' does not take arguments.", Peek());
-                }
-                do
-                {
-                    args.Add(ParseExpression());
-                } while (Match(TokenType.Comma));
-            }
-            else
-            {
-                if (expectedArgs > 0) {
-                    throw new ParseException($"Function '{functionKeyword.Value}' requires arguments.", functionKeyword);
-                } 
-            }
-
-            Consume(TokenType.RightParen, $"Expected ')' or ',' after argument list for function '{functionKeyword.Value}'.");
-
-            ValidateArgumentCount(functionKeyword, args, expectedArgs);
-
-            return new FunctionCallNode(functionKeyword, args);
-        }
-
-        private int GetExpectedArgumentCount(Token functionKeyword)
-        {
-            switch (functionKeyword.Type)
-            {
-                case TokenType.GetActualXKeyword: return 0;
-                case TokenType.GetActualYKeyword: return 0;
-                case TokenType.GetCanvasSizeKeyword: return 0;
-                case TokenType.GetColorCountKeyword: return 5; 
-                case TokenType.IsBrushColorKeyword: return 1; 
-                case TokenType.IsBrushSizeKeyword: return 1; 
-                case TokenType.IsCanvasColorKeyword: return 3;
-                default: return -1;
-            }
         }
 
         private bool IsAtEnd()
