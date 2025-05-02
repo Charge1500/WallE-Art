@@ -107,6 +107,8 @@ public class UIManager : MonoBehaviour
         ExecuteCode(sourceCode);
     }
     public void Menu(){
+        codeEditorInput.text="";
+        statusTextEditor.text="";
         SceneManager.LoadScene("Menu");
     }
     public void Clean(){
@@ -193,7 +195,7 @@ public class UIManager : MonoBehaviour
 
         ShowStatus("--- Executing Statements Phase ---");
         Interpreter interpreter = new Interpreter(canvasDisplayImage.texture as Texture2D); 
-        Texture2D texture= interpreter.Interpret(astRoot);
+        Texture2D texture = interpreter.Interpret(astRoot);
 
         if (interpreter.errors != null)
         {

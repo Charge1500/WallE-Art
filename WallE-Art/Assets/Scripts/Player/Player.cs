@@ -138,10 +138,10 @@ public class PlayerController2D : MonoBehaviour
         }
         else
         {
-             if (animator.GetBool("IsInactive") && !isInactive)
-             {
-                animator.SetBool("IsInactive", false);
-             }
+            if (animator.GetBool("IsInactive") && !isInactive)
+            {
+            animator.SetBool("IsInactive", false);
+            }
         }
     }
 

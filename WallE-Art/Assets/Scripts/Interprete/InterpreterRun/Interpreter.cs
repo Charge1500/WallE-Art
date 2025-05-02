@@ -5,6 +5,9 @@ using UnityEngine;
 using Interprete;
 public partial class Interpreter : IAstVisitor<object> 
 {
+    private int max_execution_steps = int.MaxValue;
+    private int _executedSteps = 0;
+
     private Scope scope = new Scope();
     private Texture2D texture; 
 
@@ -28,6 +31,7 @@ public partial class Interpreter : IAstVisitor<object>
     {
         _programAst = program ?? throw new ArgumentNullException(nameof(program));
         _programCounter = 0;
+        _executedSteps = 0;
         _currentBrushColor = Color.clear; 
         _currentBrushSize = 1;
         scope = new Scope();
@@ -39,11 +43,16 @@ public partial class Interpreter : IAstVisitor<object>
 
             while (_programCounter < program.Statements.Count)
             {
+                _executedSteps++;
+                if (_executedSteps > max_execution_steps)
+                {
+                    throw new RuntimeException($"Execution aborted: Maximum step limit ({max_execution_steps}) exceeded. Possible infinite loop.");
+                }
                 _goToExecuted = false;
                 StatementNode currentStatement = program.Statements[_programCounter];
 
                 Execute(currentStatement);
-
+            
                 if (!_goToExecuted)
                 {
                     _programCounter++;

@@ -29,11 +29,6 @@ public partial class Interpreter
         return null;
     }
 
-    /* public object VisitLabelNode(LabelNode node)
-    {
-        return null;
-    } */
-
     public object VisitGoToNode(GoToNode node)
     {
         object conditionValue = Evaluate(node.Condition);
@@ -228,33 +223,38 @@ public partial class Interpreter
 
     public object ExecuteFill(Token commandToken, List<object> args)
     {
-        int canvasSize = texture.width;
-        
         Color targetColor = texture.GetPixel(_walleX, _walleY);
 
         if (InterpreterHelpers.ColorsApproximatelyEqual(_currentBrushColor, targetColor) || _currentBrushColor == Color.clear)
         {
             return null;
-        }
-
-        HashSet<(int, int)> visited = new HashSet<(int, int)>(); 
-        FillCanvas(_walleX,_walleY,targetColor,canvasSize,visited);
+        } 
+        FloodFillIterative(_walleX,_walleY,targetColor);
 
         return null;
     }
-    public void FillCanvas(int x,int y,Color targetColor,int canvasSize, HashSet<(int, int)> visited){
+    public void FloodFillIterative(int startX, int startY, Color targetColor) {
+    int w = texture.width, h = texture.height;
+    var toProcess = new Stack<(int x,int y)>();
+    var visited   = new HashSet<(int,int)>();
+    toProcess.Push((startX, startY));
 
+    while (toProcess.Count > 0) {
+            var (x,y) = toProcess.Pop();
+            if (x < 0 || x >= w || y < 0 || y >= h) continue;
+            if (visited.Contains((x,y))) continue;
 
-        if (x < 0 || x >= canvasSize || y < 0 || y >= canvasSize || visited.Contains((x,y))) return;
-        visited.Add((x,y));
-        
+            Color c = texture.GetPixel(x,y);
+            if (!InterpreterHelpers.ColorsApproximatelyEqual(c, targetColor))
+                continue;
 
-        if (!InterpreterHelpers.ColorsApproximatelyEqual(texture.GetPixel(x, y), targetColor)) return;
-        texture.SetPixel(x, y, _currentBrushColor);
-        FillCanvas(x + 1, y,targetColor,canvasSize,visited); 
-        FillCanvas(x - 1, y,targetColor,canvasSize,visited);
-        FillCanvas(x, y + 1,targetColor,canvasSize,visited);
-        FillCanvas(x, y - 1,targetColor,canvasSize,visited);
-        
+            texture.SetPixel(x, y, _currentBrushColor);
+            visited.Add((x,y));
+
+            toProcess.Push((x+1, y));
+            toProcess.Push((x-1, y));
+            toProcess.Push((x, y+1));
+            toProcess.Push((x, y-1));
+        }
     }
 }

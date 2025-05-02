@@ -1208,6 +1208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 398426997}
   - component: {fileID: 398426998}
+  - component: {fileID: 398426999}
   m_Layer: 0
   m_Name: JugarManager
   m_TagString: Untagged
@@ -1275,6 +1276,7 @@ MonoBehaviour:
   nextLevelsButtonObject: {fileID: 1518018915}
   previousLevelsButton: {fileID: 1338733404}
   previousLevelsButtonObject: {fileID: 1338733402}
+  canvasController: {fileID: 398426999}
   addLevelPanel: {fileID: 694971992}
   cancelLevelPanel: {fileID: 100074168}
   addLevel: {fileID: 1287913772}
@@ -1283,6 +1285,19 @@ MonoBehaviour:
   address: {fileID: 326964949}
   info: {fileID: 619076933}
   code: 
+  size: {fileID: 671845424}
+--- !u!114 &398426999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398426996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ad8520cbae0b441927accaa8333497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &415251427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,7 +2263,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: 64
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0

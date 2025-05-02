@@ -3,6 +3,7 @@ public class LevelLoader : MonoBehaviour
 {
     public static LevelLoader Instance; 
     public Texture2D level { get; private set; }
+    public (int,int) wallePos { get; private set; }
     public string editorText { get; private set; }
 
     private void Awake()
@@ -25,5 +26,9 @@ public class LevelLoader : MonoBehaviour
     public void SetEditorText(string text)
     {
         editorText = text;
+    }
+    public void SetWallePos((int,int) pos)
+    {
+        wallePos = pos;
     }
 }
