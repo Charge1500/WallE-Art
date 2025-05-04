@@ -8,15 +8,18 @@ public class UIManager : MonoBehaviour
 {
     [Header("UI Elements")]
     [SerializeField] private RawImage canvasDisplayImage; 
+
     [SerializeField] private TMP_InputField sizeInput;    
     [SerializeField] private TMP_InputField codeEditorInput;
     [SerializeField] private TMP_InputField statusTextEditor;
+
     [SerializeField] private Button resizeButton;     
     [SerializeField] private Button loadButton;       
     [SerializeField] private Button saveButton;       
     [SerializeField] private Button executeButton;    
     [SerializeField] private Button menuButton;    
-    [SerializeField] private Button cleanButton;    
+    [SerializeField] private Button cleanButton;   
+
     [SerializeField] private Toggle showCodeEditor;    
     [SerializeField] private Toggle showErrorArea;    
     [SerializeField] private Toggle showBook;    
@@ -83,6 +86,7 @@ public class UIManager : MonoBehaviour
         string loadedCode = fileManager.LoadScriptFromFile();
         if (loadedCode != null) {
             codeEditorInput.text = loadedCode;
+            codeEditorInput.textComponent.rectTransform.anchoredPosition = Vector2.zero;
             ShowStatus("Archivo cargado correctamente.");
         } else {
             ShowError("Fallo al cargar el archivo o cancelado.");
@@ -113,6 +117,7 @@ public class UIManager : MonoBehaviour
     }
     public void Clean(){
         statusTextEditor.text="";
+        statusTextEditor.textComponent.rectTransform.anchoredPosition = Vector2.zero;
     }
 
     public void ActiveCodeEditor(bool activate){

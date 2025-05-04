@@ -5,9 +5,9 @@ using TMPro;
 public class LineNumber : MonoBehaviour
 {
     [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private TMP_Text lineNumberText;
-    [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private TMP_InputField lineNumber;
     [SerializeField] private RectTransform lineNumbersRect;
+    [SerializeField] private RectTransform codeRect;
 
     private void Start()
     {
@@ -15,13 +15,13 @@ public class LineNumber : MonoBehaviour
         UpdateLineNumbers(inputField.text);
     }
 
-    private void SyncScroll()
+    private void Update()
     {
-        Vector2 textPos = inputField.textComponent.rectTransform.anchoredPosition;
-        lineNumbersRect.anchoredPosition = new Vector2(
-            lineNumbersRect.anchoredPosition.x,
-            textPos.y
-        );
+         if(lineNumbersRect.anchoredPosition.y != codeRect.anchoredPosition.y){
+            Vector2 pos = lineNumbersRect.anchoredPosition;
+            pos.y = codeRect.anchoredPosition.y; 
+            lineNumbersRect.anchoredPosition = pos;
+        } 
     }
 
 
@@ -29,11 +29,11 @@ public class LineNumber : MonoBehaviour
     private void UpdateLineNumbers(string text)
     {
         int lineCount = text.Split('\n').Length;;
-        lineNumberText.text = "";
+        lineNumber.text = "";
 
         for (int i = 1; i <= lineCount; i++)
         {
-            lineNumberText.text += i + "\n";
+            lineNumber.text += i + "\n";
         }
     }
 }
