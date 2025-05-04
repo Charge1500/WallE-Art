@@ -4,52 +4,66 @@ using System.Collections.Generic;
 
 public class TextureToTile : MonoBehaviour
 {
-    public GameObject walle;
+    [SerializeField] public GameObject walle;
     [Header("Configuración")]
-    public float cellSize = 0.5f;
+    [SerializeField] private float cellSize = 0.5f;
 
-    public Texture2D sourceTexture;
-    public LevelManager levelManager;
+    [SerializeField] private Texture2D sourceTexture;
+    [SerializeField] public PolygonCollider2D  polyCollider;
+    [SerializeField] private GameObject  cineMachineConfiner;
 
     [Header("Tilemap")]
-    public Tilemap tilemap;
-    Dictionary<(int x, int y), int> tilePosition = new Dictionary<(int x, int y), int>();
-
+    [SerializeField] Tilemap tilemap;
+    [SerializeField] Dictionary<(int x, int y), int> tilePosition = new Dictionary<(int x, int y), int>();
+    [SerializeField] private List<(int x, int y)> keysToProcess= new List<(int x, int y)>();
     [Header("Mapeo de colores")]
-    public List<TileBase> tiles = new List<TileBase>();
+    [SerializeField] private List<TileBase> tiles = new List<TileBase>();
     private List<Color> colorOfTilesBlue = new List<Color>();
     private List<Color> colorOfTilesBlack = new List<Color>();
-    public List<ColorToTile> colorTileMappings = new List<ColorToTile>();
+    [SerializeField] private List<ColorToTile> colorTileMappings = new List<ColorToTile>();
+    [SerializeField] private TileBase blueBackgroundTile;
+    [SerializeField] private TileBase blackBackgroundTile;
 
     void Awake(){
-        levelManager=GetComponent<LevelManager>();
+        sourceTexture = LevelLoader.Instance.level;
         ColorOfTilesBlue();
         ColorOfTilesBlack();
         SetColorTiles();
+        blueBackgroundTile=tiles[0];
+        blackBackgroundTile=tiles[tiles.Count-1];
+        GenerateWalle();
     }
     void Start()
     {
-        sourceTexture = levelManager.levelToLoad;
         GenerateColliderFromTexture();
         GenerateGridFromTexture();
+        GenerateObjectsTiles();
         UpdateAllTiles(); 
-        GenerateWalle();
     }
     
     public void GenerateColliderFromTexture()
     {
         float width = sourceTexture.width * cellSize;
         float height = sourceTexture.height * cellSize;
-        Vector2[] points = new Vector2[5];
-        points[0] = new Vector2(0, 0);         
+
+        Vector2[] points = new Vector2[4];
+        points[0] = new Vector2(0, 0);          
         points[1] = new Vector2(width, 0);      
         points[2] = new Vector2(width, height); 
         points[3] = new Vector2(0, height);     
-        points[4] = new Vector2(0, 0);
-
-        EdgeCollider2D edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
+        polyCollider = cineMachineConfiner.AddComponent<PolygonCollider2D>();
+        polyCollider.isTrigger = true;
+        polyCollider.SetPath(0, points); 
         
-        edgeCollider.points = points;
+        Vector2[] points2 = new Vector2[5];
+        points2[0] = new Vector2(0, 0);         
+        points2[1] = new Vector2(width, 0);      
+        points2[2] = new Vector2(width, height); 
+        points2[3] = new Vector2(0, height);     
+        points2[4] = new Vector2(0, 0);
+        EdgeCollider2D edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
+        edgeCollider.points = points2;
+
     }
 
     public void GenerateGridFromTexture()
@@ -65,14 +79,71 @@ public class TextureToTile : MonoBehaviour
 
                 if (tile != null)
                 {
-                    Vector3Int tilePosition = new Vector3Int(x, y, 0);
-                    tilemap.SetTile(tilePosition, tile); 
+                    Vector3Int tilePos = new Vector3Int(x, y, 0);
+                    tilemap.SetTile(tilePos, tile); 
+                    continue;
                 }
+                tilePosition[(x,y)] = -1;
+                keysToProcess.Add((x,y));
             }
         }
     }
 
+    public void GenerateObjectsTiles(){
+        foreach ((int x,int y) coordenada in keysToProcess)
+        {
+            if(tilePosition[coordenada]==-1) AssignBackgroundToObject(coordenada.x,coordenada.y);
+        }
+    }
+    public void AssignBackgroundToObject(int startX, int startY)
+    {
+        Queue<(int x, int y)> queue = new Queue<(int x, int y)>();
+        HashSet<(int x, int y)> visited = new HashSet<(int x, int y)>();
+        (int, int)[] dirs = { (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1), (-1, 0), (-1, 1) };
 
+        queue.Enqueue((startX, startY));
+        visited.Add((startX, startY));
+
+        bool foundBackground = false;
+        Vector3Int originalPos = new Vector3Int(startX, startY, 0);
+
+        while (queue.Count > 0)
+        {
+            (int x,int y) current = queue.Dequeue();
+            int cx = current.x;
+            int cy = current.y;
+
+            if (tilePosition.TryGetValue((cx, cy), out int backgroundType) && backgroundType != -1)
+            {
+                TileBase backgroundTileToSet = (backgroundType == 0) ? blueBackgroundTile : blackBackgroundTile;
+
+                tilemap.SetTile(originalPos, backgroundTileToSet);
+
+                tilePosition[(startX, startY)] = backgroundType;
+
+                foundBackground = true;
+                break;
+            }
+
+            foreach ((int dx, int dy) in dirs)
+            {
+                int nx = cx + dx;
+                int ny = cy + dy;
+
+                if (nx >= 0 && nx < sourceTexture.width && ny >= 0 && ny < sourceTexture.height && !visited.Contains((nx, ny)))
+                {
+                    visited.Add((nx, ny));
+                    queue.Enqueue((nx, ny));
+                }
+            }
+        }
+
+        if (!foundBackground)
+        {
+            tilemap.SetTile(originalPos, blackBackgroundTile);
+            tilePosition[(startX, startY)] = 1;
+        }
+    }
     void UpdateAllTiles()
     {
         BoundsInt bounds = tilemap.cellBounds;
@@ -90,7 +161,7 @@ public class TextureToTile : MonoBehaviour
         {
             if (ColorApproximately(mapping.color, color))
             {
-                tilePosition[(x,y)] = mapping.background;
+                tilePosition[(x,y)] = mapping.backgroundType;
                 return mapping.tile;
             }
         }
@@ -105,9 +176,8 @@ public class TextureToTile : MonoBehaviour
     }
 
     public void GenerateWalle(){
-        int x = 0;
-        int y = 0;
-        (x,y) = levelManager.walleSpawn;
+        int x = LevelLoader.Instance.wallePos.Item1;
+        int y = LevelLoader.Instance.wallePos.Item2;
         GameObject walleInstance = Instantiate(walle, new Vector3(x *0.5f + 0.5f, y*0.5f + 0.5f, 0), Quaternion.identity);
         walle = walleInstance;
     }
@@ -156,10 +226,10 @@ public class ColorToTile
 {
     public Color color;
     public TileBase tile;
-    public int background;
+    public int backgroundType;
     public ColorToTile(Color Color,TileBase Tile,int Background){
         color=Color;
         tile=Tile;
-        background=Background;
+        backgroundType=Background;
     }
 }

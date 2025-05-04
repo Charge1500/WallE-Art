@@ -11,6 +11,8 @@ public class JugarManager : MonoBehaviour
     [Header("Level Buttons")]
     [SerializeField] private GameObject[] levelsButtonsObjects;
     [SerializeField] private Button[] levelsButtons;
+    [SerializeField] private GameObject[] deleteButtonsObjects;
+    [SerializeField] private Button[] deleteButtons;
     [SerializeField] private TMP_Text[] levelsButtonsTMP;
     [SerializeField] private List<Texture2D> levels;
     [SerializeField] private int levelsIndex = 0;
@@ -55,34 +57,47 @@ public class JugarManager : MonoBehaviour
 
     public void UpdateLevelButtons(){
         int arrayIndex = 0;
-        for (int i = levelsIndex; i < levelsIndex + levelsButtons.Length; i++)
-        {
-            levelsButtons[arrayIndex].onClick.RemoveAllListeners();
-            if(!levelsButtonsObjects[arrayIndex].activeSelf)  levelsButtonsObjects[arrayIndex].SetActive(true);
 
-            if(i >= levels.Count){
-                levelsButtonsTMP[arrayIndex].text= "+";
+        for (int i = 0; i < levelsButtons.Length; i++)
+        {
+            arrayIndex = i;
+            int currentLevelListIndex = levelsIndex + i; 
+
+            levelsButtons[arrayIndex].onClick.RemoveAllListeners();
+            deleteButtons[arrayIndex].onClick.RemoveAllListeners();
+
+            if (!levelsButtonsObjects[arrayIndex].activeSelf) levelsButtonsObjects[arrayIndex].SetActive(true);
+
+            if (currentLevelListIndex < levels.Count)
+            {
+                levelsButtonsTMP[arrayIndex].text = $"{currentLevelListIndex + 1}"; 
+                int capturedLevelListIndex = currentLevelListIndex;
+
+                levelsButtons[arrayIndex].onClick.AddListener(() => StartLevel(capturedLevelListIndex));
+                deleteButtons[arrayIndex].onClick.AddListener(() => DeleteLevel(capturedLevelListIndex));
+
+                if (!deleteButtonsObjects[arrayIndex].activeSelf) deleteButtonsObjects[arrayIndex].SetActive(true);
+            }
+            else if (currentLevelListIndex == levels.Count)
+            {
+                levelsButtonsTMP[arrayIndex].text = "+";
                 levelsButtons[arrayIndex].onClick.AddListener(AddLevelScreen);
-                DesactivateRestingButtons(arrayIndex+1);
-                break;
+
+                if (deleteButtonsObjects[arrayIndex].activeSelf) deleteButtonsObjects[arrayIndex].SetActive(false);
+
+                DesactivateRestingButtons(arrayIndex + 1);
+                break; 
             }
-            levelsButtonsTMP[arrayIndex].text = $"{i + 1}";
-            for (int buttonIndex = 0; buttonIndex < levelsButtons.Length; buttonIndex++)
-            {   
-                int capturedButtonIndex = buttonIndex;
-                levelsButtons[buttonIndex].onClick.AddListener(() => StartLevel(capturedButtonIndex));   
-            }
-            arrayIndex++;
         }
 
-        nextLevelsButtonObject.SetActive(((levelsIndex + levelsButtons.Length) > levels.Count) ? false : true);
-        previousLevelsButtonObject.SetActive(((levelsIndex - levelsButtons.Length) < 0) ? false : true);
+        nextLevelsButtonObject.SetActive((levelsIndex + levelsButtons.Length) <= levels.Count);
+        previousLevelsButtonObject.SetActive(levelsIndex > 0); 
     }
 
     public void DesactivateRestingButtons(int n){
         for (int i = n; i < levelsButtonsObjects.Length; i++)
         {
-            levelsButtonsObjects[i].SetActive(false);
+            if (i < levelsButtonsObjects.Length && levelsButtonsObjects[i].activeSelf) levelsButtonsObjects[i].SetActive(false);
         }
     }
 
@@ -122,8 +137,12 @@ public class JugarManager : MonoBehaviour
             
             if(interpreter.errors.Count!=0){ShowError("Execution failed. Check editor for details.");return;}
             if(!Validate(texture)){ShowError("The texture must have a yellow\nsquare 2x2 and at least one pink pixel");return;}
+            
+            Texture2D textureToAdd = new Texture2D(texture.width, texture.height, texture.format, true);
+            Graphics.CopyTexture(texture, textureToAdd);
+            textureToAdd.Apply();
 
-            levels.Add(texture); 
+            levels.Add(textureToAdd);
             UpdateLevelButtons();
             addLevelPanel.SetActive(false);
 
@@ -149,10 +168,17 @@ public class JugarManager : MonoBehaviour
         }
     }
 
-    public void StartLevel(int buttonIndex){
-        int levelIndex = levelsIndex + buttonIndex;
-        LevelLoader.Instance.SetLevel(levels[levelIndex]); 
+    public void StartLevel(int levelListIndex){
+        LevelLoader.Instance.SetLevel(levels[levelListIndex]); 
         SceneManager.LoadScene("Nivel");
+    }
+    public void DeleteLevel(int levelListIndex){
+        levels.RemoveAt(levelListIndex);  
+        if (levelsIndex > 0 && levelsIndex >= levels.Count) {
+            levelsIndex -= levelsButtons.Length; 
+            if (levelsIndex < 0) levelsIndex = 0; 
+        }
+        UpdateLevelButtons(); 
     }
     public void Editor(){
         SceneManager.LoadScene("Editor");
@@ -196,7 +222,7 @@ public class JugarManager : MonoBehaviour
                     if(yellowCount==1) {
                         square = tex.GetPixel(x+1, y)==yellow && tex.GetPixel(x+1, y+1)==yellow && tex.GetPixel(x, y+1)==yellow;
                         if(square){
-                            LevelLoader.Instance.SetWallePos((x,y)); 
+                            LevelLoader.Instance.SetWallePos((x,y));
                         }
                     }
                     if(yellowCount>4) return false;

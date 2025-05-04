@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.Cinemachine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] public Texture2D levelToLoad;
@@ -8,10 +9,14 @@ public class LevelManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private Button[] buttons;
     [Header("Configuración")]
+    [SerializeField] private CinemachineCamera cinemachineCamera;
+    [SerializeField] private CinemachineConfiner2D confiner;
+    [SerializeField] private TextureToTile textureToTile;
     [SerializeField] private GameObject pausePanel;
     private bool isPaused = false;
 
     void Awake(){
+        textureToTile = GetComponent<TextureToTile>();
         levelToLoad = LevelLoader.Instance.level;
         walleSpawn = LevelLoader.Instance.wallePos;
     }
@@ -21,6 +26,8 @@ public class LevelManager : MonoBehaviour
         buttons[1].onClick.AddListener(Restart);
         buttons[2].onClick.AddListener(Menu);
         buttons[3].onClick.AddListener(Quit);
+        cinemachineCamera.Follow = textureToTile.walle.transform;
+        confiner.BoundingShape2D = textureToTile.polyCollider;
     }
     void Update()
     {
@@ -46,9 +53,11 @@ public class LevelManager : MonoBehaviour
     }
 
     public void Restart(){
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Nivel");
     }
     public void Menu(){
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
     public void Quit(){
