@@ -1617,7 +1617,7 @@ GameObject:
   - component: {fileID: 1459369575}
   m_Layer: 6
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1699,15 +1699,63 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: 2.114467e-28
+      e01: 0
+      e02: 1e-45
+      e03: -1.6106144e+10
+      e10: 4.5912e-41
+      e11: 0
+      e12: 0
+      e13: 6.61e-43
+      e20: 2.022862e-28
+      e21: -1.6106144e+10
+      e22: -1.5883744e+29
+      e23: 1.5666371e-28
+      e30: 4.5912e-41
+      e31: 6.61e-43
+      e32: 6.64e-43
+      e33: 6.63e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 6.9698e-41, g: 6.9698e-41, b: 6.9698e-41, a: 6.9698e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
+  m_Origin: {x: -18, y: -7, z: 0}
+  m_Size: {x: 20, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1880,7 +1928,7 @@ GameObject:
   - component: {fileID: 1717832866}
   m_Layer: 6
   m_Name: LevelManager
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,18 +1961,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0283f6e455cac5a4488a69c65d9fef19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walle: {fileID: 8137646624601729839, guid: 358cc6f068b81eb4389c791c86644292, type: 3}
+  walle: {fileID: 5917970693884386208, guid: 1b7aab381c7ceee4f827fce108717b6e, type: 3}
   cellSize: 0.5
   sourceTexture: {fileID: 0}
   polyCollider: {fileID: 0}
   cineMachineConfiner: {fileID: 2063123248}
-  levelManager: {fileID: 1717832867}
   tilemap: {fileID: 1459369574}
   tiles:
   - {fileID: 11400000, guid: c473ef92d1edb46438fd50b4777dc440, type: 2}
   - {fileID: 11400000, guid: d755cfd883632604e944ca1fa60bf3f4, type: 2}
   - {fileID: 11400000, guid: adc294c64123c3143886265992f04cc1, type: 2}
-  - {fileID: 11400000, guid: ba93d63b26f1b46428b0e839c4a13a22, type: 2}
+  - {fileID: 11400000, guid: 6b0e0a02ccbba414ebc7d55bc3b98e65, type: 2}
   - {fileID: 11400000, guid: e2757cedf3d4f584dbe3f177845c7fd2, type: 2}
   - {fileID: 11400000, guid: 2b12b7ac285efdf42aa851f2fde36444, type: 2}
   - {fileID: 11400000, guid: bb68018273092834fb9fcf64ffc31127, type: 2}

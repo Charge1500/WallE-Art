@@ -12,7 +12,7 @@ namespace Interprete{
         private int _currentColumn;
         private List<Token> _tokens;
 
-        private static readonly Dictionary<string, TokenType> Keywords = new Dictionary<string, TokenType>(StringComparer.OrdinalIgnoreCase) // Ignorar mayúsculas/minúsculas? La spec no lo dice, asumamos case-sensitive por ahora. Si no, usar OrdinalIgnoreCase.
+        public static readonly Dictionary<string, TokenType> Keywords = new Dictionary<string, TokenType>(StringComparer.OrdinalIgnoreCase) // Ignorar mayúsculas/minúsculas? La spec no lo dice, asumamos case-sensitive por ahora. Si no, usar OrdinalIgnoreCase.
         {
             {"Spawn", TokenType.SpawnKeyword},{"Color", TokenType.ColorKeyword},{"Size", TokenType.SizeKeyword},{"DrawLine", TokenType.DrawLineKeyword},
             {"DrawCircle", TokenType.DrawCircleKeyword},{"DrawRectangle", TokenType.DrawRectangleKeyword},{"Fill", TokenType.FillKeyword},

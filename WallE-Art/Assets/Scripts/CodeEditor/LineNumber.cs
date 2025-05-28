@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+//inputField.text = inputField.text.Replace("for", "<color=blue>for</color>");
 
 public class LineNumber : MonoBehaviour
 {

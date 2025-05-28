@@ -18,16 +18,36 @@ public class TextureToTile : MonoBehaviour
     [SerializeField] private List<(int x, int y)> keysToProcess= new List<(int x, int y)>();
     [Header("Mapeo de colores")]
     [SerializeField] private List<TileBase> tiles = new List<TileBase>();
-    private List<Color> colorOfTilesBlue = new List<Color>();
-    private List<Color> colorOfTilesBlack = new List<Color>();
+    private List<Color> colorOfTilesBlue =new List<Color> {
+        //-----------------BlueBackGround------------------
+        Color.white,
+        Color.green,
+        new Color(1.0f, 0.5f, 0.3f),//coral
+        new Color(0.75f, 1.0f, 0.0f),//lime
+        new Color(1.0f, 0.5f, 0.0f),//orange
+        new Color(0.4f, 0.0f, 0.1f),//burgundy
+        new Color(1.0f, 0.4f, 0.7f)//pink};
+    };
+    private List<Color> colorOfTilesBlack = new List<Color> {
+        //-----------------BlackBackGround------------------
+        new Color(0.5f, 0.0f, 0.0f),//darkred
+        new Color(0.5f, 0.5f, 0.5f),//gray
+        Color.red,
+        new Color(0.5f, 0.0f, 0.5f),//purple
+        new Color(0.25f, 0.88f, 0.82f),//turquoise
+        new Color(0f, 1.0f, 1.0f),//cyan
+        Color.blue,
+        new Color(0.0f, 0.0f, 0.5f),//darkblue
+        new Color(0.1f, 0.2f, 0.3f),//steelblue
+        new Color(0.6f, 0.3f, 0.1f),//brown
+        Color.black
+    };
     [SerializeField] private List<ColorToTile> colorTileMappings = new List<ColorToTile>();
     [SerializeField] private TileBase blueBackgroundTile;
     [SerializeField] private TileBase blackBackgroundTile;
 
     void Awake(){
         sourceTexture = LevelLoader.Instance.level;
-        ColorOfTilesBlue();
-        ColorOfTilesBlack();
         SetColorTiles();
         blueBackgroundTile=tiles[0];
         blackBackgroundTile=tiles[tiles.Count-1];
@@ -195,30 +215,7 @@ public class TextureToTile : MonoBehaviour
         }
         
     }
-    public void ColorOfTilesBlue(){
-        //-----------------BlueBackGround------------------
-        colorOfTilesBlue.Add(Color.white);
-        colorOfTilesBlue.Add(Color.green);
-        colorOfTilesBlue.Add(new Color(1.0f, 0.5f, 0.3f));//coral
-        colorOfTilesBlue.Add(new Color(0.75f, 1.0f, 0.0f));//lime
-        colorOfTilesBlue.Add(new Color(1.0f, 0.5f, 0.0f));//orange
-        colorOfTilesBlue.Add(new Color(0.4f, 0.0f, 0.1f));//burgundy
-        colorOfTilesBlue.Add(new Color(1.0f, 0.4f, 0.7f));//pink
-    }
-    public void ColorOfTilesBlack(){
-        //-----------------BlackBackGround------------------
-        colorOfTilesBlack.Add(new Color(0.5f, 0.0f, 0.0f));//darkred
-        colorOfTilesBlack.Add(new Color(0.5f, 0.5f, 0.5f));//gray
-        colorOfTilesBlack.Add(Color.red);
-        colorOfTilesBlack.Add(new Color(0.5f, 0.0f, 0.5f));//purple
-        colorOfTilesBlack.Add(new Color(0.25f, 0.88f, 0.82f));//turquoise
-        colorOfTilesBlack.Add(new Color(0f, 1.0f, 1.0f));//cyan
-        colorOfTilesBlack.Add(Color.blue);
-        colorOfTilesBlack.Add(new Color(0.0f, 0.0f, 0.5f));//darkblue
-        colorOfTilesBlack.Add(new Color(0.1f, 0.2f, 0.3f));//steelblue
-        colorOfTilesBlack.Add(new Color(0.6f, 0.3f, 0.1f));//brown
-        colorOfTilesBlack.Add(Color.black);
-    }
+    
 }
 
 [System.Serializable]

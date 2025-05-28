@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class PlayerController2D : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [Header("Componentes")]
     [SerializeField] private Rigidbody2D rb;
@@ -151,5 +152,16 @@ public class PlayerController2D : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
+    }
+    public void Damage(){
+        Dead(3);
+    }
+    public void Dead(int sceneToLoadIndex){
+        SceneManager.LoadScene(sceneToLoadIndex);
+    }
+
+    public void BounceOnEnemy(float bounceAmount){
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceAmount);
+        animator.SetBool("IsJumping", true);
     }
 }

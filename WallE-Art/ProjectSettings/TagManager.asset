@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PlayerAttackPoint
+  - Ground
+  - WeakPoint
+  - Enemie
   layers:
   - Default
   - TransparentFX
@@ -12,10 +16,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Particles
+  - Enemies
+  - Player
+  - PlayerAttackPoint
   - 
   - 
   - 
@@ -40,6 +44,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemies
+    uniqueID: 2937682783
+    locked: 0
+  - name: Player
+    uniqueID: 166970199
     locked: 0
   m_RenderingLayers:
   - Default

@@ -145,23 +145,23 @@ public class UIManager : MonoBehaviour
     private void ExecuteCode(string sourceCode)
     {
         Clean(); 
-        ShowStatus("--- Starting Execution ---");
+        //ShowStatus("--- Starting Execution ---");
 
-        ShowStatus("--- Lexer Phase ---");
+        //ShowStatus("--- Lexer Phase ---");
         Lexer lexer = new Lexer();
         List<Token> tokens = lexer.Tokenize(sourceCode);
 
-        if (tokens != null)
+        if (!(tokens != null))
+        {
+            ShowStatus("(No tokens generated)");
+        }
+        /* else
         {
             foreach (Token token in tokens)
             {
                 ShowStatus(token.ToString());
             }
-        }
-        else
-        {
-            ShowStatus("(No tokens generated)");
-        }
+        } */
 
         if(lexer.errors != null){
             foreach (string error in lexer.errors)
@@ -169,12 +169,8 @@ public class UIManager : MonoBehaviour
                 ShowError(error);
             }
         }
-        else
-        {
-            ShowStatus("(No errors)");
-        }
 
-        ShowStatus("--- Parser Phase ---");
+        //ShowStatus("--- Parser Phase ---");
         Parser parser = new Parser(tokens); 
         ProgramNode astRoot = parser.Parse(); 
 
@@ -186,19 +182,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        if (astRoot.Statements != null)
-        {
-            foreach (StatementNode statement in astRoot.Statements)
-            {
-                ShowStatus(statement.ToString());
-            }
-        }
-        else
-        {
-            ShowStatus("Parser finished, but no AST generated (or empty program).");
-        }
-
-        ShowStatus("--- Executing Statements Phase ---");
+        //ShowStatus("--- Executing Statements Phase ---");
         Interpreter interpreter = new Interpreter(canvasDisplayImage.texture as Texture2D); 
         Texture2D texture = interpreter.Interpret(astRoot);
 
@@ -213,7 +197,7 @@ public class UIManager : MonoBehaviour
             canvasDisplayImage.texture = texture;
         }
 
-        ShowStatus("PROGRAM ENDS");
+        //ShowStatus("PROGRAM ENDS");
         
     }
 

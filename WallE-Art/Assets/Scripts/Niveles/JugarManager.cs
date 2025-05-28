@@ -35,13 +35,23 @@ public class JugarManager : MonoBehaviour
     [SerializeField] private string code;
     [SerializeField] private TMP_InputField size;
 
+    [Header("Start Level")]
+    [SerializeField] private GameObject startLevelPanel;
+    [SerializeField] private RawImage textrueExample;
+    [SerializeField] private Button startLevel;
+    [SerializeField] private Button cancelStartLevelPanel;
+
     void Start(){
         nextLevelsButton.onClick.AddListener(Next);
         previousLevelsButton.onClick.AddListener(Previous);
+
         cancelLevelPanel.onClick.AddListener(Cancel);
         addLevel.onClick.AddListener(AddLevel);
         findFile.onClick.AddListener(FindFile);
         editor.onClick.AddListener(Editor);
+
+        cancelStartLevelPanel.onClick.AddListener(CancelStartLevelPanel);
+
         UpdateLevelButtons();
     }
 
@@ -73,7 +83,7 @@ public class JugarManager : MonoBehaviour
                 levelsButtonsTMP[arrayIndex].text = $"{currentLevelListIndex + 1}"; 
                 int capturedLevelListIndex = currentLevelListIndex;
 
-                levelsButtons[arrayIndex].onClick.AddListener(() => StartLevel(capturedLevelListIndex));
+                levelsButtons[arrayIndex].onClick.AddListener(() => ActiveStartLevelPanel(capturedLevelListIndex));
                 deleteButtons[arrayIndex].onClick.AddListener(() => DeleteLevel(capturedLevelListIndex));
 
                 if (!deleteButtonsObjects[arrayIndex].activeSelf) deleteButtonsObjects[arrayIndex].SetActive(true);
@@ -166,6 +176,20 @@ public class JugarManager : MonoBehaviour
         {
             info.text = "Carga cancelada";
         }
+    }
+
+    public void ActiveStartLevelPanel(int levelListIndex){
+        Texture2D texture = levels[levelListIndex];
+        texture.filterMode = FilterMode.Point;
+        textrueExample.texture = texture;
+        
+        startLevelPanel.SetActive(true);
+        startLevel.onClick.RemoveAllListeners();
+        startLevel.onClick.AddListener(() => StartLevel(levelListIndex));
+    }
+
+    public void CancelStartLevelPanel(){
+        startLevelPanel.SetActive(false);
     }
 
     public void StartLevel(int levelListIndex){
