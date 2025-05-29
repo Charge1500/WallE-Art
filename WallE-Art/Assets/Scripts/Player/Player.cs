@@ -7,11 +7,14 @@ public class Player : MonoBehaviour
     [Header("Componentes")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
+    [SerializeField] private LevelManager lvManager;
 
     [Header("Movimiento")]
+    [SerializeField] protected Collider2D mainCollider;
     [SerializeField] private float moveSpeed = 5f;
     private float horizontalMove = 0f;
     private bool isFacingRight = true;
+    private bool dead = false;
 
     [Header("Salto")]
     [SerializeField] private float jumpForce = 10f;
@@ -33,20 +36,24 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        mainCollider = GetComponent<Collider2D>();
+        lvManager = GetComponentInParent<LevelManager>();
         groundCheck = transform.Find("GroundCheck");
     }
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        HandleInput();
-        HandleInactivity();
-        UpdateAnimations();
+        if(!dead){
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+            HandleInput();
+            HandleInactivity();
+            UpdateAnimations();
+        }
     }
 
     void FixedUpdate()
     {
-        HandleMovement();
+        if(!dead) HandleMovement();
     }
 
     void HandleInput()
@@ -154,14 +161,55 @@ public class Player : MonoBehaviour
         transform.localScale = scaler;
     }
     public void Damage(){
-        Dead(3);
+        Dead();
     }
-    public void Dead(int sceneToLoadIndex){
-        SceneManager.LoadScene(sceneToLoadIndex);
+    public void Dead(){
+        dead=true;
+        StartCoroutine(DeadAnim());
+        StartCoroutine(GameOverScreen());
+        
     }
+    public IEnumerator DeadAnim(){
+        DetectEnemies(false);
+        rb.gravityScale = 0f;
+        rb.linearVelocity = new Vector2(0f, 0f);
+        animator.SetFloat("Speed", 0);
+        animator.SetBool("IsJumping", false);
+        animator.SetBool("IsFalling", false);
+        animator.SetBool("IsInactive", false);
+        animator.SetBool("IsCrouching", true);
+        yield return new WaitForSeconds(1f);
+        rb.gravityScale = 1f;
+        BounceOnEnemy(3.5f);
+        mainCollider.enabled = false;
+    }
+    public IEnumerator GameOverScreen(){
+        yield return new WaitForSeconds(2.5f);
 
+        lvManager.gameOverScreen.SetActive(true);
+        lvManager.cinemachineCamera.Follow = null;    
+        
+        Time.timeScale = 0;
+    }
     public void BounceOnEnemy(float bounceAmount){
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceAmount);
         animator.SetBool("IsJumping", true);
     }
+
+    public void DetectEnemies(bool active){
+        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 10f);
+        foreach (Collider2D other in objects)
+        {
+            if (other.CompareTag("Enemy"))
+            {
+                    IEnemyPlatformer enemy = other.GetComponent<IEnemyPlatformer>();
+                if (!enemy.IsDefeated)
+                {
+                    enemy.SetPlayerProximity(active);
+                }
+            }
+        }
+    }
+    
+    
 }

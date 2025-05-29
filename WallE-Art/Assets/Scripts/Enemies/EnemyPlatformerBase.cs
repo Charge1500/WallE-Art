@@ -6,7 +6,7 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
     [Header("Components")]
     protected Rigidbody2D rb;
     protected Animator animator;
-    protected Collider2D mainCollider;
+    [SerializeField] protected Collider2D mainCollider;
 
     [Header("Movement")]
     [SerializeField] protected float moveSpeed = 1.5f;
@@ -18,7 +18,7 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
 
 
     protected bool isFacingRight = true;
-    protected bool isPlayerNear = true;
+    protected bool isPlayerNear = false;
     protected bool _isDefeated = false;
     public bool IsDefeated => _isDefeated;
 
@@ -39,7 +39,7 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
         if(isPlayerNear){
             if (_isDefeated)
             {
-                rb.linearVelocity = Vector2.zero; 
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
                 return;    
             }
             PerformMovement();
@@ -90,6 +90,18 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
         player.BounceOnEnemy(playerBounceOnDefeat);
 
         StartCoroutine(DestroyAfterDelayCoroutine(destroyDelayAfterDefeat));
+    }
+
+    public virtual void SetPlayerProximity(bool isNear)
+    {
+        if (_isDefeated) return;
+
+        isPlayerNear = isNear;
+
+        if (!isNear) 
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
     }
 
     public virtual void HandlePlayerContact(Player player)

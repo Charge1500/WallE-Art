@@ -1,8 +1,8 @@
-using UnityEngine;
+/* using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public class TextureToTile : MonoBehaviour
+public class TextureToTileMap : MonoBehaviour
 {
     [SerializeField] public GameObject walle;
     [Header("Configuración")]
@@ -22,24 +22,24 @@ public class TextureToTile : MonoBehaviour
         //-----------------BlueBackGround------------------
         Color.white,
         Color.green,
-        new Color(1.0f, 0.5f, 0.3f),//coral
         new Color(0.75f, 1.0f, 0.0f),//lime
+        new Color(1.0f, 0.5f, 0.3f),//coral
         new Color(1.0f, 0.5f, 0.0f),//orange
         new Color(0.4f, 0.0f, 0.1f),//burgundy
-        new Color(1.0f, 0.4f, 0.7f)//pink};
+        new Color(1.0f, 0.4f, 0.7f)//pink;
     };
     private List<Color> colorOfTilesBlack = new List<Color> {
         //-----------------BlackBackGround------------------
-        new Color(0.5f, 0.0f, 0.0f),//darkred
-        new Color(0.5f, 0.5f, 0.5f),//gray
-        Color.red,
-        new Color(0.5f, 0.0f, 0.5f),//purple
         new Color(0.25f, 0.88f, 0.82f),//turquoise
+        new Color(0.5f, 0.0f, 0.5f),//purple
         new Color(0f, 1.0f, 1.0f),//cyan
         Color.blue,
         new Color(0.0f, 0.0f, 0.5f),//darkblue
         new Color(0.1f, 0.2f, 0.3f),//steelblue
         new Color(0.6f, 0.3f, 0.1f),//brown
+        Color.red,
+        new Color(0.5f, 0.0f, 0.0f),//darkred
+        new Color(0.5f, 0.5f, 0.5f),//gray
         Color.black
     };
     [SerializeField] private List<ColorToTile> colorTileMappings = new List<ColorToTile>();
@@ -218,7 +218,7 @@ public class TextureToTile : MonoBehaviour
     
 }
 
-[System.Serializable]
+/* [System.Serializable]
 public class ColorToTile
 {
     public Color color;
@@ -229,4 +229,4 @@ public class ColorToTile
         tile=Tile;
         backgroundType=Background;
     }
-}
+} */

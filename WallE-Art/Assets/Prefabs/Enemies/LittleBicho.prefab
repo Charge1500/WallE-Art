@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 3460934992200146744}
   m_Layer: 8
   m_Name: LittleBicho
-  m_TagString: Enemie
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.098952, y: -0.7802185, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7801, y: 0.7801, z: 0.7801}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7605660890236138307}

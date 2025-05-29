@@ -244,7 +244,9 @@ public class JugarManager : MonoBehaviour
                 {
                     yellowCount++;
                     if(yellowCount==1) {
-                        square = tex.GetPixel(x+1, y)==yellow && tex.GetPixel(x+1, y+1)==yellow && tex.GetPixel(x, y+1)==yellow;
+                        if(x+1<tex.width && y+1<tex.width){
+                            square = tex.GetPixel(x+1, y)==yellow && tex.GetPixel(x+1, y+1)==yellow && tex.GetPixel(x, y+1)==yellow;
+                        }
                         if(square){
                             LevelLoader.Instance.SetWallePos((x,y));
                         }

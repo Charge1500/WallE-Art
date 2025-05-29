@@ -8,8 +8,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public (int,int) walleSpawn;
     [Header("UI")]
     [SerializeField] private Button[] buttons;
+    [SerializeField] public GameObject gameOverScreen;
     [Header("Configuración")]
-    [SerializeField] private CinemachineCamera cinemachineCamera;
+    [SerializeField] public CinemachineCamera cinemachineCamera;
     [SerializeField] private CinemachineConfiner2D confiner;
     [SerializeField] private TextureToTile textureToTile;
     [SerializeField] private GameObject pausePanel;
@@ -22,11 +23,16 @@ public class LevelManager : MonoBehaviour
     }
     void Start()
     {
+        //pause buttons
         buttons[0].onClick.AddListener(Resume);
         buttons[1].onClick.AddListener(Restart);
         buttons[2].onClick.AddListener(Menu);
         buttons[3].onClick.AddListener(Quit);
-        cinemachineCamera.Follow = textureToTile.walle.transform;
+        //game over screen buttons
+        buttons[4].onClick.AddListener(Restart);
+        buttons[5].onClick.AddListener(Menu);
+
+        cinemachineCamera.Follow = textureToTile.wallePrefab.transform;
         confiner.BoundingShape2D = textureToTile.polyCollider;
     }
     void Update()

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3115116582533068456}
   - component: {fileID: 7414066002071865200}
   - component: {fileID: 8869406918522829274}
-  m_Layer: 0
+  - component: {fileID: 403004453363972948}
+  m_Layer: 8
   m_Name: Plant
-  m_TagString: Untagged
+  m_TagString: StaticEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1357284513
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2433393228872898138, guid: 9175b6d6f8406404ea6ddcb58536b27c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -148,3 +149,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &403004453363972948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645226024464590092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846a640338ab18a4faece57565831352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

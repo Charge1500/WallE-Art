@@ -13,8 +13,6 @@ public class EnemyWeakPoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (parentEnemy.IsDefeated) return;
-
         if (other.CompareTag(playerTag))
         {
             Player player = other.GetComponent<Player>();
