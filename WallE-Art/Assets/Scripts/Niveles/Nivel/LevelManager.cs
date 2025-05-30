@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public (int,int) walleSpawn;
     [Header("UI")]
     [SerializeField] private Button[] buttons;
-    [SerializeField] public GameObject gameOverScreen;
+    [SerializeField] public GameObject[] screens;
     [Header("Configuración")]
     [SerializeField] public CinemachineCamera cinemachineCamera;
     [SerializeField] private CinemachineConfiner2D confiner;

@@ -2457,9 +2457,9 @@ TextureImporter:
       name: WallE  Eve highresReady_86
       rect:
         serializedVersion: 2
-        x: 684
+        x: 687
         y: 774
-        width: 48
+        width: 43
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

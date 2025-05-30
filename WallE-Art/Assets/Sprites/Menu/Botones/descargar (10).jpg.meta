@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bb82a638f885e36478ff4f8c1971379b
+guid: 52fd3f370d0576c438910f1f850c7576
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3033387346697411723
-    second: descargar (4)_0
+      213: -8541173296290085901
+    second: descargar (10)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: descargar (4)_0
+      name: descargar (10)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 736
-        height: 1042
+        width: 616
+        height: 578
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 573afed974e37e5d0800000000000000
-      internalID: -3033387346697411723
+      spriteID: 3f3c39dd328a77980800000000000000
+      internalID: -8541173296290085901
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      descargar (4)_0: -3033387346697411723
+      descargar (10)_0: -8541173296290085901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

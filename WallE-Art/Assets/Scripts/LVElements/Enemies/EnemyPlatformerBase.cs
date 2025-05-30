@@ -18,7 +18,7 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
 
 
     protected bool isFacingRight = true;
-    protected bool isPlayerNear = false;
+    [SerializeField] protected bool isPlayerNear = false;
     protected bool _isDefeated = false;
     public bool IsDefeated => _isDefeated;
 

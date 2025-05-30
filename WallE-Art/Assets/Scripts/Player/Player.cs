@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [Header("Componentes")]
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Animator animator;
+    [SerializeField] public Animator animator;
     [SerializeField] private LevelManager lvManager;
 
     [Header("Movimiento")]
@@ -14,14 +14,14 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     private float horizontalMove = 0f;
     private bool isFacingRight = true;
-    private bool dead = false;
+    public bool dead = false;
 
     [Header("Salto")]
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckRadius = 0.2f;
-    private bool isGrounded = false;
+    [SerializeField] private bool isGrounded = false;
 
     [Header("Agacharse")]
     [SerializeField] private KeyCode crouchKey = KeyCode.LeftControl; 
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
         {
             if (isCrouching)
             {
-                 isCrouching = false;
+                isCrouching = false;
             }
         }
         if (Mathf.Abs(horizontalMove) > 0.01f)
@@ -127,8 +127,8 @@ public class Player : MonoBehaviour
     void UpdateAnimations()
     {
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-        if (!isGrounded && rb.linearVelocity.y < -0.1f)
+        if(isGrounded && rb.linearVelocity.y <= 0f) animator.SetBool("IsJumping", false);
+        if (!isGrounded && rb.linearVelocity.y <= 0)
         {
             animator.SetBool("IsFalling", true);
             animator.SetBool("IsJumping", false);
@@ -166,30 +166,23 @@ public class Player : MonoBehaviour
     public void Dead(){
         dead=true;
         StartCoroutine(DeadAnim());
-        StartCoroutine(GameOverScreen());
+        StartCoroutine(ActiveScreen(0,2.5f));
         
     }
     public IEnumerator DeadAnim(){
         DetectEnemies(false);
         rb.gravityScale = 0f;
-        rb.linearVelocity = new Vector2(0f, 0f);
-        animator.SetFloat("Speed", 0);
-        animator.SetBool("IsJumping", false);
-        animator.SetBool("IsFalling", false);
-        animator.SetBool("IsInactive", false);
-        animator.SetBool("IsCrouching", true);
+        WalleStop();
         yield return new WaitForSeconds(1f);
         rb.gravityScale = 1f;
         BounceOnEnemy(3.5f);
         mainCollider.enabled = false;
     }
-    public IEnumerator GameOverScreen(){
-        yield return new WaitForSeconds(2.5f);
-
-        lvManager.gameOverScreen.SetActive(true);
+    public IEnumerator ActiveScreen(int screen,float time){
+        yield return new WaitForSeconds(time);
+    
+        lvManager.screens[screen].SetActive(true);
         lvManager.cinemachineCamera.Follow = null;    
-        
-        Time.timeScale = 0;
     }
     public void BounceOnEnemy(float bounceAmount){
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceAmount);
@@ -210,6 +203,41 @@ public class Player : MonoBehaviour
             }
         }
     }
+    public void WalleStop(){
+        rb.linearVelocity = new Vector2(0f, 0f);
+        animator.SetFloat("Speed", 0);
+        animator.SetBool("IsJumping", false);
+        animator.SetBool("IsFalling", false);
+        animator.SetBool("IsInactive", false);
+        animator.SetBool("IsCrouching", false);
+    }
     
-    
+    public void WalleWin(){
+        DetectEnemies(false);
+        dead = true;
+        WalleStop();
+        animator.SetBool("IsInactive", true);
+        StartCoroutine(ActiveScreen(1,4.5f));
+    }
+    public void ChangeScale(float x, float y){
+        if(CheckGrowUp(0.5f,groundLayer)){
+            int face=1;
+            if(!isFacingRight) face=-1;
+            transform.localScale = new Vector2(x*face,y);
+        }
+    }  
+
+    public bool CheckGrowUp(float raycastDistance,LayerMask whatIsObstacle)
+    {
+        Vector2 raycastOrigin = transform.position;
+        Vector2 raycastDirection = Vector2.up;
+        //Debug.DrawRay(raycastOrigin, raycastDirection * raycastDistance, Color.red);
+        
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, raycastDirection, raycastDistance, whatIsObstacle);
+        if (hit.collider != null)
+        {
+            return false;
+        }
+        return true;
+    }
 }
