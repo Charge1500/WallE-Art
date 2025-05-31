@@ -4423,7 +4423,7 @@ MonoBehaviour:
   - description: PlantWin
     colorName: Pink
     color: {r: 1, g: 0.4, b: 0.7, a: 0}
-    prefab: {fileID: 2599996121115296433, guid: 615f77f2acb0d1c44a47679b42af5bec, type: 3}
+    prefab: {fileID: 3850427761687285891, guid: 481ae9f680259264091723ec99802edb, type: 3}
   blueBackgroundTile: {fileID: 11400000, guid: c473ef92d1edb46438fd50b4777dc440, type: 2}
   blackBackgroundTile: {fileID: 11400000, guid: fd6a44787c964284884e0a10c736d7eb, type: 2}
 --- !u!1001 &1837511417
