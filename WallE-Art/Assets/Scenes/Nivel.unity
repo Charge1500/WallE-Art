@@ -1105,7 +1105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 479.17203, y: -279.85077}
+  m_AnchoredPosition: {x: 343, y: -279.85077}
   m_SizeDelta: {x: 117.331, y: 150.424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &498580114
@@ -1848,7 +1848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 514, y: -85}
+  m_AnchoredPosition: {x: 466, y: -4}
   m_SizeDelta: {x: 628.298, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551239256
@@ -1871,9 +1871,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Corre Walle
-
-    Nintendo nos quiere denunciar'
+  m_text: "\xA1Cre\xEDste que escapaste de mi y de los derechos de autor! \xA1La
+    pr\xF3xima vez no tendr\xE1s tanta suerte!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 729b95cb29982934aa2dbb02ff466a67, type: 2}
   m_sharedMaterial: {fileID: -8599175800600221555, guid: 729b95cb29982934aa2dbb02ff466a67, type: 2}
@@ -1938,7 +1937,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -33.90211, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3249,7 +3248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 595, y: -303.98907}
+  m_AnchoredPosition: {x: 612, y: -303.98907}
   m_SizeDelta: {x: 79.675, y: 102.147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141664625
@@ -4287,6 +4286,8 @@ MonoBehaviour:
   - {fileID: 1175594791}
   - {fileID: 973206576}
   - {fileID: 541127267}
+  - {fileID: 2125467909}
+  - {fileID: 883718737}
   screens:
   - {fileID: 983696927}
   - {fileID: 1651760688}
@@ -4423,7 +4424,7 @@ MonoBehaviour:
   - description: PlantWin
     colorName: Pink
     color: {r: 1, g: 0.4, b: 0.7, a: 0}
-    prefab: {fileID: 3850427761687285891, guid: 481ae9f680259264091723ec99802edb, type: 3}
+    prefab: {fileID: 6101748260109530421, guid: 44efa18b98e91f84da41aeae413168a7, type: 3}
   blueBackgroundTile: {fileID: 11400000, guid: c473ef92d1edb46438fd50b4777dc440, type: 2}
   blackBackgroundTile: {fileID: 11400000, guid: fd6a44787c964284884e0a10c736d7eb, type: 2}
 --- !u!1001 &1837511417

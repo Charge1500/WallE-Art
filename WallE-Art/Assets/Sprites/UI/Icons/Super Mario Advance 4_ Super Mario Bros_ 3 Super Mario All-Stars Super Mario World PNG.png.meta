@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 877f821597f5e354d9ac1a48161e8b6b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4908863935127315044
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_0
+  - first:
+      213: -6058196709239248721
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_1
+  - first:
+      213: 7619287803589173534
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_2
+  - first:
+      213: -5072840463660417013
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_3
+  - first:
+      213: -6759955075812887978
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_4
+  - first:
+      213: -5470598710098242085
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_5
+  - first:
+      213: 2370110885719732850
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_6
+  - first:
+      213: 529302273196198387
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_7
+  - first:
+      213: -2935264458251728422
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_8
+  - first:
+      213: -182567356851906289
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_9
+  - first:
+      213: -1360879966344902396
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_10
+  - first:
+      213: -4717884049241120417
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_11
+  - first:
+      213: 7122093141716501646
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_12
+  - first:
+      213: -1616700232846761334
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_13
+  - first:
+      213: 6124927039825582865
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_14
+  - first:
+      213: 4571898225709839307
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_15
+  - first:
+      213: -7622627805507569527
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_16
+  - first:
+      213: 8894858270691581612
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_17
+  - first:
+      213: 8214384549124999748
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_18
+  - first:
+      213: -832998421057639059
+    second: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+      Mario World PNG_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super
+        Mario World PNG_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 728
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138aca99837f2f24a8a0dce48bc7611b
+      internalID: 198912183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 87e05d9dab86b644dae5b4a4b3fa3857
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Super Mario Advance 4_ Super Mario Bros_ 3 Super Mario All-Stars Super Mario World PNG_0: 198912183
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

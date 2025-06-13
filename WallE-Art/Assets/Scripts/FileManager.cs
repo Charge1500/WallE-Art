@@ -33,7 +33,7 @@ public class FileManager : MonoBehaviour
 
     public bool SaveScriptToFile()
     {
-        string path = SaveFilePanel();
+        string path = StandaloneFileBrowser.SaveFilePanel("Guardar archivo", "", "archivo", "pw");
 
         if (!string.IsNullOrEmpty(path))
         {
@@ -53,32 +53,43 @@ public class FileManager : MonoBehaviour
         }
         return false;
     }
-
-    private string OpenFilePanel()
+    
+     private string OpenFilePanel()
     {
         var paths = StandaloneFileBrowser.OpenFilePanel("Cargar archivo", "", "pw", false);
 
         if (paths.Length > 0 && !string.IsNullOrEmpty(paths[0]))
         {
             string content = File.ReadAllText(paths[0]);
-            inputField.text = content;
             return paths[0];
         }
 
         return null;
     }
 
-    private string SaveFilePanel()
+    public bool SaveTextureAsJPG(Texture2D texture)
     {
-        var path = StandaloneFileBrowser.SaveFilePanel("Guardar archivo", "", "archivo", "pw");
+
+        byte[] bytes = texture.EncodeToJPG();
+        string path = StandaloneFileBrowser.SaveFilePanel("Guardar imagen", "", "imagen", "jpg");
 
         if (!string.IsNullOrEmpty(path))
         {
-            string content = inputField.text;
-            File.WriteAllText(path, content);
-            return path;
+            try
+            {
+                File.WriteAllBytes(path, bytes);
+                return true;
+            }
+            catch (IOException ex)
+            {
+                compiler.text = $"Error saving image: {ex.Message}";
+            }
+            catch (System.Exception ex)
+            {
+                compiler.text = $"An unexpected error occurred while saving image: {ex.Message}";
+            }
         }
 
-        return null;
+        return false;
     }
 }

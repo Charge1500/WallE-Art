@@ -146,7 +146,7 @@ public class JugarManager : MonoBehaviour
             Texture2D texture = interpreter.Interpret(astRoot); 
             
             if(interpreter.errors.Count!=0){ShowError("Execution failed. Check editor for details.");return;}
-            if(!Validate(texture)){ShowError("The texture must have a yellow\nsquare 2x2 and at least one pink pixel");return;}
+            if(!Validate(texture)){ShowError("The texture must have a yellow\nsquare 2x2 and only one pink pixel");return;}
             
             Texture2D textureToAdd = new Texture2D(texture.width, texture.height, texture.format, true);
             Graphics.CopyTexture(texture, textureToAdd);
@@ -230,7 +230,7 @@ public class JugarManager : MonoBehaviour
         Color yellow  = Color.yellow;
 
         bool square = false;
-        bool foundPink = false;
+        int pinkCount = 0;
         int yellowCount = 0;
 
         for (int y = 0; y < tex.width; y++)
@@ -238,9 +238,11 @@ public class JugarManager : MonoBehaviour
             for (int x = 0; x < tex.width; x++)
             {
                 Color c = tex.GetPixel(x, y);
-                if (ColorsApprox(c,pink)) foundPink = true;
-
-                if (c==yellow && x < tex.width-1 && y < tex.width-1)
+                if (ColorsApprox(c,pink)) {
+                    pinkCount++;
+                    if(pinkCount>1) return false;
+                }
+                if (ColorsApprox(c,yellow) && x < tex.width-1 && y < tex.width-1)
                 {
                     yellowCount++;
                     if(yellowCount==1) {
@@ -256,7 +258,7 @@ public class JugarManager : MonoBehaviour
                 
             }
         }
-        if (!foundPink) return false;
+        if (pinkCount!=1) return false;
         if(square) return true;
         return false;
     }

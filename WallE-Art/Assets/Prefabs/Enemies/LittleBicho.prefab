@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 2868820734380354313}
   - component: {fileID: 5317563668663179819}
   - component: {fileID: 9209167414204906444}
-  - component: {fileID: 3460934992200146744}
+  - component: {fileID: 8774615039506579957}
   m_Layer: 8
   m_Name: LittleBicho
   m_TagString: Enemy
@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b636d3924499144b6bff36cbf7cba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCollider: {fileID: 0}
   moveSpeed: 1.5
   groundLayer:
     serializedVersion: 2
@@ -256,6 +257,7 @@ MonoBehaviour:
   frontEdgeDetector: {fileID: 3900369722079735351}
   frontWallDetector: {fileID: 1156946470710917455}
   wallCheckDistance: 0.1
+  isPlayerNear: 0
   defeatedAnimatorParam: Dead
   destroyDelayAfterDefeat: 1
   playerBounceOnDefeat: 5
@@ -286,7 +288,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &3460934992200146744
+--- !u!70 &8774615039506579957
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,9 +322,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.002018085, y: -0.07871357}
-  m_Size: {x: 0.5300867, y: 0.39688015}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 0.5}
+  m_Direction: 0
 --- !u!1 &7910087799645927712
 GameObject:
   m_ObjectHideFlags: 0

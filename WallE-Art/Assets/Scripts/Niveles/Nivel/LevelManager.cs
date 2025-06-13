@@ -31,6 +31,9 @@ public class LevelManager : MonoBehaviour
         //game over screen buttons
         buttons[4].onClick.AddListener(Restart);
         buttons[5].onClick.AddListener(Menu);
+        //win screen buttons
+        buttons[6].onClick.AddListener(Restart);
+        buttons[7].onClick.AddListener(Menu);
 
         cinemachineCamera.Follow = textureToTile.wallePrefab.transform;
         confiner.BoundingShape2D = textureToTile.polyCollider;

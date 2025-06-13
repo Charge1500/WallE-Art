@@ -43,7 +43,7 @@ public class TextureToTile : MonoBehaviour
         ProcessTextureAndPlaceElements();
         FillBackgroundTileAreas();
         terrainTilemap.RefreshAllTiles();
-        //wallePrefab.GetComponent<Player>().DetectEnemies();
+        wallePrefab.GetComponent<Player>().DetectEnemies(true);
     }
 
     /* void ClearLevelState()
@@ -148,7 +148,8 @@ public class TextureToTile : MonoBehaviour
     void InstantiatePrefab(GameObject prefab, int x, int y)
     {
         Vector3 position = new Vector3(x * cellSize + (cellSize * 0.5f), y * cellSize + (cellSize * 0.5f), 0);
-        Instantiate(prefab, position, Quaternion.identity, this.transform);
+        GameObject instance = Instantiate(prefab, position, Quaternion.identity, this.transform);
+        if(instance.tag == "Enemy") instance.GetComponent<Rigidbody2D>().gravityScale = 0f;
         
         prefabInstantiatedPositions.Add((x, y));
         tileBackgroundInfo[(x, y)] = -1;

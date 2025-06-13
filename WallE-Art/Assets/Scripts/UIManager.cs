@@ -16,13 +16,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button resizeButton;     
     [SerializeField] private Button loadButton;       
     [SerializeField] private Button saveButton;       
+    [SerializeField] private Button saveImageButton;       
     [SerializeField] private Button executeButton;    
     [SerializeField] private Button menuButton;    
+    [SerializeField] private Button levelSection;    
     [SerializeField] private Button cleanButton;   
 
-    [SerializeField] private Toggle showCodeEditor;    
+    /* [SerializeField] private Toggle showCodeEditor;    
     [SerializeField] private Toggle showErrorArea;    
-    [SerializeField] private Toggle showBook;    
+    [SerializeField] private Toggle showBook;    */ 
     [SerializeField] private TMP_Text statusText;
 
     [Header("UI Elements")]
@@ -51,13 +53,15 @@ public class UIManager : MonoBehaviour
         resizeButton.onClick.AddListener(OnResizeButtonPressed);
         loadButton.onClick.AddListener(OnLoadButtonPressed);
         saveButton.onClick.AddListener(OnSaveButtonPressed);
+        saveImageButton.onClick.AddListener(OnSaveImageButtonPressed);
         executeButton.onClick.AddListener(OnExecuteButtonPressed);
         menuButton.onClick.AddListener(Menu);
+        levelSection.onClick.AddListener(LevelSection);
         cleanButton.onClick.AddListener(Clean);
-        showCodeEditor.onValueChanged.AddListener(ActiveCodeEditor);
+        /* showCodeEditor.onValueChanged.AddListener(ActiveCodeEditor);
         showErrorArea.onValueChanged.AddListener(ActivateErrorArea);
         showBook.onValueChanged.AddListener(ActiveBook);
-
+ */
         ShowStatus("Canvas inicializado.");
     }
 
@@ -102,6 +106,19 @@ public class UIManager : MonoBehaviour
            ShowError("Fallo al guardar el archivo o cancelado.");
         }
     }
+    
+    private void OnSaveImageButtonPressed()
+    {
+        bool saved = fileManager.SaveTextureAsJPG(canvasDisplayImage.texture as Texture2D);
+        if (saved)
+        {
+            ShowStatus("Archivo guardado correctamente.");
+        }
+        else
+        {
+            ShowError("Fallo al guardar el archivo o cancelado.");
+        }
+    }
 
     private void OnExecuteButtonPressed()
     {
@@ -115,12 +132,17 @@ public class UIManager : MonoBehaviour
         statusTextEditor.text="";
         SceneManager.LoadScene("Menu");
     }
+    public void LevelSection(){
+        codeEditorInput.text="";
+        statusTextEditor.text="";
+        SceneManager.LoadScene("Jugar");
+    }
     public void Clean(){
         statusTextEditor.text="";
         statusTextEditor.textComponent.rectTransform.anchoredPosition = Vector2.zero;
     }
 
-    public void ActiveCodeEditor(bool activate){
+    /* public void ActiveCodeEditor(bool activate){
         codeEditor.SetActive(activate);
     }
     public void ActivateErrorArea(bool activate){
@@ -128,7 +150,7 @@ public class UIManager : MonoBehaviour
     }
     public void ActiveBook(bool activate){
         book.SetActive(activate);
-    }
+    } */
     public void ShowStatus(string message)
     {
         statusTextEditor.text += "\n" + "<color=white>"+message+"</color>";

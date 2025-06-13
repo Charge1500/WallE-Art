@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] public Animator animator;
     [SerializeField] private LevelManager lvManager;
+    [SerializeField] private LayerMask enemiesLayer;
 
     [Header("Movimiento")]
     [SerializeField] protected Collider2D mainCollider;
@@ -50,6 +51,12 @@ public class Player : MonoBehaviour
             UpdateAnimations();
         }
     }
+
+    /* void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 8f);
+    } */
 
     void FixedUpdate()
     {
@@ -161,48 +168,48 @@ public class Player : MonoBehaviour
         transform.localScale = scaler;
     }
     public void Damage(){
+        if(Mathf.Abs(transform.localScale.x)!=1){
+            int face=1;
+            if(!isFacingRight) face=-1;
+            transform.localScale = new Vector2(1f*face,1f);
+            return;
+        }
         Dead();
+        
     }
     public void Dead(){
         dead=true;
+        DetectEnemies(false);
         StartCoroutine(DeadAnim());
         StartCoroutine(ActiveScreen(0,2.5f));
-        
+        StartCoroutine(DesactivePlayer(2.5f));
     }
     public IEnumerator DeadAnim(){
-        DetectEnemies(false);
         rb.gravityScale = 0f;
         WalleStop();
+        animator.SetBool("IsCrouching", true);
         yield return new WaitForSeconds(1f);
         rb.gravityScale = 1f;
         BounceOnEnemy(3.5f);
         mainCollider.enabled = false;
     }
+
     public IEnumerator ActiveScreen(int screen,float time){
-        yield return new WaitForSeconds(time);
-    
+        yield return new WaitForSeconds(time);   
         lvManager.screens[screen].SetActive(true);
-        lvManager.cinemachineCamera.Follow = null;    
+        lvManager.cinemachineCamera.Follow = null; 
     }
+
+    public IEnumerator DesactivePlayer(float time){
+        yield return new WaitForSeconds(time);   
+        gameObject.SetActive(false); 
+    }
+
     public void BounceOnEnemy(float bounceAmount){
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceAmount);
         animator.SetBool("IsJumping", true);
     }
 
-    public void DetectEnemies(bool active){
-        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 10f);
-        foreach (Collider2D other in objects)
-        {
-            if (other.CompareTag("Enemy"))
-            {
-                    IEnemyPlatformer enemy = other.GetComponent<IEnemyPlatformer>();
-                if (!enemy.IsDefeated)
-                {
-                    enemy.SetPlayerProximity(active);
-                }
-            }
-        }
-    }
     public void WalleStop(){
         rb.linearVelocity = new Vector2(0f, 0f);
         animator.SetFloat("Speed", 0);
@@ -216,6 +223,7 @@ public class Player : MonoBehaviour
         DetectEnemies(false);
         dead = true;
         WalleStop();
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("IsInactive", true);
         StartCoroutine(ActiveScreen(1,4.5f));
     }
@@ -239,5 +247,20 @@ public class Player : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    public void DetectEnemies(bool active){
+        Collider2D[] objects = Physics2D.OverlapCircleAll(groundCheck.position, 10f, enemiesLayer);
+        foreach (Collider2D other in objects)
+        { 
+            if(other.CompareTag("Enemy")){
+                IEnemyPlatformer enemy = other.GetComponent<IEnemyPlatformer>();
+                if (!enemy.IsDefeated)
+                {
+                    enemy.SetPlayerProximity(active);
+                    other.gameObject.GetComponent<Rigidbody2D>().constraints = (active) ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezeAll;
+                }
+            }
+        }
     }
 }

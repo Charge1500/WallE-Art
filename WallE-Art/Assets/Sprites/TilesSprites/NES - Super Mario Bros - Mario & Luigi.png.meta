@@ -297,6 +297,72 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Mario & Luigi_9
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 372
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04638c57cc26e64390996d8f6643d66
+      internalID: -1713493063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Mario & Luigi_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 372
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e79ed3f612e7a646aa392aef93b292a
+      internalID: 485379475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Super Mario Bros - Mario & Luigi_11
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 372
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23c932203c9078448a6f7280c1c3080
+      internalID: -2019577352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -313,6 +379,8 @@ TextureImporter:
     nameFileIdTable:
       NES - Super Mario Bros - Mario & Luigi_0: -3732045684544685907
       NES - Super Mario Bros - Mario & Luigi_1: -535923995
+      NES - Super Mario Bros - Mario & Luigi_10: 485379475
+      NES - Super Mario Bros - Mario & Luigi_11: -2019577352
       NES - Super Mario Bros - Mario & Luigi_2: 1599063404
       NES - Super Mario Bros - Mario & Luigi_3: -1479590419
       NES - Super Mario Bros - Mario & Luigi_4: 1372417126
@@ -320,6 +388,7 @@ TextureImporter:
       NES - Super Mario Bros - Mario & Luigi_6: 725430819
       NES - Super Mario Bros - Mario & Luigi_7: -1016390491
       NES - Super Mario Bros - Mario & Luigi_8: 652566967
+      NES - Super Mario Bros - Mario & Luigi_9: -1713493063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

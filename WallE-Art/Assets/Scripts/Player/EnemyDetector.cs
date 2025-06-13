@@ -10,6 +10,7 @@ public class EnemyDetector : MonoBehaviour
             if (!enemy.IsDefeated)
             {
                 enemy.SetPlayerProximity(true);
+                other.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1f;
             }
         }
     }
@@ -21,6 +22,7 @@ public class EnemyDetector : MonoBehaviour
             if (!enemy.IsDefeated)
             {
                 enemy.SetPlayerProximity(false);
+                other.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f;
             }
         }
     }
