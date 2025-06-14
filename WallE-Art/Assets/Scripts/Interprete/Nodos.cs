@@ -17,32 +17,33 @@ namespace Interprete
         T VisitProgramNode(ProgramNode node);
         T VisitAssignmentNode(AssignmentNode node);
         T VisitGoToNode(GoToNode node);
+        T VisitLabelNode(LabelNode node);
     }
 
 
 
     public abstract class AstNode
     {
-        public abstract object Accept(IAstVisitor<object> visitor);
+        public abstract T Accept<T>(IAstVisitor<T> visitor);
     }
 
     public abstract class StatementNode : AstNode { }
 
     public abstract class ExpressionNode : AstNode { }
 
-    public class LiteralNode<T> : ExpressionNode
+    public class LiteralNode<TValue> : ExpressionNode
     {
-        public T Value { get; }
+        public TValue Value { get; }
         public Token Token { get; }
 
-        public LiteralNode(T value, Token token)
+        public LiteralNode(TValue value, Token token)
         {
             Value = value;
             Token = token;
         }
         public override string ToString() => $"{Value}";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitLiteralNode(this); 
         }
@@ -58,7 +59,7 @@ namespace Interprete
         }
         public override string ToString() => $"{NameToken.Value}";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitVariableNode(this);
         }
@@ -76,7 +77,7 @@ namespace Interprete
         }
         public override string ToString() => $"({OperatorToken.Value}{Right})";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitUnaryOpNode(this);
         }
@@ -96,7 +97,7 @@ namespace Interprete
         }
         public override string ToString() => $"({Left} {OperatorToken.Value} {Right})";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitBinaryOpNode(this);
         }
@@ -114,7 +115,7 @@ namespace Interprete
         }
         public override string ToString() => $"{FunctionNameToken.Value}({string.Join(", ", Arguments)})";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitFunctionCallNode(this);
         }
@@ -125,7 +126,7 @@ namespace Interprete
         public List<StatementNode> Statements { get; } = new List<StatementNode>();
         public override string ToString() => $"Program({Statements.Count} statements)";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitProgramNode(this);
         }
@@ -143,7 +144,7 @@ namespace Interprete
         }
         public override string ToString() => $"{VariableNameToken.Value} <- {ValueExpression}";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitAssignmentNode(this);
         }
@@ -158,9 +159,9 @@ namespace Interprete
         }
         public override string ToString() => $"Label: {LabelToken.Value}";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
-            return null;
+            return visitor.VisitLabelNode(this); 
         }
     }
 
@@ -176,7 +177,7 @@ namespace Interprete
         }
         public override string ToString() => $"GoTo [{TargetLabelToken.Value}] ({Condition})";
 
-        public override object Accept(IAstVisitor<object> visitor)
+        public override T Accept<T>(IAstVisitor<T> visitor)
         {
             return visitor.VisitGoToNode(this);
         }
@@ -193,6 +194,6 @@ namespace Interprete
             Arguments = arguments;
         }
         public override string ToString() => $"{CommandToken.Value}({string.Join(", ", Arguments)})";
-        public override object Accept(IAstVisitor<object> visitor) { return visitor.VisitCommandNode(this); }
+        public override T Accept<T>(IAstVisitor<T> visitor) { return visitor.VisitCommandNode(this); }
     }
 }

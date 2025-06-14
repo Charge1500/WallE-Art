@@ -124,13 +124,14 @@ public class JugarManager : MonoBehaviour
         if(!string.IsNullOrEmpty(code)){ 
             Lexer lexer = new Lexer();
             List<Token> tokens = lexer.Tokenize(code);
-
             Parser parser = new Parser(tokens);
             ProgramNode astRoot = parser.Parse();
+            SemanticAnalyzer analyzer = new SemanticAnalyzer();
+            analyzer.Analyze(astRoot);
 
-            if (astRoot == null)
+            if (lexer.errors.Count > 0 || parser.errors.Count > 0 || analyzer.errors.Count > 0)
             {
-                ShowError("Parsing failed. Check editor for details."); 
+                ShowError("Compilation failed. Check editor for details."); 
                 return;
             }
             
@@ -247,13 +248,15 @@ public class JugarManager : MonoBehaviour
                     yellowCount++;
                     if(yellowCount==1) {
                         if(x+1<tex.width && y+1<tex.width){
-                            square = tex.GetPixel(x+1, y)==yellow && tex.GetPixel(x+1, y+1)==yellow && tex.GetPixel(x, y+1)==yellow;
+                            square = ColorsApprox(tex.GetPixel(x+1, y),yellow) && 
+                                     ColorsApprox(tex.GetPixel(x+1, y+1),yellow) && 
+                                     ColorsApprox(tex.GetPixel(x, y+1),yellow);
                         }
                         if(square){
                             LevelLoader.Instance.SetWallePos((x,y));
                         }
                     }
-                    if(yellowCount>4) return false;
+                    if(yellowCount>4) {Debug.Log("B");return false;}
                 }
                 
             }

@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button saveImageButton;       
     [SerializeField] private Button executeButton;    
     [SerializeField] private Button menuButton;    
+    [SerializeField] private Button legendButton;    
     [SerializeField] private Button levelSection;    
     [SerializeField] private Button cleanButton;   
 
@@ -31,6 +32,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject codeEditor;      
     [SerializeField] private GameObject errorArea;      
     [SerializeField] private GameObject book;      
+    [SerializeField] private GameObject legendObject;      
 
     [Header("Logic Controllers")]
     [SerializeField] private CanvasController canvasController; 
@@ -56,12 +58,13 @@ public class UIManager : MonoBehaviour
         saveImageButton.onClick.AddListener(OnSaveImageButtonPressed);
         executeButton.onClick.AddListener(OnExecuteButtonPressed);
         menuButton.onClick.AddListener(Menu);
+        legendButton.onClick.AddListener(LegendPanel);
         levelSection.onClick.AddListener(LevelSection);
         cleanButton.onClick.AddListener(Clean);
         /* showCodeEditor.onValueChanged.AddListener(ActiveCodeEditor);
         showErrorArea.onValueChanged.AddListener(ActivateErrorArea);
         showBook.onValueChanged.AddListener(ActiveBook);
- */
+        */
         ShowStatus("Canvas inicializado.");
     }
 
@@ -125,12 +128,15 @@ public class UIManager : MonoBehaviour
         canvasController.InitializeCanvas(canvasDisplayImage.texture.height);
         canvasDisplayImage.texture = canvasController.GetCanvasTexture();
         string sourceCode = codeEditorInput.text;
-        ExecuteCode(sourceCode);
+        ExecuteCode(sourceCode,canvasDisplayImage.texture as Texture2D);
     }
     public void Menu(){
         codeEditorInput.text="";
         statusTextEditor.text="";
         SceneManager.LoadScene("Menu");
+    }
+    public void LegendPanel(){
+        legendObject.SetActive(true);
     }
     public void LevelSection(){
         codeEditorInput.text="";
@@ -164,7 +170,7 @@ public class UIManager : MonoBehaviour
         statusText.color = Color.red; 
     }
 
-    private void ExecuteCode(string sourceCode)
+    private void ExecuteCode(string sourceCode, Texture2D textureParam)
     {
         Clean(); 
         //ShowStatus("--- Starting Execution ---");
@@ -185,7 +191,7 @@ public class UIManager : MonoBehaviour
             }
         } */
 
-        if(lexer.errors != null){
+        if(lexer.errors.Count > 0){
             foreach (string error in lexer.errors)
             {
                 ShowError(error);
@@ -196,7 +202,7 @@ public class UIManager : MonoBehaviour
         Parser parser = new Parser(tokens); 
         ProgramNode astRoot = parser.Parse(); 
 
-        if (parser.errors != null)
+        if (parser.errors.Count > 0)
         {
             foreach (string error in parser.errors)
             {
@@ -204,11 +210,20 @@ public class UIManager : MonoBehaviour
             }
         }
 
+        SemanticAnalyzer analyzer = new SemanticAnalyzer();
+        analyzer.Analyze(astRoot);
+        if (analyzer.errors.Count > 0) {
+            foreach (string error in analyzer.errors)
+            {
+                ShowError(error);
+            }
+        }
+
         //ShowStatus("--- Executing Statements Phase ---");
-        Interpreter interpreter = new Interpreter(canvasDisplayImage.texture as Texture2D); 
+        Interpreter interpreter = new Interpreter(textureParam as Texture2D); 
         Texture2D texture = interpreter.Interpret(astRoot);
 
-        if (interpreter.errors != null)
+        if (interpreter.errors.Count > 0)
         {
             foreach (string error in interpreter.errors)
             {
@@ -216,7 +231,7 @@ public class UIManager : MonoBehaviour
             }
         }
         if(interpreter.errors == null && parser.errors == null && lexer.errors == null){
-            canvasDisplayImage.texture = texture;
+            textureParam = texture;
         }
 
         //ShowStatus("PROGRAM ENDS");

@@ -13,6 +13,9 @@ public class TextureToTile : MonoBehaviour
     [SerializeField] private Texture2D sourceTexture;
     [SerializeField] public PolygonCollider2D polyCollider;
 
+    [Header("Theme Data")]
+    [SerializeField] private LevelThemeData levelTheme; 
+
     [Header("Colliders")]
     [SerializeField] private GameObject cineMachineConfiner;
 
@@ -24,12 +27,6 @@ public class TextureToTile : MonoBehaviour
     private List<(int x, int y)> positionsRequiringBackgroundFill = new List<(int x, int y)>();
     
     private HashSet<(int x, int y)> prefabInstantiatedPositions = new HashSet<(int x, int y)>();
-
-    [Header("Mapeo de Colores a Tiles de Terreno")]
-    [SerializeField] private List<ColorToTile> colorToTerrainTileMappings = new List<ColorToTile>();
-
-    [Header("Mapeo de Colores a Prefabs")]
-    [SerializeField] private List<ColorToPrefabMapping> colorToPrefabMappings = new List<ColorToPrefabMapping>();
 
     [Header("Tiles de Fondo Específicos")]
     [SerializeField] private TileBase blueBackgroundTile;
@@ -111,7 +108,7 @@ public class TextureToTile : MonoBehaviour
 
                 if (!prefabInstantiatedPositions.Contains((x,y)))
                 {
-                    foreach (ColorToPrefabMapping prefabMapping in colorToPrefabMappings)
+                    foreach (ColorToPrefabMapping prefabMapping in levelTheme.colorToPrefabMappings)
                     {
                         if (ColorApproximately(prefabMapping.color, pixelColor))
                         {
@@ -124,7 +121,7 @@ public class TextureToTile : MonoBehaviour
 
                 if (!processedPixel && !prefabInstantiatedPositions.Contains((x,y)))
                 {
-                    foreach (ColorToTile terrainMapping in colorToTerrainTileMappings)
+                    foreach (ColorToTile terrainMapping in levelTheme.colorToTerrainTileMappings)
                     {
                         if (ColorApproximately(terrainMapping.color, pixelColor))
                         {
@@ -282,6 +279,7 @@ public class ColorToPrefabMapping
     public string colorName;
     public Color color;
     public GameObject prefab;
+    public Sprite[] displaySprites;
 }
 
 //tipo de área de fondo (0 para azul, 1 para negro)
@@ -293,4 +291,5 @@ public class ColorToTile
     public Color color;
     public TileBase tile;
     public int backgroundType; 
+    public Sprite[] displaySprites;
 }

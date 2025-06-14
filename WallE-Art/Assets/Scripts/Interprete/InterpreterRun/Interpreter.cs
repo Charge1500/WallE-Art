@@ -1,45 +1,45 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Interprete;
-public partial class Interpreter : IAstVisitor<object> 
+
+public partial class Interpreter : IAstVisitor<object>
 {
-    private int max_execution_steps = int.MaxValue;
+    private readonly int max_execution_steps = 1000000;
     private int _executedSteps = 0;
 
-    private Scope scope = new Scope();
-    private Texture2D texture; 
+    private Scope _runtimeScope = new Scope();
+    private readonly Texture2D _texture;
 
     private int _walleX;
     private int _walleY;
-    private Color _currentBrushColor = Color.clear; 
-    private int _currentBrushSize = 1; 
+    private Color _currentBrushColor = Color.clear;
+    private int _currentBrushSize = 1;
     public List<string> errors = new List<string>();
 
-    private int _programCounter = 0; 
-    private bool _goToExecuted = false; 
+    private int _programCounter = 0;
+    private bool _goToExecuted = false;
+    private readonly Dictionary<string, int> _labelPositions = new Dictionary<string, int>();
 
-    private ProgramNode _programAst;
 
-    public Interpreter(Texture2D canvasController)
+    public Interpreter(Texture2D canvasTexture)
     {
-        texture = canvasController;
+        _texture = canvasTexture;
     }
 
     public Texture2D Interpret(ProgramNode program)
     {
-        _programAst = program ?? throw new ArgumentNullException(nameof(program));
         _programCounter = 0;
         _executedSteps = 0;
-        _currentBrushColor = Color.clear; 
+        _currentBrushColor = Color.clear;
         _currentBrushSize = 1;
-        scope = new Scope();
-        
+        _runtimeScope = new Scope();
+        _labelPositions.Clear();
+        errors.Clear();
 
         try
         {
-            FindLabels(program);
+            FindLabelPositions(program);
 
             while (_programCounter < program.Statements.Count)
             {
@@ -48,59 +48,50 @@ public partial class Interpreter : IAstVisitor<object>
                 {
                     throw new RuntimeException($"Execution aborted: Maximum step limit ({max_execution_steps}) exceeded. Possible infinite loop.");
                 }
+
                 _goToExecuted = false;
                 StatementNode currentStatement = program.Statements[_programCounter];
-
+                
                 Execute(currentStatement);
-            
+
                 if (!_goToExecuted)
                 {
                     _programCounter++;
                 }
             }
-            //Debug.Log("Interpretation finished successfully.");
-            texture.Apply();
-            return texture;
+            _texture.Apply();
+            return _texture;
         }
-        catch (RuntimeException ex) 
+        catch (RuntimeException ex)
         {
             errors.Add(ex.Message);
         }
-         catch (Exception ex) 
+        catch (Exception ex)
         {
-            errors.Add(ex.Message);
+            errors.Add($"[FATAL] Unexpected Interpreter Error: {ex.GetType().Name} - {ex.Message}");
         }
         return null;
     }
 
-    private void Execute(StatementNode node)
-    {   
-        node.Accept(this);
-    }
+    private void Execute(StatementNode node) => node.Accept(this);
+    private object Evaluate(ExpressionNode node) => node.Accept(this);
 
-    private object Evaluate(ExpressionNode node)
-    {
-        return node.Accept(this);
-    }
-
-    private void FindLabels(ProgramNode program)
+    private void FindLabelPositions(ProgramNode program)
     {
         for (int i = 0; i < program.Statements.Count; i++)
         {
             if (program.Statements[i] is LabelNode labelNode)
             {
-                scope.DefineLabel(labelNode.LabelToken, i);
+                _labelPositions[labelNode.LabelToken.Value] = i;
             }
         }
     }
-
+    
     private void DrawPixelWithBrush(int cx, int cy)
     {
         if (_currentBrushColor == Color.clear) return;
-
-        int canvasSize = texture.width;
-        int halfBrush = _currentBrushSize / 2; 
-
+        int canvasSize = _texture.width;
+        int halfBrush = _currentBrushSize / 2;
         for (int offsetY = -halfBrush; offsetY <= halfBrush; offsetY++)
         {
             for (int offsetX = -halfBrush; offsetX <= halfBrush; offsetX++)
@@ -109,10 +100,9 @@ public partial class Interpreter : IAstVisitor<object>
                 int py = cy + offsetY;
                 if (px >= 0 && px < canvasSize && py >= 0 && py < canvasSize)
                 {
-                    texture.SetPixel(px, py, _currentBrushColor);
+                    _texture.SetPixel(px, py, _currentBrushColor);
                 }
             }
         }
     }
-
 }
