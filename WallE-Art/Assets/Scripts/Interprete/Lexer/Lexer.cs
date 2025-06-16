@@ -12,16 +12,16 @@ namespace Interprete{
         private int _currentColumn;
         private List<Token> _tokens;
 
-        public static readonly Dictionary<string, TokenType> Keywords;
+        public static readonly Dictionary<string, TokenType> keywords;
 
         static Lexer()
         {
-            Keywords = new Dictionary<string, TokenType>(StringComparer.OrdinalIgnoreCase);
+            keywords = new Dictionary<string, TokenType>(StringComparer.OrdinalIgnoreCase);
             foreach (var def in FunctionRegistry.AllDefinitions)
             {
-                Keywords[def.Name] = def.KeywordToken;
+                keywords[def.Name] = def.KeywordToken;
             }
-            Keywords["GoTo"] = TokenType.GoToKeyword;
+            keywords["GoTo"] = TokenType.GoToKeyword;
         }
 
 
@@ -203,7 +203,7 @@ namespace Interprete{
             }
             string identifier = _sourceCode.Substring(startPos, _position - startPos);
 
-            if (Keywords.TryGetValue(identifier, out TokenType keywordType))
+            if (keywords.TryGetValue(identifier, out TokenType keywordType))
             {
                 return new Token(keywordType, identifier, _currentLine, startColumn);
             }

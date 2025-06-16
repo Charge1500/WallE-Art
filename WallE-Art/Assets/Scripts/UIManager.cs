@@ -209,7 +209,7 @@ public class UIManager : MenuManager
                 ShowError(error);
             }
         }
-
+        if(lexer.errors.Count > 0 || parser.errors.Count > 0 || analyzer.errors.Count > 0) return;
         //ShowStatus("--- Executing Statements Phase ---");
         Interpreter interpreter = new Interpreter(textureParam as Texture2D,levelThemeData); 
         Texture2D texture = interpreter.Interpret(astRoot);

@@ -36,7 +36,7 @@ namespace Interprete
 
         private static void Define(string name, TokenType tokenType, FunctionCategory category, ValueType returnType, params ValueType[] argTypes)
         {
-            var def = new FunctionDefinition(name, tokenType, category, returnType, argTypes);
+            FunctionDefinition def = new FunctionDefinition(name, tokenType, category, returnType, argTypes);
             ByName[name] = def;
             ByToken[tokenType] = def;
         }

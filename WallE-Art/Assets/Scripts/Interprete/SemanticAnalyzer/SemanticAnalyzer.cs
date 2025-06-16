@@ -12,7 +12,7 @@ namespace Interprete
         {
             try
             {
-                foreach (var statement in program.Statements)
+                foreach (StatementNode statement in program.Statements)
                 {
                     if (statement is LabelNode labelNode)
                     {
@@ -22,7 +22,7 @@ namespace Interprete
             }
             catch(SemanticException ex) { errors.Add(ex.Message); }
 
-            foreach (var statement in program.Statements)
+            foreach (StatementNode statement in program.Statements)
             {
                 if (statement is LabelNode) continue;
 
@@ -149,7 +149,7 @@ namespace Interprete
 
         public ValueType VisitCommandNode(CommandNode node)
         {
-            var def = FunctionRegistry.Get(node.CommandToken.Type);
+            FunctionDefinition def = FunctionRegistry.Get(node.CommandToken.Type);
             CheckArgumentTypes(node.CommandToken, node.Arguments, def.ArgumentTypes);
             
             return ValueType.Void;
@@ -157,7 +157,7 @@ namespace Interprete
 
         public ValueType VisitFunctionCallNode(FunctionCallNode node)
         {
-            var def = FunctionRegistry.Get(node.FunctionNameToken.Type);
+            FunctionDefinition def = FunctionRegistry.Get(node.FunctionNameToken.Type);
             CheckArgumentTypes(node.FunctionNameToken, node.Arguments, def.ArgumentTypes);
             
             return def.ReturnType;

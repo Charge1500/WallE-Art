@@ -5,8 +5,8 @@ using Interprete;
 
 public partial class Interpreter : IAstVisitor<object>
 {
-    private readonly int max_execution_steps = 1000000;
-    private int _executedSteps = 0;
+    private readonly int max_label_visits = 10000;    
+    private Dictionary<string, int> _labelVisitCounts = new Dictionary<string, int>();
 
     private Scope _runtimeScope = new Scope();
     private readonly Texture2D _texture;
@@ -32,7 +32,6 @@ public partial class Interpreter : IAstVisitor<object>
     public Texture2D Interpret(ProgramNode program)
     {
         _programCounter = 0;
-        _executedSteps = 0;
         _currentBrushColor = Color.clear;
         _currentBrushSize = 1;
         _runtimeScope = new Scope();
@@ -45,12 +44,6 @@ public partial class Interpreter : IAstVisitor<object>
 
             while (_programCounter < program.Statements.Count)
             {
-                _executedSteps++;
-                if (_executedSteps > max_execution_steps)
-                {
-                    throw new RuntimeException($"Execution aborted: Maximum step limit ({max_execution_steps}) exceeded. Possible infinite loop.");
-                }
-
                 _goToExecuted = false;
                 StatementNode currentStatement = program.Statements[_programCounter];
                 
@@ -114,5 +107,20 @@ public partial class Interpreter : IAstVisitor<object>
                 //throw new RuntimeException($"Attempted to draw outside canvas bounds at ({px},{py}).", commandToken);
             }
         }
+    }
+    public object VisitLabelNode(LabelNode node)
+    {
+        string labelName = node.LabelToken.Value;
+        if (!_labelVisitCounts.ContainsKey(labelName))
+        {
+            _labelVisitCounts[labelName] = 0;
+        }
+        _labelVisitCounts[labelName]++;
+        if (_labelVisitCounts[labelName] > max_label_visits)
+        {
+            throw new RuntimeException($"Execution aborted: Label '{labelName}' visited too many times ({max_label_visits}). Possible infinite loop at this label.", node.LabelToken);
+        }
+
+        return null;
     }
 }

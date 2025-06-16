@@ -52,7 +52,6 @@ public partial class Interpreter
     }
     
     public object VisitProgramNode(ProgramNode node) => null; 
-    public object VisitLabelNode(LabelNode node) => null;
 
     public object VisitAssignmentNode(AssignmentNode node)
     {

@@ -8,6 +8,7 @@ namespace Interprete{
     {
         private readonly List<Token> _tokens;
         private int _current = 0;
+        private bool _spawn = false;
         public List<string> errors = new List<string>();
 
         public Parser(List<Token> tokens)
@@ -19,7 +20,6 @@ namespace Interprete{
         public ProgramNode Parse()
         {
             ProgramNode program = new ProgramNode();
-            CheckFirstStatementIsSpawn(errors);
             while (!IsAtEnd())
             {
                 try
@@ -28,7 +28,7 @@ namespace Interprete{
                         Advance();
                     }
                     if (IsAtEnd()) break;
-                    
+                    if(!_spawn)CheckFirstStatementIsSpawn();
                     StatementNode statement = ParseStatement();
 
                     if (statement != null) program.Statements.Add(statement);
@@ -111,14 +111,14 @@ namespace Interprete{
         private CommandNode ParseCommand()
         {
             Token commandToken = Advance();
-            var (token,args) = ParseArgumentList(commandToken);
+            (Token token,List<ExpressionNode> args) = ParseArgumentList(commandToken);
 
             return new CommandNode(token, args);
         }
         private FunctionCallNode ParseFunctionCall()
         {
             Token functionToken = Advance();
-            var (token,args) = ParseArgumentList(functionToken);
+            (Token token,List<ExpressionNode> args) = ParseArgumentList(functionToken);
 
             return new FunctionCallNode(token, args);
         }
@@ -126,7 +126,7 @@ namespace Interprete{
         public (Token, List<ExpressionNode>) ParseArgumentList(Token keywordToken){
             Consume(TokenType.LeftParen, $"Expected '(' after function name '{keywordToken.Value}'.");
 
-            var def = FunctionRegistry.Get(keywordToken.Type);
+            FunctionDefinition def = FunctionRegistry.Get(keywordToken.Type);
 
             int expectedArgs = def.Arity;
             List<ExpressionNode> args = new List<ExpressionNode>();
@@ -401,16 +401,17 @@ namespace Interprete{
             }
         }
 
-        private void CheckFirstStatementIsSpawn(List<string> errors)
+        private void CheckFirstStatementIsSpawn()
         {
+            _spawn = true;
             if (_tokens == null || _tokens.Count == 0 || _tokens[0].Type == TokenType.EndOfFile) {
-                errors.Add("[Line 1:1] Parse Error: Source code cannot be empty. Must start with 'Spawn'.");
+                throw new ParseException("[Line 1:1] Parse Error: Source code cannot be empty. Must start with 'Spawn'.");
             }
             while(Check(TokenType.EndOfLine) && !IsAtEnd()) {
                 Advance();
             }
-            if (IsAtEnd()) errors.Add("Parse Error: Source code cannot be empty. Must start with 'Spawn'.");
-            if(!Check(TokenType.SpawnKeyword)) errors.Add("Parse Error: Source must start with 'Spawn'.");
+            if (IsAtEnd()) throw new ParseException("Parse Error: Source code cannot be empty. Must start with 'Spawn'.");
+            if(!Check(TokenType.SpawnKeyword)) throw new ParseException("Parse Error: Source must start with 'Spawn'.");
             return;       
         }
     }
