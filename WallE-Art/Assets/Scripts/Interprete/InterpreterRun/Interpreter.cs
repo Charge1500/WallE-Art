@@ -6,7 +6,7 @@ using Interprete;
 public partial class Interpreter : IAstVisitor<object>
 {
     private readonly int max_label_visits = 10000;    
-    private Dictionary<string, int> _labelVisitCounts = new Dictionary<string, int>();
+    private Dictionary<int, int> _labelVisitCounts = new Dictionary<int, int>();
 
     private Scope _runtimeScope = new Scope();
     private readonly Texture2D _texture;
@@ -108,19 +108,6 @@ public partial class Interpreter : IAstVisitor<object>
             }
         }
     }
-    public object VisitLabelNode(LabelNode node)
-    {
-        string labelName = node.LabelToken.Value;
-        if (!_labelVisitCounts.ContainsKey(labelName))
-        {
-            _labelVisitCounts[labelName] = 0;
-        }
-        _labelVisitCounts[labelName]++;
-        if (_labelVisitCounts[labelName] > max_label_visits)
-        {
-            throw new RuntimeException($"Execution aborted: Label '{labelName}' visited too many times ({max_label_visits}). Possible infinite loop at this label.", node.LabelToken);
-        }
-
-        return null;
-    }
+    public object VisitLabelNode(LabelNode node) => null;
+    
 }

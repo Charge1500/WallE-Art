@@ -62,6 +62,18 @@ public partial class Interpreter
 
     public object VisitGoToNode(GoToNode node)
     {
+        if (!_labelVisitCounts.ContainsKey(_programCounter))
+        {
+            _labelVisitCounts[_programCounter] = 0;
+        }
+
+        _labelVisitCounts[_programCounter]++;
+
+        if (_labelVisitCounts[_programCounter] > max_label_visits)
+        {
+            throw new RuntimeException($"Execution aborted: GoTo '{node.TargetLabelToken.Value}' visited too many times ({max_label_visits}).", node.TargetLabelToken);
+        }
+
         if ((bool)Evaluate(node.Condition))
         {
             _programCounter = _labelPositions[node.TargetLabelToken.Value];

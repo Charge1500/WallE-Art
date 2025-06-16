@@ -190,14 +190,10 @@ namespace Interprete{
                     continue;
                 }
 
-                if (currentChar == '_' || currentChar == '-')
+                if (currentChar == '_')
                 {
-                    char nextChar = Peek();
-                    if (nextChar != '\0' && char.IsLetter(nextChar))
-                    {
-                        Advance();
-                        continue;
-                    }
+                    Advance();
+                    continue;
                 }
                 break;
             }
