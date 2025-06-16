@@ -44,6 +44,8 @@ public class JugarManager : MenuManager
     [SerializeField] private Button cancelStartLevelPanel;
 
     void Start(){
+        MusicManager.Instance.PlayMusic(MusicManager.Instance.music[2]);
+
         canvasController = GetComponent<CanvasController>();
         nextLevelsButton.onClick.AddListener(Next);
         previousLevelsButton.onClick.AddListener(Previous);

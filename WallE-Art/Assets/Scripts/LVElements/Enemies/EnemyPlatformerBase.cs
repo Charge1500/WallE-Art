@@ -13,11 +13,16 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
 
     [Header("Configuración de Capas")]
     [SerializeField] protected LayerMask groundLayer;
+
+    [Header("Audio")]
+    [SerializeField] public AudioClip[] mySoundsClip; 
+    [SerializeField] private AudioSource audioSource; 
     
     public bool IsDefeated => stateController.IsDefeated;
 
     protected virtual void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         components.InitializeComponents(gameObject);
         movement.Initialize(transform, components.rb);
         edgeDetector.Initialize(transform.Find("FrontEdgeDetector"), transform.Find("FrontWallDetector"), groundLayer, edgeDetector.wallCheckDistance); // Asume que tienes GameObjects hijos con estos nombres
@@ -91,6 +96,7 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
 
     protected virtual IEnumerator DestroyAfterDelayCoroutine(float delay)
     {
+        if(audioSource!=null) audioSource.PlayOneShot(mySoundsClip[0]);
         yield return new WaitForSeconds(delay);
         DestroySelf();
     }

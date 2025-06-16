@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using TMPro; 
 public class MenuManager : MonoBehaviour
 {
+    void Start(){
+        MusicManager.Instance.PlayMusic(MusicManager.Instance.music[0]);
+    }
     public void Salir(){
         Application.Quit();
     }

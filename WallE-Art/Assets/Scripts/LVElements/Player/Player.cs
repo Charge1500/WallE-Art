@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private KeyCode crouchKey = KeyCode.DownArrow; 
     [SerializeField] private LayerMask groundLayer; 
+
+    [Header("Audio")]
+    [SerializeField] public AudioClip[] mySoundsClip; 
+    [SerializeField] private AudioSource audioSource; 
     
     // Estados específicos del jugador
     public bool dead = false;
@@ -29,6 +33,7 @@ public class Player : MonoBehaviour
     
     void Awake()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
         components.InitializeComponents(gameObject);
         movement.Initialize(transform, components.rb);
         groundDetector.Initialize(transform.Find("GroundCheck"), groundLayer);
@@ -64,6 +69,7 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && groundDetector.IsGrounded && !isCrouching)
         {
+            audioSource.PlayOneShot(mySoundsClip[0]);
             components.rb.linearVelocity = new Vector2(components.rb.linearVelocity.x, jumpForce);
             animations.SetJumping(true);
             ResetInactivityTimer(); 
@@ -151,6 +157,8 @@ public class Player : MonoBehaviour
             return;
         }
         Die();
+        MusicManager.Instance.StopMusic();
+        audioSource.PlayOneShot(mySoundsClip[1]);
     }
     
     public void Die()
@@ -210,6 +218,8 @@ public class Player : MonoBehaviour
     
     public void WalleWin()
     {
+        MusicManager.Instance.StopMusic();
+        audioSource.PlayOneShot(mySoundsClip[2]);
         DetectEnemies(false);
         dead = true;
         WalleStop();
@@ -222,6 +232,8 @@ public class Player : MonoBehaviour
     {
         if (!isChangingScale && (EntityUtils.CheckObstacleAbove(transform.position, 0.5f, groundLayer) || transform.localScale.y != 1f))
         {
+            if(transform.localScale.y==1) audioSource.PlayOneShot(mySoundsClip[4]);
+            else audioSource.PlayOneShot(mySoundsClip[3]);
             StartCoroutine(GrowAnimation(targetX, targetY));
         }
     }  

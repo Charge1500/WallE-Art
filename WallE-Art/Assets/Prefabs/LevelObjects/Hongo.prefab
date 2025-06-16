@@ -193,4 +193,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  mySoundsClip: []
+  audioSource: {fileID: 0}
   timeAlive: 10

@@ -46,6 +46,8 @@ public class UIManager : MenuManager
 
     void Start()
     {
+        MusicManager.Instance.PlayMusic(MusicManager.Instance.music[1]);
+
         codeEditorInput.text = LevelLoader.Instance.editorText;
         LevelLoader.Instance.SetEditorText("");
 

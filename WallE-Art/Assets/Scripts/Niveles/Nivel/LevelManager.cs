@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     private bool isPaused = false;
 
     void Awake(){
+        MusicManager.Instance.PlayMusic(MusicManager.Instance.music[3]);
         textureToTile = GetComponent<TextureToTile>();
         levelToLoad = LevelLoader.Instance.level;
         walleSpawn = LevelLoader.Instance.wallePos;

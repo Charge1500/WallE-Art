@@ -2821,6 +2821,8 @@ MonoBehaviour:
   previousObject: {fileID: 1145083275}
   closeButton: {fileID: 1606749296}
   guidePages: []
+  currentItemIndex: 0
+  large: 0
   levelTheme: {fileID: 11400000, guid: 46450a8870b86db489e7ffed36cdbf17, type: 2}
   displayImages:
   - {fileID: 939389612}
