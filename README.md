@@ -69,9 +69,4 @@ Para trabajar con el código fuente del proyecto, necesitarás:
 
 Una vez abierto, el proyecto está listo para ser ejecutado directamente desde el editor de Unity.
 
-## **Mejoras Futuras 💡**
-
-* Expandir el conjunto de comandos del lenguaje de Pixel Art para incluir más operaciones complejas.  
-* Implementar un editor de niveles dentro del juego para facilitar la creación de nuevos desafíos.  
-* Añadir más tipos de enemigos y power-ups en los niveles de plataforma.  
-* Mejorar la interfaz de usuario con animaciones y transiciones más fluidas.# WallE-Art
+### Para mas información leer pdfs de la carpeta Informe
