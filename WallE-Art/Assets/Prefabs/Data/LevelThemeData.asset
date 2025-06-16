@@ -15,135 +15,147 @@ MonoBehaviour:
   colorToTerrainTileMappings:
   - description: BlueSky
     colorName: White
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     tile: {fileID: 11400000, guid: c473ef92d1edb46438fd50b4777dc440, type: 2}
     backgroundType: 0
     displaySprites:
     - {fileID: -1600340735, guid: dc418663f09252b4ca7a07a19d0c0bba, type: 3}
   - description: EarthPlatform
     colorName: Coral
-    color: {r: 1, g: 0.5, b: 0.3, a: 0}
+    color: {r: 1, g: 0.5, b: 0.3, a: 1}
     tile: {fileID: 11400000, guid: 2b12b7ac285efdf42aa851f2fde36444, type: 2}
     backgroundType: -1
     displaySprites: []
   - description: OrangeSquare
     colorName: Orange
-    color: {r: 1, g: 0.5, b: 0, a: 0}
+    color: {r: 1, g: 0.5, b: 0, a: 1}
     tile: {fileID: 11400000, guid: e2757cedf3d4f584dbe3f177845c7fd2, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: OrangePlatform
     colorName: Burgundy
-    color: {r: 0.4, g: 0, b: 0.1, a: 0}
+    color: {r: 0.4, g: 0, b: 0.1, a: 1}
     tile: {fileID: 11400000, guid: bb68018273092834fb9fcf64ffc31127, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: BlackCave
     colorName: Black
-    color: {r: 0, g: 0, b: 0, a: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
     tile: {fileID: 11400000, guid: fd6a44787c964284884e0a10c736d7eb, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: CavePlatform
     colorName: Purple
-    color: {r: 0.5, g: 0, b: 0.5, a: 0}
+    color: {r: 0.5, g: 0, b: 0.5, a: 1}
     tile: {fileID: 11400000, guid: 0071cfe7413a3524a85529d95b215bf0, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: CaveEarth
     colorName: Cyan
-    color: {r: 0, g: 1, b: 1, a: 0}
+    color: {r: 0, g: 1, b: 1, a: 1}
     tile: {fileID: 11400000, guid: c490111a279662b47a58fbb360d4c76c, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: BlueSquare
     colorName: Blue
-    color: {r: 0, g: 0, b: 1, a: 0}
+    color: {r: 0, g: 0, b: 1, a: 1}
     tile: {fileID: 11400000, guid: febba9ee64068fa4285fff625b11d0c0, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: CaveCeiling
     colorName: DarkBlue
-    color: {r: 0, g: 0, b: 0.5, a: 0}
+    color: {r: 0, g: 0, b: 0.5, a: 1}
     tile: {fileID: 11400000, guid: 233c3226a2fdc3d4d9388c18290de1f7, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: VallaCave
     colorName: SteelBlue
-    color: {r: 0.1, g: 0.2, b: 0.3, a: 0}
+    color: {r: 0.1, g: 0.2, b: 0.3, a: 1}
     tile: {fileID: 11400000, guid: 49df7bdffa33cc048b8cc7cf770ad1c8, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: WallBackgroundCastle
     colorName: Brown
-    color: {r: 0.6, g: 0.3, b: 0.1, a: 0}
+    color: {r: 0.6, g: 0.3, b: 0.1, a: 1}
     tile: {fileID: 11400000, guid: da1a9da0ec2d1a2429d55e9080e39597, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: CastleCeiling
     colorName: Red
-    color: {r: 1, g: 0, b: 0, a: 0}
+    color: {r: 1, g: 0, b: 0, a: 1}
     tile: {fileID: 11400000, guid: c7ea7685d569fa34091ca9cd7cb83d7b, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: CastlePlatform
     colorName: Gray
-    color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     tile: {fileID: 11400000, guid: 03a04a4214de2c1488fd2d2aaa6a47e5, type: 2}
     backgroundType: 1
     displaySprites: []
   - description: Bush
     colorName: Green
-    color: {r: 0, g: 1, b: 0, a: 0}
+    color: {r: 0, g: 1, b: 0, a: 1}
     tile: {fileID: 11400000, guid: 99dfad47ad106a8489db2dcc4de210ee, type: 2}
     backgroundType: -1
     displaySprites: []
   - description: TriangleBush
     colorName: Green
-    color: {r: 0.75, g: 1, b: 0, a: 0}
+    color: {r: 0.75, g: 1, b: 0, a: 1}
     tile: {fileID: 11400000, guid: d755cfd883632604e944ca1fa60bf3f4, type: 2}
     backgroundType: -1
     displaySprites: []
   - description: Valla
     colorName: OldGold
-    color: {r: 0.8, g: 0.7, b: 0.2, a: 0}
+    color: {r: 0.8, g: 0.7, b: 0.2, a: 1}
     tile: {fileID: 11400000, guid: adc294c64123c3143886265992f04cc1, type: 2}
     backgroundType: -1
     displaySprites: []
   - description: Tree
     colorName: Caqui
-    color: {r: 0.75, g: 0.75, b: 0.55, a: 0}
+    color: {r: 0.75, g: 0.75, b: 0.55, a: 1}
     tile: {fileID: 11400000, guid: 6b0e0a02ccbba414ebc7d55bc3b98e65, type: 2}
     backgroundType: -1
     displaySprites: []
   - description: Clouds
     colorName: Caqui
-    color: {r: 0.7, g: 0.5, b: 1, a: 0}
+    color: {r: 0.7, g: 0.5, b: 1, a: 1}
     tile: {fileID: 11400000, guid: 033db309007b5104fa50034396bc75da, type: 2}
     backgroundType: -1
     displaySprites: []
   - description: CloudPlatform
     colorName: Menta
-    color: {r: 0.6, g: 1, b: 0.8, a: 0}
+    color: {r: 0.6, g: 1, b: 0.8, a: 1}
     tile: {fileID: 11400000, guid: 269ccae6feae39648b63735ea80a16c8, type: 2}
     backgroundType: -1
     displaySprites: []
   - description: Bridge
     colorName: LightGray
-    color: {r: 0.8, g: 0.8, b: 0.8, a: 0}
+    color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     tile: {fileID: 11400000, guid: be028e0cba2809b49b9b4a24fe4bfbca, type: 2}
     backgroundType: -1
     displaySprites: []
   colorToPrefabMappings:
   - description: PlantWin
     colorName: Pink
-    color: {r: 1, g: 0.4, b: 0.7, a: 0}
+    color: {r: 1, g: 0.4, b: 0.7, a: 1}
     prefab: {fileID: 3585702810546688295, guid: ffafdb72bff47f64495dc64eefa4335b, type: 3}
     displaySprites:
     - {fileID: -7424156774359068045, guid: 6159a21127066c9449d69af902759e0d, type: 3}
   - description: Goomba
     colorName: Turquoise
-    color: {r: 0.2509804, g: 0.8784314, b: 0.81960785, a: 0}
+    color: {r: 0.2509804, g: 0.8784314, b: 0.81960785, a: 1}
     prefab: {fileID: 6101748260109530421, guid: 44efa18b98e91f84da41aeae413168a7, type: 3}
     displaySprites:
     - {fileID: 340790383953342548, guid: 9175b6d6f8406404ea6ddcb58536b27c, type: 3}
+  - description: Cube
+    colorName: DarkGreen
+    color: {r: 0, g: 0.392, b: 0, a: 1}
+    prefab: {fileID: 3850427761687285891, guid: 481ae9f680259264091723ec99802edb, type: 3}
+    displaySprites:
+    - {fileID: 9008232839756062621, guid: 56189784f1ad04547a8032e7a5350d02, type: 3}
+  - description: Turtle
+    colorName: DarkYellow
+    color: {r: 0.72, g: 0.53, b: 0.04, a: 1}
+    prefab: {fileID: 9025930932771104525, guid: 71694ebb7a9bf9449a6bb6874e7f583e, type: 3}
+    displaySprites:
+    - {fileID: 95440312698277392, guid: 9175b6d6f8406404ea6ddcb58536b27c, type: 3}

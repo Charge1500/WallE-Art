@@ -2813,9 +2813,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8747ca35cc0bc534fb6a1e1ef71e0f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  legendObject: {fileID: 2099900925}
+  guidePanel: {fileID: 2099900925}
+  textContent: {fileID: 1218791998}
+  nextObject: {fileID: 1518548250}
+  nextButton: {fileID: 1518548252}
+  previousButton: {fileID: 1145083277}
+  previousObject: {fileID: 1145083275}
+  closeButton: {fileID: 1606749296}
+  guidePages: []
   levelTheme: {fileID: 11400000, guid: 46450a8870b86db489e7ffed36cdbf17, type: 2}
-  descriptionText: {fileID: 1218791998}
   displayImages:
   - {fileID: 939389612}
   - {fileID: 1518914438}
@@ -2826,11 +2832,6 @@ MonoBehaviour:
   - {fileID: 2066326379}
   - {fileID: 588868868}
   - {fileID: 1373619871}
-  nextButton: {fileID: 1518548252}
-  nextObject: {fileID: 1518548250}
-  previousButton: {fileID: 1145083277}
-  previousObject: {fileID: 1145083275}
-  closeButton: {fileID: 1606749296}
 --- !u!1 &1080411335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,6 +3708,7 @@ MonoBehaviour:
   legendObject: {fileID: 2099900925}
   canvasController: {fileID: 787655869}
   fileManager: {fileID: 98556505}
+  levelThemeData: {fileID: 11400000, guid: 46450a8870b86db489e7ffed36cdbf17, type: 2}
   defaultCanvasSize: 64
   minCanvasSize: 8
   maxCanvasSize: 256

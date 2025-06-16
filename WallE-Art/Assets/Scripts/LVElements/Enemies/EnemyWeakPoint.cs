@@ -16,7 +16,9 @@ public class EnemyWeakPoint : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             Player player = other.GetComponent<Player>();
-            parentEnemy.Defeat(player);
+            if(!player.isChangingScale && !player.dead){
+                parentEnemy.Defeat(player);
+            }
         }
     }
 }

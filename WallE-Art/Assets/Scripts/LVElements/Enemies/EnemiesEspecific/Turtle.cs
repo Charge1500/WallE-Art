@@ -3,49 +3,61 @@ using System.Collections;
 
 public class Turtle : EnemyPlatformerBase
 {
-    public bool isHide=false;
-    public bool isHidingMove=false;
+    public bool isHide = false;
+    public bool isHidingMove = false;
+
     public override void Defeat(Player player)
     {
-        if(isHide){
-            player.BounceOnEnemy(playerBounceOnDefeat);
-            _isDefeated = true;
-            mainCollider.enabled = false;
-            StartCoroutine(DestroyAfterDelayCoroutine(destroyDelayAfterDefeat));
-        }
-        player.BounceOnEnemy(playerBounceOnDefeat);
-        _isDefeated = true;
-
-        animator.SetBool(defeatedAnimatorParam, true);
-
-        moveSpeed = 0f;
-
-        rb.linearVelocity = Vector2.zero;
-        isHide = true;
-    }
-
-    protected override void OnCollisionEnter2D(Collision2D collision)
-    {
-        Player player = collision.gameObject.GetComponent<Player>();
-        if (player != null)
+        if (isHide)
         {
-            HandlePlayerContact(player);
+            player.BounceOnEnemy(combat.PlayerBounceForce);
+            stateController.SetDefeated(true);
+            components.mainCollider.enabled = false;
+            StartCoroutine(DestroyAfterDelayCoroutine(combat.DestroyDelay));
+        }
+        else 
+        {
+            player.BounceOnEnemy(combat.PlayerBounceForce);
+            stateController.SetDefeated(true);
+            
+            animations.SetDead(true); 
+            movement.SetMoveSpeed(0f);
+            components.rb.linearVelocity = Vector2.zero;
+            
+            isHide = true;
         }
     }
 
     public override void HandlePlayerContact(Player player)
     {
-        if(!isHide) player.Damage();
-        if(isHidingMove) player.Damage();
-        if(isHide){
-            if((isFacingRight && !(player.transform.localScale.x>0)) || (!isFacingRight && player.transform.localScale.x>0)) {
-                transform.localScale = new Vector3(transform.localScale.x *-1,transform.localScale.y,0);
+
+        if (!isHide) player.Damage();
+        else if (isHidingMove) player.Damage();
+        else if (isHide)
+        {
+            if ((movement.IsFacingRight && !(player.transform.localScale.x > 0)) || (!movement.IsFacingRight && player.transform.localScale.x > 0))
+            {
+                movement.Flip();
             }
-            isFacingRight = player.transform.localScale.x>0;
-            moveSpeed = 3f; 
-            _isDefeated = false;
-            isHidingMove = true;
+            float playerDirection = Mathf.Sign(player.transform.localScale.x);
+
+            movement.isFacingRight = player.transform.localScale.x>0;
+
+            movement.SetMoveSpeed(3f);
+            stateController.SetDefeated(false); 
+            isHidingMove = true; 
         }
     }
-
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    {
+        Player player = collision.gameObject.GetComponent<Player>();
+        if (player != null)
+        {
+            if (stateController.IsDefeated && !isHide) 
+            {
+                return;
+            }
+            HandlePlayerContact(player);
+        }
+    }
 }

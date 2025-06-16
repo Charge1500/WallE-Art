@@ -10,21 +10,6 @@ namespace Interprete{
         private int _current = 0;
         public List<string> errors = new List<string>();
 
-        private static HashSet<TokenType> FunctionKeywords = new HashSet<TokenType>
-        {
-            TokenType.GetActualXKeyword, TokenType.GetActualYKeyword, TokenType.GetCanvasSizeKeyword,
-            TokenType.GetColorCountKeyword, TokenType.IsBrushColorKeyword, TokenType.IsBrushSizeKeyword,
-            TokenType.IsCanvasColorKeyword
-        };
-
-        private static HashSet<TokenType> CommandKeywords = new HashSet<TokenType>
-        {
-            TokenType.SpawnKeyword, TokenType.ColorKeyword, TokenType.SizeKeyword,
-            TokenType.DrawLineKeyword, TokenType.DrawCircleKeyword, TokenType.DrawRectangleKeyword,
-            TokenType.FillKeyword
-        };
-
-
         public Parser(List<Token> tokens)
         {
             _tokens = tokens ?? new List<Token>();
@@ -74,7 +59,7 @@ namespace Interprete{
             {
                 return ParseAssignment();
             }
-            else if (CommandKeywords.Contains(currentToken.Type))
+            else if (FunctionRegistry.IsCommand(currentToken.Type))
             {
                 return ParseCommand();
             }
@@ -125,73 +110,49 @@ namespace Interprete{
 
         private CommandNode ParseCommand()
         {
-            List<ExpressionNode> args = new List<ExpressionNode>();
-            Token functionKeyword = Advance();
-            (functionKeyword,args) = FunctionCommandNode(functionKeyword);
+            Token commandToken = Advance();
+            var (token,args) = ParseArgumentList(commandToken);
 
-            return new CommandNode(functionKeyword, args);
+            return new CommandNode(token, args);
         }
         private FunctionCallNode ParseFunctionCall()
         {
-            List<ExpressionNode> args = new List<ExpressionNode>();
-            Token functionKeyword = Advance();
-            (functionKeyword,args) = FunctionCommandNode(functionKeyword);
+            Token functionToken = Advance();
+            var (token,args) = ParseArgumentList(functionToken);
 
-            return new FunctionCallNode(functionKeyword, args);
+            return new FunctionCallNode(token, args);
         }
 
-        public (Token, List<ExpressionNode>) FunctionCommandNode(Token functionKeyword){
-            Consume(TokenType.LeftParen, $"Expected '(' after function name '{functionKeyword.Value}'.");
+        public (Token, List<ExpressionNode>) ParseArgumentList(Token keywordToken){
+            Consume(TokenType.LeftParen, $"Expected '(' after function name '{keywordToken.Value}'.");
 
+            var def = FunctionRegistry.Get(keywordToken.Type);
+
+            int expectedArgs = def.Arity;
             List<ExpressionNode> args = new List<ExpressionNode>();
-
-            int expectedArgs = GetExpectedArgumentCount(functionKeyword);
 
             if (!Check(TokenType.RightParen))
             {
                 if (expectedArgs == 0)
                 {
-                    throw new ParseException($"Function '{functionKeyword.Value}' does not take arguments.", Peek());
+                    throw new ParseException($"Function '{keywordToken.Value}' does not take any arguments.", Peek());
                 }
                 do
                 {
                     args.Add(ParseExpression());
                 } while (Match(TokenType.Comma));
             }
-            else
+            
+            Consume(TokenType.RightParen, $"Expected ')' or ',' after argument list for function '{keywordToken.Value}'.");
+
+            if (args.Count != expectedArgs)
             {
-                if (expectedArgs > 0) {
-                    throw new ParseException($"Function '{functionKeyword.Value}' requires arguments.", functionKeyword);
-                } 
+                throw new ParseException($"'{keywordToken.Value}' expects {expectedArgs} arguments, but got {args.Count}.", keywordToken);
             }
 
-            Consume(TokenType.RightParen, $"Expected ')' or ',' after argument list for function '{functionKeyword.Value}'.");
-
-            ValidateArgumentCount(functionKeyword, args, expectedArgs);
-            return (functionKeyword, args);
+            return (keywordToken, args);
         }
 
-        private int GetExpectedArgumentCount(Token functionKeyword)
-        {
-            switch (functionKeyword.Type)
-            {
-                case TokenType.SpawnKeyword: return 2;
-                case TokenType.ColorKeyword: return 1;
-                case TokenType.SizeKeyword: return 1;
-                case TokenType.DrawLineKeyword: return 3;
-                case TokenType.DrawCircleKeyword: return 3;
-                case TokenType.DrawRectangleKeyword: return 5;
-                case TokenType.FillKeyword: return 0;
-                case TokenType.GetActualXKeyword: return 0;
-                case TokenType.GetActualYKeyword: return 0;
-                case TokenType.GetCanvasSizeKeyword: return 0;
-                case TokenType.GetColorCountKeyword: return 5; 
-                case TokenType.IsBrushColorKeyword: return 1; 
-                case TokenType.IsBrushSizeKeyword: return 1; 
-                case TokenType.IsCanvasColorKeyword: return 3;
-                default: return -1;
-            }
-        }
         private ExpressionNode ParseExpression()
         {
             return ParseLogicalOr();
@@ -317,7 +278,7 @@ namespace Interprete{
                 return new VariableNode(identifierToken);
             }
 
-            if (FunctionKeywords.Contains(Peek().Type))
+            if (FunctionRegistry.IsFunction(Peek().Type))
             { 
                 if (CheckNext(TokenType.LeftParen)) {
                     return ParseFunctionCall();

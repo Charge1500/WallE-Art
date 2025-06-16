@@ -8,7 +8,7 @@ namespace Interprete{
         SpawnKeyword, ColorKeyword, SizeKeyword, DrawLineKeyword, DrawCircleKeyword, DrawRectangleKeyword, FillKeyword,
 
         //Function Keywords
-        GetActualXKeyword, GetActualYKeyword, GetCanvasSizeKeyword, GetColorCountKeyword, IsBrushColorKeyword, IsBrushSizeKeyword, IsCanvasColorKeyword,
+        GetActualXKeyword, GetActualYKeyword, GetCanvasSizeKeyword, GetColorCountKeyword, IsBrushColorKeyword, IsBrushSizeKeyword, IsCanvasColorKeyword,MoveToKeyword,
 
         //Control Flow
         GoToKeyword,

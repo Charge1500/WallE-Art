@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class MushRom : EnemyPlatformerBase
 {
-    void Start(){
-        isPlayerNear = true;
-        StartCoroutine(DestroyAfterDelayCoroutine(10f));
+    [SerializeField] private (float x,float y) scalePlayer = (1.25f,1.25f);
+    [SerializeField] private float timeAlive = 10f;
+    void Start()
+    {
+        stateController.SetPlayerProximity(true); 
+        StartCoroutine(DestroyAfterDelayCoroutine(timeAlive)); 
     }
+
     public override void HandlePlayerContact(Player player)
     {
-        player.ChangeScale(1.2f,1.2f);
-        Destroy(gameObject);
+        player.ChangeScale(scalePlayer.x, scalePlayer.y);
+        DestroySelf();
     }
 }

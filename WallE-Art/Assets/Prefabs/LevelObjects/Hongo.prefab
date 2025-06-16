@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1251596124738031020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5185851849636171319}
-  m_Layer: 8
-  m_Name: FrontWall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5185851849636171319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251596124738031020}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2993164, y: -0.0074310303, z: 0}
-  m_LocalScale: {x: 0.7801, y: 0.7801, z: 0.7801}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7398600593979781975}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2599996121115296433
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,9 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3527666742578983161}
-  - {fileID: 5185851849636171319}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7197988718226775901
@@ -199,45 +166,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8288b2bdd7315843bd23905b780aa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCollider: {fileID: 0}
-  moveSpeed: 1.5
+  components:
+    rb: {fileID: 0}
+    animator: {fileID: 0}
+    mainCollider: {fileID: 0}
+  movement:
+    moveSpeed: 2
+    isFacingRight: 1
+  edgeDetector:
+    frontEdgeDetector: {fileID: 0}
+    frontWallDetector: {fileID: 0}
+    obstacleLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    wallCheckDistance: 0.1
+  animations:
+    speedParam: Speed
+    jumpParam: IsJumping
+    fallParam: IsFalling
+    crouchParam: IsCrouching
+    deadParam: Dead
+    inactiveParam: IsInactive
+  combat:
+    playerBounceForce: 5
+    destroyDelay: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  frontEdgeDetector: {fileID: 3527666742578983161}
-  frontWallDetector: {fileID: 5185851849636171319}
-  wallCheckDistance: 0.1
-  defeatedAnimatorParam: Dead
-  destroyDelayAfterDefeat: 1
-  playerBounceOnDefeat: 5
---- !u!1 &7869806830454607177
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3527666742578983161}
-  m_Layer: 8
-  m_Name: FrontEdge
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3527666742578983161
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7869806830454607177}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.304, y: -0.243, z: 0}
-  m_LocalScale: {x: 0.7801, y: 0.7801, z: 0.7801}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7398600593979781975}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  timeAlive: 10

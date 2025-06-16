@@ -2,37 +2,52 @@ using UnityEngine;
 
 namespace Interprete
 {
-    public static class InterpreterHelpers
+    public class InterpreterHelpers
     {
-        public static bool TryParseColor(string colorName, out Color result)
+        public static bool TryParseColor(string colorName, LevelThemeData levelTheme, out Color result)
         {
-            if (string.IsNullOrWhiteSpace(colorName))
-            {
+            if (string.IsNullOrWhiteSpace(colorName)){
                 result = Color.clear;
                 return false;
             }
-            switch (colorName.ToLowerInvariant())
+            
+
+            string lowerColorName = colorName.ToLowerInvariant();
+
+            foreach (ColorToTile terrainMapping in levelTheme.colorToTerrainTileMappings)
             {
+                if (terrainMapping.colorName.ToLowerInvariant() == lowerColorName)
+                {
+                    result = terrainMapping.color;
+                    return true;
+                }
+            }
+
+            foreach (ColorToPrefabMapping prefabMapping in levelTheme.colorToPrefabMappings)
+            {
+                if (prefabMapping.colorName.ToLowerInvariant() == lowerColorName)
+                {
+                    result = prefabMapping.color;
+                    return true;
+                }
+            }
+
+            switch (lowerColorName)
+            {
+                case "transparent": result = Color.clear; return true;
                 case "blue": result = Color.blue; return true;
                 case "darkblue": result = new Color(0.0f, 0.0f, 0.5f); return true;
                 case "darkred": result = new Color(0.5f, 0.0f, 0.0f); return true;
-                case "steelblue": result = new Color(0.1f, 0.2f, 0.3f); return true;
-                case "cyan": result = new Color(0f, 1.0f, 1.0f); return true;
                 case "purple": result = new Color(0.5f, 0.0f, 0.5f); return true;
                 case "green": result = Color.green; return true;
                 case "red": result = Color.red; return true;
                 case "yellow": result = Color.yellow; return true;
                 case "orange": result = new Color(1.0f, 0.5f, 0.0f); return true;
                 case "brown": result = new Color(0.6f, 0.3f, 0.1f); return true;
-                case "coral": result = new Color(1.0f, 0.5f, 0.3f); return true;
-                case "burgundy": result = new Color(0.4f, 0.0f, 0.1f); return true;
                 case "gray": result = new Color(0.5f, 0.5f, 0.5f); return true;
                 case "black": result = Color.black; return true;
-                case "turquoise": result = new Color(0.25f, 0.88f, 0.82f); return true;
-                case "lime": result = new Color(0.75f, 1.0f, 0.0f); return true;
                 case "white": result = Color.white; return true;
                 case "pink": result = new Color(1.0f, 0.4f, 0.7f); return true;
-                case "transparent": result = Color.clear; return true;
                 default:
                     result = Color.clear; return false;
             }

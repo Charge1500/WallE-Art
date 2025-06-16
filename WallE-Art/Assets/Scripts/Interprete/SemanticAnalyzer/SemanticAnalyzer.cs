@@ -83,35 +83,6 @@ namespace Interprete
             }
             return ValueType.Void;
         }
-        
-        public ValueType VisitCommandNode(CommandNode node)
-        {
-            switch (node.CommandToken.Type)
-            {
-                case TokenType.SpawnKeyword:
-                    CheckArgumentTypes(node.CommandToken, node.Arguments, ValueType.Number, ValueType.Number);
-                    break;
-                case TokenType.ColorKeyword:
-                    CheckArgumentTypes(node.CommandToken, node.Arguments, ValueType.String);
-                    break;
-                case TokenType.SizeKeyword:
-                    CheckArgumentTypes(node.CommandToken, node.Arguments, ValueType.Number);
-                    break;
-                case TokenType.DrawLineKeyword:
-                case TokenType.DrawCircleKeyword:
-                    CheckArgumentTypes(node.CommandToken, node.Arguments, ValueType.Number, ValueType.Number, ValueType.Number);
-                    break;
-                case TokenType.DrawRectangleKeyword:
-                    CheckArgumentTypes(node.CommandToken, node.Arguments, ValueType.Number, ValueType.Number, ValueType.Number, ValueType.Number, ValueType.Number);
-                    break;
-                case TokenType.FillKeyword:
-                    CheckArgumentCount(node.CommandToken, node.Arguments, 0);
-                    break;
-                default:
-                    throw new SemanticException($"Unknown command '{node.CommandToken.Value}'.", node.CommandToken);
-            }
-            return ValueType.Void;
-        }
 
         public ValueType VisitLiteralNode<T>(LiteralNode<T> node)
         {
@@ -176,36 +147,20 @@ namespace Interprete
             throw new SemanticException($"Invalid binary operator '{node.OperatorToken.Value}'.", node.OperatorToken);
         }
 
+        public ValueType VisitCommandNode(CommandNode node)
+        {
+            var def = FunctionRegistry.Get(node.CommandToken.Type);
+            CheckArgumentTypes(node.CommandToken, node.Arguments, def.ArgumentTypes);
+            
+            return ValueType.Void;
+        }
+
         public ValueType VisitFunctionCallNode(FunctionCallNode node)
         {
-            var token = node.FunctionNameToken;
-            switch (token.Type)
-            {
-                case TokenType.GetActualXKeyword:
-                case TokenType.GetActualYKeyword:
-                case TokenType.GetCanvasSizeKeyword:
-                    CheckArgumentCount(token, node.Arguments, 0);
-                    return ValueType.Number;
-                
-                case TokenType.IsBrushColorKeyword:
-                    CheckArgumentTypes(token, node.Arguments, ValueType.String);
-                    return ValueType.Boolean;
-
-                case TokenType.IsBrushSizeKeyword:
-                    CheckArgumentTypes(token, node.Arguments, ValueType.Number);
-                    return ValueType.Boolean;
-                
-                case TokenType.IsCanvasColorKeyword:
-                    CheckArgumentTypes(token, node.Arguments, ValueType.String, ValueType.Number, ValueType.Number);
-                    return ValueType.Boolean;
-                
-                case TokenType.GetColorCountKeyword:
-                    CheckArgumentTypes(token, node.Arguments, ValueType.String, ValueType.Number, ValueType.Number, ValueType.Number, ValueType.Number);
-                    return ValueType.Number;
-
-                default:
-                    throw new SemanticException($"Unknown function '{token.Value}'.", token);
-            }
+            var def = FunctionRegistry.Get(node.FunctionNameToken.Type);
+            CheckArgumentTypes(node.FunctionNameToken, node.Arguments, def.ArgumentTypes);
+            
+            return def.ReturnType;
         }
         
         private void CheckArgumentCount(Token token, List<ExpressionNode> args, int expected)

@@ -6,7 +6,7 @@ using TMPro;
 using SFB;
 using System.IO;
 using Interprete;
-public class JugarManager : MonoBehaviour
+public class JugarManager : MenuManager
 {
     [Header("Level Buttons")]
     [SerializeField] private GameObject[] levelsButtonsObjects;
@@ -18,12 +18,14 @@ public class JugarManager : MonoBehaviour
     [SerializeField] private int levelsIndex = 0;
 
     [Header("Auxiliar Level Buttons")]
+    [SerializeField] private Button regresar;
     [SerializeField] private Button nextLevelsButton;
     [SerializeField] private GameObject nextLevelsButtonObject;
     [SerializeField] private Button previousLevelsButton;
     [SerializeField] private GameObject previousLevelsButtonObject;
 
     [Header("Create Level")]
+    [SerializeField] private LevelThemeData levelThemeData; 
     [SerializeField] private CanvasController canvasController; 
     [SerializeField] private GameObject addLevelPanel;
     [SerializeField] private Button cancelLevelPanel;
@@ -42,6 +44,7 @@ public class JugarManager : MonoBehaviour
     [SerializeField] private Button cancelStartLevelPanel;
 
     void Start(){
+        canvasController = GetComponent<CanvasController>();
         nextLevelsButton.onClick.AddListener(Next);
         previousLevelsButton.onClick.AddListener(Previous);
 
@@ -49,6 +52,7 @@ public class JugarManager : MonoBehaviour
         addLevel.onClick.AddListener(AddLevel);
         findFile.onClick.AddListener(FindFile);
         editor.onClick.AddListener(Editor);
+        regresar.onClick.AddListener(Menu);
 
         cancelStartLevelPanel.onClick.AddListener(CancelStartLevelPanel);
 
@@ -135,15 +139,15 @@ public class JugarManager : MonoBehaviour
                 return;
             }
             
-            if(!int.TryParse(size.text, out int sizeValue) || sizeValue < 8 || sizeValue > 256) 
+            if(!int.TryParse(size.text, out int sizeValue) || sizeValue < 16 || sizeValue > 256) 
             {
-                ShowError("Invalid Canvas Size (must be between 8 and 256).");
+                ShowError("Invalid Canvas Size (must be between 16 and 256).");
                 return;
             }
 
             canvasController.InitializeCanvas(sizeValue);
             Texture2D newTexture = canvasController.GetCanvasTexture();
-            Interpreter interpreter = new Interpreter(newTexture);
+            Interpreter interpreter = new Interpreter(newTexture, levelThemeData);
             Texture2D texture = interpreter.Interpret(astRoot); 
             
             if(interpreter.errors.Count!=0){ShowError("Execution failed. Check editor for details.");return;}
@@ -204,12 +208,6 @@ public class JugarManager : MonoBehaviour
             if (levelsIndex < 0) levelsIndex = 0; 
         }
         UpdateLevelButtons(); 
-    }
-    public void Editor(){
-        SceneManager.LoadScene("Editor");
-    }
-    public void Regresar(){
-        SceneManager.LoadScene("Menu");
     }
 
     public void ShowStatus(string message)

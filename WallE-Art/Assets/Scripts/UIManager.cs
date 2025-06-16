@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using TMPro; 
 using Interprete;
-public class UIManager : MonoBehaviour
+public class UIManager : MenuManager
 {
     [Header("UI Elements")]
     [SerializeField] private RawImage canvasDisplayImage; 
@@ -37,6 +37,7 @@ public class UIManager : MonoBehaviour
     [Header("Logic Controllers")]
     [SerializeField] private CanvasController canvasController; 
     [SerializeField] private FileManager fileManager;
+    [SerializeField] private LevelThemeData levelThemeData;
 
     [Header("Configuration")]
     [SerializeField] private int defaultCanvasSize = 64;
@@ -58,8 +59,8 @@ public class UIManager : MonoBehaviour
         saveImageButton.onClick.AddListener(OnSaveImageButtonPressed);
         executeButton.onClick.AddListener(OnExecuteButtonPressed);
         menuButton.onClick.AddListener(Menu);
+        levelSection.onClick.AddListener(Jugar);
         legendButton.onClick.AddListener(LegendPanel);
-        levelSection.onClick.AddListener(LevelSection);
         cleanButton.onClick.AddListener(Clean);
         /* showCodeEditor.onValueChanged.AddListener(ActiveCodeEditor);
         showErrorArea.onValueChanged.AddListener(ActivateErrorArea);
@@ -130,18 +131,8 @@ public class UIManager : MonoBehaviour
         string sourceCode = codeEditorInput.text;
         ExecuteCode(sourceCode,canvasDisplayImage.texture as Texture2D);
     }
-    public void Menu(){
-        codeEditorInput.text="";
-        statusTextEditor.text="";
-        SceneManager.LoadScene("Menu");
-    }
     public void LegendPanel(){
         legendObject.SetActive(true);
-    }
-    public void LevelSection(){
-        codeEditorInput.text="";
-        statusTextEditor.text="";
-        SceneManager.LoadScene("Jugar");
     }
     public void Clean(){
         statusTextEditor.text="";
@@ -220,7 +211,7 @@ public class UIManager : MonoBehaviour
         }
 
         //ShowStatus("--- Executing Statements Phase ---");
-        Interpreter interpreter = new Interpreter(textureParam as Texture2D); 
+        Interpreter interpreter = new Interpreter(textureParam as Texture2D,levelThemeData); 
         Texture2D texture = interpreter.Interpret(astRoot);
 
         if (interpreter.errors.Count > 0)

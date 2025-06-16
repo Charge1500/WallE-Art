@@ -1493,11 +1493,13 @@ MonoBehaviour:
   - {fileID: 1883869938}
   levels: []
   levelsIndex: 0
+  regresar: {fileID: 919241184}
   nextLevelsButton: {fileID: 1518018917}
   nextLevelsButtonObject: {fileID: 1518018915}
   previousLevelsButton: {fileID: 1338733404}
   previousLevelsButtonObject: {fileID: 1338733402}
-  canvasController: {fileID: 398426999}
+  levelThemeData: {fileID: 11400000, guid: 46450a8870b86db489e7ffed36cdbf17, type: 2}
+  canvasController: {fileID: 0}
   addLevelPanel: {fileID: 1751190809}
   cancelLevelPanel: {fileID: 100074168}
   addLevel: {fileID: 1287913772}

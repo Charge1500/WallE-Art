@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156946470710917455}
   m_Layer: 8
-  m_Name: FrontWall
+  m_Name: FrontWallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,18 +249,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b636d3924499144b6bff36cbf7cba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCollider: {fileID: 0}
-  moveSpeed: 1.5
+  components:
+    rb: {fileID: 0}
+    animator: {fileID: 0}
+    mainCollider: {fileID: 0}
+  movement:
+    moveSpeed: 1.5
+    isFacingRight: 1
+  edgeDetector:
+    frontEdgeDetector: {fileID: 0}
+    frontWallDetector: {fileID: 0}
+    obstacleLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    wallCheckDistance: 0.1
+  animations:
+    speedParam: Speed
+    jumpParam: IsJumping
+    fallParam: IsFalling
+    crouchParam: IsCrouching
+    deadParam: Dead
+    inactiveParam: IsInactive
+  combat:
+    playerBounceForce: 5
+    destroyDelay: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  frontEdgeDetector: {fileID: 3900369722079735351}
-  frontWallDetector: {fileID: 1156946470710917455}
-  wallCheckDistance: 0.1
-  isPlayerNear: 0
-  defeatedAnimatorParam: Dead
-  destroyDelayAfterDefeat: 1
-  playerBounceOnDefeat: 5
 --- !u!50 &9209167414204906444
 Rigidbody2D:
   serializedVersion: 5
@@ -335,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3900369722079735351}
   m_Layer: 8
-  m_Name: FrontEdge
+  m_Name: FrontEdgeDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

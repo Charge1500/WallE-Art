@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4394426481863634340}
   m_Layer: 0
-  m_Name: FrontEdge
+  m_Name: FrontEdgeDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8071926205069086132}
   m_Layer: 0
-  m_Name: FrontWall
+  m_Name: FrontWallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,16 +344,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5d7bb8a9a474242a1ead299c7bfe88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCollider: {fileID: 0}
-  moveSpeed: 1.5
+  components:
+    rb: {fileID: 0}
+    animator: {fileID: 0}
+    mainCollider: {fileID: 0}
+  movement:
+    moveSpeed: 1.5
+    isFacingRight: 1
+  edgeDetector:
+    frontEdgeDetector: {fileID: 0}
+    frontWallDetector: {fileID: 0}
+    obstacleLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    wallCheckDistance: 0.1
+  animations:
+    speedParam: Speed
+    jumpParam: IsJumping
+    fallParam: IsFalling
+    crouchParam: IsCrouching
+    deadParam: Dead
+    inactiveParam: IsInactive
+  combat:
+    playerBounceForce: 5
+    destroyDelay: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  frontEdgeDetector: {fileID: 4394426481863634340}
-  frontWallDetector: {fileID: 8071926205069086132}
-  wallCheckDistance: 0.1
-  defeatedAnimatorParam: Dead
-  destroyDelayAfterDefeat: 1
-  playerBounceOnDefeat: 5
   isHide: 0
   isHidingMove: 0

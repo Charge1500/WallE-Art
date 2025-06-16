@@ -12,14 +12,17 @@ namespace Interprete{
         private int _currentColumn;
         private List<Token> _tokens;
 
-        public static readonly Dictionary<string, TokenType> Keywords = new Dictionary<string, TokenType>(StringComparer.OrdinalIgnoreCase) // Ignorar mayúsculas/minúsculas? La spec no lo dice, asumamos case-sensitive por ahora. Si no, usar OrdinalIgnoreCase.
+        public static readonly Dictionary<string, TokenType> Keywords;
+
+        static Lexer()
         {
-            {"Spawn", TokenType.SpawnKeyword},{"Color", TokenType.ColorKeyword},{"Size", TokenType.SizeKeyword},{"DrawLine", TokenType.DrawLineKeyword},
-            {"DrawCircle", TokenType.DrawCircleKeyword},{"DrawRectangle", TokenType.DrawRectangleKeyword},{"Fill", TokenType.FillKeyword},
-            {"GetActualX", TokenType.GetActualXKeyword},{"GetActualY", TokenType.GetActualYKeyword},{"GetCanvasSize", TokenType.GetCanvasSizeKeyword},
-            {"GetColorCount", TokenType.GetColorCountKeyword},{"IsBrushColor", TokenType.IsBrushColorKeyword},{"IsBrushSize", TokenType.IsBrushSizeKeyword},
-            {"IsCanvasColor", TokenType.IsCanvasColorKeyword},{"GoTo", TokenType.GoToKeyword}
-        };
+            Keywords = new Dictionary<string, TokenType>(StringComparer.OrdinalIgnoreCase);
+            foreach (var def in FunctionRegistry.AllDefinitions)
+            {
+                Keywords[def.Name] = def.KeywordToken;
+            }
+            Keywords["GoTo"] = TokenType.GoToKeyword;
+        }
 
 
         public List<Token> Tokenize(string sourceCode)
@@ -177,9 +180,26 @@ namespace Interprete{
             int startPos = _position;
             int startColumn = _currentColumn;
 
-            while (_position < _sourceCode.Length && (char.IsLetterOrDigit(CurrentChar()) || CurrentChar() == '_' || CurrentChar() == '-'))
+            while (_position < _sourceCode.Length)
             {
-                Advance();
+                char currentChar = CurrentChar();
+
+                if (char.IsLetter(currentChar))
+                {
+                    Advance();
+                    continue;
+                }
+
+                if (currentChar == '_' || currentChar == '-')
+                {
+                    char nextChar = Peek();
+                    if (nextChar != '\0' && char.IsLetter(nextChar))
+                    {
+                        Advance();
+                        continue;
+                    }
+                }
+                break;
             }
             string identifier = _sourceCode.Substring(startPos, _position - startPos);
 

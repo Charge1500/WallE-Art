@@ -10,6 +10,7 @@ public partial class Interpreter : IAstVisitor<object>
 
     private Scope _runtimeScope = new Scope();
     private readonly Texture2D _texture;
+    private readonly LevelThemeData _levelTheme;    
 
     private int _walleX;
     private int _walleY;
@@ -22,9 +23,10 @@ public partial class Interpreter : IAstVisitor<object>
     private readonly Dictionary<string, int> _labelPositions = new Dictionary<string, int>();
 
 
-    public Interpreter(Texture2D canvasTexture)
+    public Interpreter(Texture2D canvasTexture, LevelThemeData levelThemeData)
     {
         _texture = canvasTexture;
+        _levelTheme = levelThemeData;
     }
 
     public Texture2D Interpret(ProgramNode program)
@@ -87,11 +89,17 @@ public partial class Interpreter : IAstVisitor<object>
         }
     }
     
-    private void DrawPixelWithBrush(int cx, int cy)
+    private void DrawPixelWithBrush(int cx, int cy, Token commandToken)
     {
         if (_currentBrushColor == Color.clear) return;
         int canvasSize = _texture.width;
         int halfBrush = _currentBrushSize / 2;
+
+        if (cx < 0 || cx >= canvasSize || cy < 0 || cy >= canvasSize)
+        {
+            throw new RuntimeException($"Attempted to draw outside canvas bounds at ({cx},{cy}).", commandToken);
+        }
+
         for (int offsetY = -halfBrush; offsetY <= halfBrush; offsetY++)
         {
             for (int offsetX = -halfBrush; offsetX <= halfBrush; offsetX++)
@@ -101,7 +109,9 @@ public partial class Interpreter : IAstVisitor<object>
                 if (px >= 0 && px < canvasSize && py >= 0 && py < canvasSize)
                 {
                     _texture.SetPixel(px, py, _currentBrushColor);
+                    //continue;
                 }
+                //throw new RuntimeException($"Attempted to draw outside canvas bounds at ({px},{py}).", commandToken);
             }
         }
     }

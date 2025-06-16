@@ -2443,9 +2443,9 @@ MonoBehaviour:
   onActionButtonPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1734934944}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Guia
+      - m_Target: {fileID: 1734934946}
+        m_TargetAssemblyTypeName: GuideUIController, Assembly-CSharp
+        m_MethodName: Show
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2567,11 +2567,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4155259726967679083, guid: 080c39bb5fd83bf49a7b07d6308ed160, type: 3}
   m_PrefabInstance: {fileID: 943737167}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &988912227 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5917970693884386208, guid: 1b7aab381c7ceee4f827fce108717b6e, type: 3}
-  m_PrefabInstance: {fileID: 2100367870}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1081128860
 PrefabInstance:
@@ -4938,6 +4933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734934945}
   - component: {fileID: 1734934944}
+  - component: {fileID: 1734934946}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -4957,16 +4953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8675bd81647e5b40885437fa52601c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiaPanel: {fileID: 726084996}
-  walle: {fileID: 988912227}
-  nextObject: {fileID: 1545650414}
-  previousObject: {fileID: 583933573}
-  comeBackGuia: {fileID: 1184106381}
-  nextButton: {fileID: 1545650416}
-  previousButton: {fileID: 583933575}
-  guiaTMP: {fileID: 226746854}
-  guiaTextsIndex: 0
-  guiaTexts: []
 --- !u!4 &1734934945
 Transform:
   m_ObjectHideFlags: 0
@@ -4982,6 +4968,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734934946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734934943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138290e7cdef63049adb67b8e27f9663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guidePanel: {fileID: 726084996}
+  textContent: {fileID: 226746854}
+  nextObject: {fileID: 1545650414}
+  nextButton: {fileID: 1545650416}
+  previousButton: {fileID: 583933575}
+  previousObject: {fileID: 583933573}
+  closeButton: {fileID: 1184106381}
+  guidePages: []
+  currentItemIndex: 0
+  large: 0
 --- !u!1 &1743223371
 GameObject:
   m_ObjectHideFlags: 0

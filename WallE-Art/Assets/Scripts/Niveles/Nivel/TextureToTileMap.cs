@@ -272,24 +272,3 @@ public class TextureToTile : MonoBehaviour
     }
 }
 
-[System.Serializable]
-public class ColorToPrefabMapping
-{
-    public string description;
-    public string colorName;
-    public Color color;
-    public GameObject prefab;
-    public Sprite[] displaySprites;
-}
-
-//tipo de área de fondo (0 para azul, 1 para negro)
-[System.Serializable]
-public class ColorToTile
-{
-    public string description;
-    public string colorName;
-    public Color color;
-    public TileBase tile;
-    public int backgroundType; 
-    public Sprite[] displaySprites;
-}

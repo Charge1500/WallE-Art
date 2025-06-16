@@ -81,7 +81,8 @@ public partial class Interpreter
 
         switch (node.CommandToken.Type)
         {
-            case TokenType.SpawnKeyword:       ExecuteSpawn(node.CommandToken, evaluatedArgs); break;
+            case TokenType.SpawnKeyword:    
+            case TokenType.MoveToKeyword:      ExecuteSpawn(node.CommandToken, evaluatedArgs); break;
             case TokenType.ColorKeyword:       ExecuteColor(node.CommandToken, evaluatedArgs); break;
             case TokenType.SizeKeyword:        ExecuteSize(node.CommandToken, evaluatedArgs); break;
             case TokenType.DrawLineKeyword:    ExecuteDrawLine(node.CommandToken, evaluatedArgs); break;
@@ -101,18 +102,18 @@ public partial class Interpreter
         {
             evaluatedArgs.Add(Evaluate(argExpr));
         }
-
+        
         switch (node.FunctionNameToken.Type)
         {
             case TokenType.GetActualXKeyword: return _walleX;
             case TokenType.GetActualYKeyword: return _walleY;
             case TokenType.GetCanvasSizeKeyword: return _texture.width;
             case TokenType.IsBrushColorKeyword:
-                InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], out var targetColor);
+                if(!InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], _levelTheme, out var targetColor)) throw new RuntimeException($"Invalid color name '{(string)evaluatedArgs[0]}' in IsBrushColor.", node.FunctionNameToken);
                 return InterpreterHelpers.ColorsApproximatelyEqual(_currentBrushColor, targetColor);
             case TokenType.IsBrushSizeKeyword: return _currentBrushSize == (int)evaluatedArgs[0];
             case TokenType.IsCanvasColorKeyword:
-                InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], out var canvasTargetColor);
+                if(!InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], _levelTheme, out var canvasTargetColor)) throw new RuntimeException($"Invalid color name '{(string)evaluatedArgs[0]}' in IsCanvasColor.", node.FunctionNameToken);
                 int checkX = _walleX + (int)evaluatedArgs[2]; 
                 int checkY = _walleY + (int)evaluatedArgs[1]; 
                 if (checkX < 0 || checkX >= _texture.width || checkY < 0 || checkY >= _texture.height) return false;
@@ -133,18 +134,41 @@ public partial class Interpreter
     
     private void ExecuteColor(Token token, List<object> args)
     {
-        if (!InterpreterHelpers.TryParseColor((string)args[0], out _currentBrushColor))
+        if (!InterpreterHelpers.TryParseColor((string)args[0], _levelTheme, out _currentBrushColor))
             throw new RuntimeException($"Invalid color name: '{(string)args[0]}'.", token);
     }
     
-    private void ExecuteSize(Token token, List<object> args) => _currentBrushSize = (int)args[0];
+    private void ExecuteSize(Token token, List<object> args) { 
+        int k = (int)args[0];
+
+        if (k <= 0) throw new RuntimeException("Brush size must be positive.", token);
+        
+        _currentBrushSize = (k % 2 == 0) ? k - 1 : k;
+    }
     
     private void ExecuteDrawLine(Token token, List<object> args)
     {
-        int dirX = (int)args[0], dirY = (int)args[1], dist = (int)args[2];
-        for (int i = 0; i < dist; i++) { DrawPixelWithBrush(_walleX + (dirX * i), _walleY + (dirY * i)); }
-        _walleX += dirX * (dist > 0 ? dist - 1 : 0);
-        _walleY += dirY * (dist > 0 ? dist - 1 : 0);
+        int dirX = (int)args[0], dirY = (int)args[1], distance = (int)args[2];
+        if (Math.Abs(dirX) > 1 || Math.Abs(dirY) > 1) throw new RuntimeException("DrawLine directions (dirX, dirY) must be -1, 0, or 1.", token);
+        if (dirX == 0 && dirY == 0) throw new RuntimeException("DrawLine direction cannot be (0, 0).", token);
+        if (distance <= 0) throw new RuntimeException("DrawLine distance must be positive.", token);
+
+        int currentX = _walleX;
+        int currentY = _walleY;
+        int canvasSize = _texture.width;
+
+        for (int i = 0; i < distance; i++)
+        {
+            if (currentX < 0 || currentX >= canvasSize || currentY < 0 || currentY >= canvasSize) {
+                throw new RuntimeException($"Wall-E position is outside canvas bounds ({currentX - dirX},{currentY - dirY}) after DrawLine.", token);
+            }
+            DrawPixelWithBrush(currentX, currentY, token);
+            currentX += dirX;
+            currentY += dirY;
+        }
+
+        _walleX = currentX - dirX;
+        _walleY = currentY - dirY;
     }
 
     private void ExecuteDrawCircle(Token token, List<object> args)
@@ -163,25 +187,58 @@ public partial class Interpreter
             throw new RuntimeException($"Wall-E position is outside canvas bounds ({_walleX},{_walleY}) after DrawCircle.", token);
         }
 
-        int x = radius -1;
-        int y = 0;
-        int dx = 1;
-        int dy = 1;
-        int err = dx - (radius * 2);
-
-        while (x >= y)
+        if (radius == 3)
         {
-            DrawPixelWithBrush(centerX + x, centerY + y); DrawPixelWithBrush(centerX + y, centerY + x);
-            DrawPixelWithBrush(centerX - y, centerY + x); DrawPixelWithBrush(centerX - x, centerY + y);
-            DrawPixelWithBrush(centerX - x, centerY - y); DrawPixelWithBrush(centerX - y, centerY - x);
-            DrawPixelWithBrush(centerX + y, centerY - x); DrawPixelWithBrush(centerX + x, centerY - y);
+            DrawOctants(centerX, centerY, 3, 0, token);
+            DrawOctants(centerX, centerY, 2, 1, token);
+        }
+        else if (radius == 4)
+        {
+            DrawOctants(centerX, centerY, 4, 0, token);
+            DrawOctants(centerX, centerY, 4, 1, token);
+            DrawOctants(centerX, centerY, 3, 2, token);
+        }
+        else
+        {
+            int x = radius;
+            int y = 0;
+            int err = 1 - radius;
 
-            if (err <= 0) { y++; err += dy; dy += 2; }
-            if (err > 0) { x--; dx += 2; err += dx - (radius * 2); }
+            while (x >= y)
+            {
+                DrawOctants(centerX, centerY, x, y, token);
+
+                y++;
+                if (err <= 0)
+                {
+                    err += 2 * y + 1;
+                }
+                else
+                {
+                    x--;
+                    err += 2 * (y - x) + 1;
+                }
+            }
         }
 
         _walleX = centerX;
         _walleY = centerY;
+    }
+
+    private void DrawOctants(int cx, int cy, int x, int y, Token token)
+    {
+        DrawPixelWithBrush(cx + x, cy + y, token);
+        DrawPixelWithBrush(cx - x, cy + y, token);
+        DrawPixelWithBrush(cx + x, cy - y, token);
+        DrawPixelWithBrush(cx - x, cy - y, token);
+        
+        if (x != y) 
+        {
+            DrawPixelWithBrush(cx + y, cy + x, token);
+            DrawPixelWithBrush(cx - y, cy + x, token);
+            DrawPixelWithBrush(cx + y, cy - x, token);
+            DrawPixelWithBrush(cx - y, cy - x, token);
+        }
     }
     
     private void ExecuteDrawRectangle(Token token, List<object> args)
@@ -208,8 +265,8 @@ public partial class Interpreter
         int x2 = x1 + width - 1;
         int y2 = y1 + height - 1;
 
-        for (int x = x1; x <= x2; x++) { DrawPixelWithBrush(x, y1); DrawPixelWithBrush(x, y2); }
-        for (int y = y1 + 1; y < y2; y++) { DrawPixelWithBrush(x1, y); DrawPixelWithBrush(x2, y); }
+        for (int x = x1; x <= x2; x++) { DrawPixelWithBrush(x, y1, token); DrawPixelWithBrush(x, y2, token); }
+        for (int y = y1 + 1; y < y2; y++) { DrawPixelWithBrush(x1, y, token); DrawPixelWithBrush(x2, y, token); }
 
         _walleX = centerX;
         _walleY = centerY;
@@ -248,7 +305,7 @@ public partial class Interpreter
         string countColorName = (string)args[0];
         int x1 = (int)args[1], y1 = (int)args[2],x2 = (int)args[3],y2 = (int)args[4];
 
-        if (!InterpreterHelpers.TryParseColor(countColorName, out Color countTargetColor)) {
+        if (!InterpreterHelpers.TryParseColor(countColorName, _levelTheme, out Color countTargetColor)) {
             throw new RuntimeException($"Invalid color name '{countColorName}' in GetColorCount.", funcToken);
         }
 

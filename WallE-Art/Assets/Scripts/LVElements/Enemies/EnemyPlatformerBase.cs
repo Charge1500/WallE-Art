@@ -3,111 +3,89 @@ using System.Collections;
 
 public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
 {
-    [Header("Components")]
-    protected Rigidbody2D rb;
-    protected Animator animator;
-    [SerializeField] protected Collider2D mainCollider;
+    [Header("Componentes Modulares")]
+    [SerializeField] protected EntityComponents components;
+    [SerializeField] protected MovementController movement;
+    [SerializeField] protected EdgeDetector edgeDetector;
+    [SerializeField] protected EnemyStateController stateController;
+    [SerializeField] protected AnimationController animations;
+    [SerializeField] protected CombatController combat;
 
-    [Header("Movement")]
-    [SerializeField] protected float moveSpeed = 1.5f;
-    [Tooltip("Define qué es considerado 'suelo' para que el enemigo no se caiga de las plataformas.")]
+    [Header("Configuración de Capas")]
     [SerializeField] protected LayerMask groundLayer;
-    [SerializeField] protected Transform frontEdgeDetector;
-    [SerializeField] protected Transform frontWallDetector;
-    [SerializeField] protected float wallCheckDistance = 0.1f;
-
-
-    protected bool isFacingRight = true;
-    [SerializeField] protected bool isPlayerNear = false;
-    protected bool _isDefeated = false;
-    public bool IsDefeated => _isDefeated;
-
-    [SerializeField] protected string defeatedAnimatorParam = "Dead";
-    [SerializeField] protected float destroyDelayAfterDefeat = 1f;
-    [SerializeField] protected float playerBounceOnDefeat = 5f;
-
+    
+    public bool IsDefeated => stateController.IsDefeated;
 
     protected virtual void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        mainCollider = GetComponent<Collider2D>();
+        components.InitializeComponents(gameObject);
+        movement.Initialize(transform, components.rb);
+        edgeDetector.Initialize(transform.Find("FrontEdgeDetector"), transform.Find("FrontWallDetector"), groundLayer, edgeDetector.wallCheckDistance); // Asume que tienes GameObjects hijos con estos nombres
+        stateController = new EnemyStateController();
+        animations.Initialize(components.animator);
     }
 
     protected virtual void FixedUpdate()
     {
-        if(isPlayerNear){
-            if (_isDefeated)
+        if (stateController.IsPlayerNear)
+        {
+            if (stateController.IsDefeated)
             {
-                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+                movement.Stop();
                 return;    
             }
             PerformMovement();
             CheckForFlipConditions();
         }
+        else
+        {
+            if (!stateController.IsDefeated)
+            {
+                movement.Stop();
+            }
+        }
     }
 
     protected virtual void PerformMovement()
     {
-        float moveDirection = isFacingRight ? 1f : -1f;
-        rb.linearVelocity = new Vector2(moveDirection * moveSpeed, rb.linearVelocity.y);
+        float moveDirection = movement.IsFacingRight ? 1f : -1f;
+        movement.Move(moveDirection);
     }
 
     protected virtual void CheckForFlipConditions()
     {
-        bool isGroundAhead = Physics2D.OverlapCircle(frontEdgeDetector.position, 0.1f, groundLayer);
-        RaycastHit2D wallHit = Physics2D.Raycast(frontWallDetector.position, isFacingRight ? Vector2.right : Vector2.left, wallCheckDistance, groundLayer);
-
-
-        if (!isGroundAhead || (wallHit.collider != null && !wallHit.collider.isTrigger))
+        if (!edgeDetector.IsGroundAhead() || edgeDetector.IsWallAhead(movement.IsFacingRight))
         {
-            Flip();
+            movement.Flip();
         }
     }
-    protected virtual void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        Vector3 scaler = transform.localScale;
-        scaler.x *= -1;
-        transform.localScale = scaler;
-    }
-
+    
     public virtual void Defeat(Player player)
     {
-        if (_isDefeated) return;
+        if (stateController.IsDefeated) return;
 
-        _isDefeated = true;
-
-        animator.SetBool(defeatedAnimatorParam, true);
-
-        moveSpeed = 0f;
-
-        rb.linearVelocity = Vector2.zero;
-
-        mainCollider.enabled = false;
-        rb.gravityScale = 0f;
+        stateController.SetDefeated(true);
+        animations.SetDead(true);
+        movement.SetMoveSpeed(0f);
+        EntityUtils.FreezeEntity(components.rb, components.mainCollider);
         
-        player.BounceOnEnemy(playerBounceOnDefeat);
+        player.BounceOnEnemy(combat.PlayerBounceForce); 
 
-        StartCoroutine(DestroyAfterDelayCoroutine(destroyDelayAfterDefeat));
+        StartCoroutine(DestroyAfterDelayCoroutine(combat.DestroyDelay)); 
     }
 
-    public virtual void SetPlayerProximity(bool isNear)
+    public void SetPlayerProximity(bool isNear)
     {
-        if (_isDefeated) return;
-
-        isPlayerNear = isNear;
-
-        if (!isNear) 
+        stateController.SetPlayerProximity(isNear);
+        if (!isNear && !stateController.IsDefeated)
         {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            movement.Stop();
         }
     }
 
     public virtual void HandlePlayerContact(Player player)
     {
-        if (_isDefeated) return;
-
+        if (stateController.IsDefeated) return;
         player.Damage();
     }
 
@@ -124,7 +102,7 @@ public abstract class EnemyPlatformerBase : MonoBehaviour, IEnemyPlatformer
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (_isDefeated) return;
+        if (stateController.IsDefeated) return;
 
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null)
