@@ -141,9 +141,9 @@ public class JugarManager : MenuManager
                 return;
             }
             
-            if(!int.TryParse(size.text, out int sizeValue) || sizeValue < 16 || sizeValue > 256) 
+            if(!int.TryParse(size.text, out int sizeValue) || sizeValue < 16 || sizeValue > 100) 
             {
-                ShowError("Invalid Canvas Size (must be between 16 and 256).");
+                ShowError("Invalid Canvas Size (must be between 16 and 100).");
                 return;
             }
 
