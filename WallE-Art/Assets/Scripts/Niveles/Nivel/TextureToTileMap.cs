@@ -22,6 +22,9 @@ public class TextureToTile : MonoBehaviour
     [Header("Tilemap Principal")]
     [SerializeField] private Tilemap terrainTilemap;
 
+    [Header("Tilemap de Fondo")]
+    [SerializeField] private Tilemap backgroundTilemap; 
+
     private Dictionary<(int x, int y), int> tileBackgroundInfo = new Dictionary<(int x, int y), int>();
     
     private List<(int x, int y)> positionsRequiringBackgroundFill = new List<(int x, int y)>();
@@ -194,14 +197,14 @@ public class TextureToTile : MonoBehaviour
         }
     }
 
-    void MarkAsRequiringBackgroundFill(int x, int y)
+    /* void MarkAsRequiringBackgroundFill(int x, int y)
     {
         tileBackgroundInfo[(x, y)] = -1; 
         if (!positionsRequiringBackgroundFill.Contains((x, y)))
         {
             positionsRequiringBackgroundFill.Add((x, y));
         }
-    }
+    } */
     
     void FillBackgroundTileAreas()
     {
@@ -259,7 +262,7 @@ public class TextureToTile : MonoBehaviour
         
         TileBase backgroundTileToSet = (determinedBackgroundType == 0) ? blueBackgroundTile : blackBackgroundTile;
         Vector3Int originalPos = new Vector3Int(startX, startY, 0);
-        terrainTilemap.SetTile(originalPos, backgroundTileToSet);
+        backgroundTilemap.SetTile(originalPos, backgroundTileToSet);
         
         tileBackgroundInfo[(startX, startY)] = determinedBackgroundType;
     }

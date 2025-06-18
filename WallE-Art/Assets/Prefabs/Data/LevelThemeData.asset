@@ -99,7 +99,7 @@ MonoBehaviour:
     backgroundType: -1
     displaySprites: []
   - description: TriangleBush
-    colorName: Green
+    colorName: Lime
     color: {r: 0.75, g: 1, b: 0, a: 1}
     tile: {fileID: 11400000, guid: d755cfd883632604e944ca1fa60bf3f4, type: 2}
     backgroundType: -1
@@ -117,7 +117,7 @@ MonoBehaviour:
     backgroundType: -1
     displaySprites: []
   - description: Clouds
-    colorName: Caqui
+    colorName: LightPurple
     color: {r: 0.7, g: 0.5, b: 1, a: 1}
     tile: {fileID: 11400000, guid: 033db309007b5104fa50034396bc75da, type: 2}
     backgroundType: -1
