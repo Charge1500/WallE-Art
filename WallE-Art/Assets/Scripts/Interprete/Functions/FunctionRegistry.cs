@@ -11,7 +11,7 @@ namespace Interprete
 
         static FunctionRegistry()
         {
-            ByName = new Dictionary<string, FunctionDefinition>(StringComparer.OrdinalIgnoreCase);
+            ByName = new Dictionary<string, FunctionDefinition>(/*StringComparer.OrdinalIgnoreCase*/);
             ByToken = new Dictionary<TokenType, FunctionDefinition>();
 
             // Comandos (devuelven Void)
