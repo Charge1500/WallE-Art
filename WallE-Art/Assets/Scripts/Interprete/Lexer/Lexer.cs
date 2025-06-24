@@ -16,8 +16,8 @@ namespace Interprete{
 
         static Lexer()
         {
-            keywords = new Dictionary<string, TokenType>(StringComparer.OrdinalIgnoreCase);
-            foreach (var def in FunctionRegistry.AllDefinitions)
+            keywords = new Dictionary<string, TokenType>(/*StringComparer.OrdinalIgnoreCase*/);
+            foreach (FunctionDefinition def in FunctionRegistry.AllDefinitions)
             {
                 keywords[def.Name] = def.KeywordToken;
             }

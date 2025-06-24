@@ -3879,13 +3879,13 @@ MonoBehaviour:
   CameraDistance: 10
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0, y: 0}
+    ScreenPosition: {x: -0.011406869, y: 0.26013583}
     DeadZone:
-      Enabled: 1
+      Enabled: 0
       Size: {x: 0.1, y: 0.1}
     HardLimits:
       Enabled: 1
-      Size: {x: 0.8, y: 0.8}
+      Size: {x: 0.8, y: 0.38783732}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}

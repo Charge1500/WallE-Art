@@ -41,11 +41,11 @@ namespace Interprete
             ByToken[tokenType] = def;
         }
 
-        public static FunctionDefinition Get(string name) => ByName.TryGetValue(name, out var def) ? def : null;
-        public static FunctionDefinition Get(TokenType tokenType) => ByToken.TryGetValue(tokenType, out var def) ? def : null;
+        public static FunctionDefinition Get(string name) => ByName.TryGetValue(name, out FunctionDefinition def) ? def : null;
+        public static FunctionDefinition Get(TokenType tokenType) => ByToken.TryGetValue(tokenType, out FunctionDefinition def) ? def : null;
 
-        public static bool IsFunction(TokenType tokenType) => ByToken.TryGetValue(tokenType, out var def) && def.Category == FunctionCategory.Function;
-        public static bool IsCommand(TokenType tokenType) => ByToken.TryGetValue(tokenType, out var def) && def.Category == FunctionCategory.Command;
+        public static bool IsFunction(TokenType tokenType) => ByToken.TryGetValue(tokenType, out FunctionDefinition def) && def.Category == FunctionCategory.Function;
+        public static bool IsCommand(TokenType tokenType) => ByToken.TryGetValue(tokenType, out FunctionDefinition def) && def.Category == FunctionCategory.Command;
         
         public static IEnumerable<FunctionDefinition> AllDefinitions => ByName.Values;
     }

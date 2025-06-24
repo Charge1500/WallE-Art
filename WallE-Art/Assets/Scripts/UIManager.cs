@@ -128,7 +128,7 @@ public class UIManager : MenuManager
 
     private void OnExecuteButtonPressed()
     {
-        canvasController.InitializeCanvas(canvasDisplayImage.texture.height);
+        //canvasController.InitializeCanvas(canvasDisplayImage.texture.height);
         canvasDisplayImage.texture = canvasController.GetCanvasTexture();
         string sourceCode = codeEditorInput.text;
         ExecuteCode(sourceCode,canvasDisplayImage.texture as Texture2D);
@@ -223,12 +223,9 @@ public class UIManager : MenuManager
                 ShowError(error);
             }
         }
-        if(interpreter.errors == null && parser.errors == null && lexer.errors == null){
-            textureParam = texture;
-        }
-
-        //ShowStatus("PROGRAM ENDS");
         
+        textureParam = texture;  
+        //ShowStatus("PROGRAM ENDS");
     }
 
 }

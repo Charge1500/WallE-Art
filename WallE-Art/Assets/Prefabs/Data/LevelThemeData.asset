@@ -159,3 +159,9 @@ MonoBehaviour:
     prefab: {fileID: 9025930932771104525, guid: 71694ebb7a9bf9449a6bb6874e7f583e, type: 3}
     displaySprites:
     - {fileID: 95440312698277392, guid: 9175b6d6f8406404ea6ddcb58536b27c, type: 3}
+  - description: Plant
+    colorName: Gold
+    color: {r: 1, g: 0.843, b: 0, a: 1}
+    prefab: {fileID: 5645226024464590092, guid: 0e62f0ee762f3e148908ff7380d0dabf, type: 3}
+    displaySprites:
+    - {fileID: 122794752958738702, guid: 9175b6d6f8406404ea6ddcb58536b27c, type: 3}

@@ -46,7 +46,7 @@ public partial class Interpreter : IAstVisitor<object>
             {
                 _goToExecuted = false;
                 StatementNode currentStatement = program.Statements[_programCounter];
-                
+
                 Execute(currentStatement);
 
                 if (!_goToExecuted)
@@ -60,6 +60,8 @@ public partial class Interpreter : IAstVisitor<object>
         catch (CodeException ex)
         {
             errors.Add(ex.Message);
+            _texture.Apply();
+            return _texture;
         }
         catch (Exception ex)
         {

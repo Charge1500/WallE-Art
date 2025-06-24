@@ -30,6 +30,8 @@ public class TextureToTile : MonoBehaviour
     private List<(int x, int y)> positionsRequiringBackgroundFill = new List<(int x, int y)>();
     
     private HashSet<(int x, int y)> prefabInstantiatedPositions = new HashSet<(int x, int y)>();
+    private int walleX;
+    private int walleY;
 
     [Header("Tiles de Fondo Específicos")]
     [SerializeField] private TileBase blueBackgroundTile;
@@ -37,6 +39,8 @@ public class TextureToTile : MonoBehaviour
 
     void Awake()
     {
+        walleX = LevelLoader.Instance.wallePos.Item1;
+        walleY = LevelLoader.Instance.wallePos.Item2;
         sourceTexture = LevelLoader.Instance.level;
         //ClearLevelState();
         GenerateColliderFromTexture();
@@ -87,9 +91,6 @@ public class TextureToTile : MonoBehaviour
 
     void ProcessTextureAndPlaceElements()
     { 
-        int walleX = LevelLoader.Instance.wallePos.Item1;
-        int walleY = LevelLoader.Instance.wallePos.Item2;
-
         List<(int x, int y)> wallePosList = new List<(int x, int y)>();
         wallePosList.Add((walleX+1,walleY));
         wallePosList.Add((walleX,walleY+1));
