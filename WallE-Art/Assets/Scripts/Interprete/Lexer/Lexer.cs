@@ -184,17 +184,12 @@ namespace Interprete{
             {
                 char currentChar = CurrentChar();
 
-                if (char.IsLetter(currentChar))
+                if (char.IsLetter(currentChar) || char.IsDigit(currentChar) || (currentChar == '_'))
                 {
                     Advance();
                     continue;
                 }
 
-                if (currentChar == '_')
-                {
-                    Advance();
-                    continue;
-                }
                 break;
             }
             string identifier = _sourceCode.Substring(startPos, _position - startPos);
