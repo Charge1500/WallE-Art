@@ -16,7 +16,7 @@ public partial class Interpreter
             case TokenType.MinusOperator: return -(int)right;
             case TokenType.NotOperator: return !(bool)right;
         }
-        throw new RuntimeException("Unreachable: Invalid unary operator.", node.OperatorToken);
+        throw new CodeException(TypeError.Execution,"Unreachable: Invalid unary operator.", node.OperatorToken);
     }
 
     public object VisitBinaryOpNode(BinaryOpNode node)
@@ -30,10 +30,10 @@ public partial class Interpreter
             case TokenType.MinusOperator: return (int)left - (int)right;
             case TokenType.MultiplyOperator: return (int)left * (int)right;
             case TokenType.DivideOperator:
-                if ((int)right == 0) throw new RuntimeException("Division by zero.", node.OperatorToken);
+                if ((int)right == 0) throw new CodeException(TypeError.Execution,"Division by zero.", node.OperatorToken);
                 return (int)left / (int)right;
             case TokenType.ModuloOperator:
-                if ((int)right == 0) throw new RuntimeException("Modulo by zero.", node.OperatorToken);
+                if ((int)right == 0) throw new CodeException(TypeError.Execution,"Modulo by zero.", node.OperatorToken);
                 return (int)left % (int)right;
             case TokenType.PowerOperator: return (int)Math.Pow((int)left, (int)right);
 
@@ -48,7 +48,7 @@ public partial class Interpreter
             case TokenType.AndOperator: return (bool)left && (bool)right;
             case TokenType.OrOperator: return (bool)left || (bool)right;
         }
-        throw new RuntimeException("Unreachable: Invalid binary operator.", node.OperatorToken);
+        throw new CodeException(TypeError.Execution,"Unreachable: Invalid binary operator.", node.OperatorToken);
     }
     
     public object VisitProgramNode(ProgramNode node) => null; 
@@ -71,7 +71,7 @@ public partial class Interpreter
 
         if (_labelVisitCounts[_programCounter] > max_label_visits)
         {
-            throw new RuntimeException($"Execution aborted: GoTo '{node.TargetLabelToken.Value}' visited too many times ({max_label_visits}).", node.TargetLabelToken);
+            throw new CodeException(TypeError.Execution,$"Execution aborted: GoTo '{node.TargetLabelToken.Value}' visited too many times ({max_label_visits}).", node.TargetLabelToken);
         }
 
         if ((bool)Evaluate(node.Condition))
@@ -101,7 +101,7 @@ public partial class Interpreter
             case TokenType.DrawRectangleKeyword: ExecuteDrawRectangle(node.CommandToken, evaluatedArgs); break;
             case TokenType.FillKeyword:        ExecuteFill(node.CommandToken, evaluatedArgs); break;
             default:
-                throw new RuntimeException($"Unknown command '{node.CommandToken.Value}'.", node.CommandToken);
+                throw new CodeException(TypeError.Execution,$"Unknown command '{node.CommandToken.Value}'.", node.CommandToken);
         }
         return null;
     }
@@ -120,11 +120,11 @@ public partial class Interpreter
             case TokenType.GetActualYKeyword: return _walleY;
             case TokenType.GetCanvasSizeKeyword: return _texture.width;
             case TokenType.IsBrushColorKeyword:
-                if(!InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], _levelTheme, out var targetColor)) throw new RuntimeException($"Invalid color name '{(string)evaluatedArgs[0]}' in IsBrushColor.", node.FunctionNameToken);
+                if(!InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], _levelTheme, out var targetColor)) throw new CodeException(TypeError.Execution,$"Invalid color name '{(string)evaluatedArgs[0]}' in IsBrushColor.", node.FunctionNameToken);
                 return InterpreterHelpers.ColorsApproximatelyEqual(_currentBrushColor, targetColor);
             case TokenType.IsBrushSizeKeyword: return _currentBrushSize == (int)evaluatedArgs[0];
             case TokenType.IsCanvasColorKeyword:
-                if(!InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], _levelTheme, out var canvasTargetColor)) throw new RuntimeException($"Invalid color name '{(string)evaluatedArgs[0]}' in IsCanvasColor.", node.FunctionNameToken);
+                if(!InterpreterHelpers.TryParseColor((string)evaluatedArgs[0], _levelTheme, out var canvasTargetColor)) throw new CodeException(TypeError.Execution,$"Invalid color name '{(string)evaluatedArgs[0]}' in IsCanvasColor.", node.FunctionNameToken);
                 int checkX = _walleX + (int)evaluatedArgs[2]; 
                 int checkY = _walleY + (int)evaluatedArgs[1]; 
                 if (checkX < 0 || checkX >= _texture.width || checkY < 0 || checkY >= _texture.height) return false;
@@ -132,7 +132,7 @@ public partial class Interpreter
             case TokenType.GetColorCountKeyword:
                 return ExecuteGetColorCount(node.FunctionNameToken, evaluatedArgs);
             default:
-                throw new RuntimeException($"Unknown function '{node.FunctionNameToken.Value}'.", node.FunctionNameToken);
+                throw new CodeException(TypeError.Execution,$"Unknown function '{node.FunctionNameToken.Value}'.", node.FunctionNameToken);
         }
     }
 
@@ -140,19 +140,19 @@ public partial class Interpreter
     {
         _walleX = (int)args[0]; _walleY = (int)args[1];
         if (_walleX < 0 || _walleX >= _texture.width || _walleY < 0 || _walleY >= _texture.height)
-            throw new RuntimeException($"Spawn position ({_walleX},{_walleY}) is outside canvas.", token);
+            throw new CodeException(TypeError.Execution,$"Spawn position ({_walleX},{_walleY}) is outside canvas.", token);
     }
     
     private void ExecuteColor(Token token, List<object> args)
     {
         if (!InterpreterHelpers.TryParseColor((string)args[0], _levelTheme, out _currentBrushColor))
-            throw new RuntimeException($"Invalid color name: '{(string)args[0]}'.", token);
+            throw new CodeException(TypeError.Execution,$"Invalid color name: '{(string)args[0]}'.", token);
     }
     
     private void ExecuteSize(Token token, List<object> args) { 
         int k = (int)args[0];
 
-        if (k <= 0) throw new RuntimeException("Brush size must be positive.", token);
+        if (k <= 0) throw new CodeException(TypeError.Execution,"Brush size must be positive.", token);
         
         _currentBrushSize = (k % 2 == 0) ? k - 1 : k;
     }
@@ -160,9 +160,9 @@ public partial class Interpreter
     private void ExecuteDrawLine(Token token, List<object> args)
     {
         int dirX = (int)args[0], dirY = (int)args[1], distance = (int)args[2];
-        if (Math.Abs(dirX) > 1 || Math.Abs(dirY) > 1) throw new RuntimeException("DrawLine directions (dirX, dirY) must be -1, 0, or 1.", token);
-        if (dirX == 0 && dirY == 0) throw new RuntimeException("DrawLine direction cannot be (0, 0).", token);
-        if (distance <= 0) throw new RuntimeException("DrawLine distance must be positive.", token);
+        if (Math.Abs(dirX) > 1 || Math.Abs(dirY) > 1) throw new CodeException(TypeError.Execution,"DrawLine directions (dirX, dirY) must be -1, 0, or 1.", token);
+        if (dirX == 0 && dirY == 0) throw new CodeException(TypeError.Execution,"DrawLine direction cannot be (0, 0).", token);
+        if (distance <= 0) throw new CodeException(TypeError.Execution,"DrawLine distance must be positive.", token);
 
         int currentX = _walleX;
         int currentY = _walleY;
@@ -171,7 +171,7 @@ public partial class Interpreter
         for (int i = 0; i < distance; i++)
         {
             if (currentX < 0 || currentX >= canvasSize || currentY < 0 || currentY >= canvasSize) {
-                throw new RuntimeException($"Wall-E position is outside canvas bounds ({currentX - dirX},{currentY - dirY}) after DrawLine.", token);
+                throw new CodeException(TypeError.Execution,$"Wall-E position is outside canvas bounds ({currentX - dirX},{currentY - dirY}) after DrawLine.", token);
             }
             DrawPixelWithBrush(currentX, currentY, token);
             currentX += dirX;
@@ -186,16 +186,16 @@ public partial class Interpreter
     {
         int dirX = (int)args[0], dirY = (int)args[1], radius = (int)args[2];
 
-        if (Math.Abs(dirX) > 1 || Math.Abs(dirY) > 1) throw new RuntimeException("DrawCircle directions (dirX, dirY) must be -1, 0, or 1.", token);
-        if (dirX == 0 && dirY == 0) throw new RuntimeException("DrawCircle direction cannot be (0, 0).", token);
-        if (radius <= 0) throw new RuntimeException("DrawCircle radius must be positive.", token);
+        if (Math.Abs(dirX) > 1 || Math.Abs(dirY) > 1) throw new CodeException(TypeError.Execution,"DrawCircle directions (dirX, dirY) must be -1, 0, or 1.", token);
+        //if (dirX == 0 && dirY == 0) throw new CodeException(TypeError.Execution,"DrawCircle direction cannot be (0, 0).", token);
+        if (radius <= 0) throw new CodeException(TypeError.Execution,"DrawCircle radius must be positive.", token);
 
         int centerX = _walleX + dirX * radius;
         int centerY = _walleY + dirY * radius;
         int canvasSize = _texture.width;
 
         if (centerX < 0 || centerX >= canvasSize || centerY < 0 || centerY >= canvasSize) {
-            throw new RuntimeException($"Wall-E position is outside canvas bounds ({_walleX},{_walleY}) after DrawCircle.", token);
+            throw new CodeException(TypeError.Execution,$"Wall-E position is outside canvas bounds ({_walleX},{_walleY}) after DrawCircle.", token);
         }
 
         if (radius == 3)
@@ -256,17 +256,17 @@ public partial class Interpreter
     {
         int dirX = (int)args[0], dirY = (int)args[1], distance = (int)args[2], width = (int)args[3], height = (int)args[4];
 
-        if (Math.Abs(dirX) > 1 || Math.Abs(dirY) > 1) throw new RuntimeException("DrawRectangle directions (dirX, dirY) must be -1, 0, or 1.", token);
-        if (distance < 0) throw new RuntimeException("DrawRectangle distance cannot be negative.", token);
-        if (width <= 0) throw new RuntimeException("DrawRectangle width must be positive.", token);
-        if (height <= 0) throw new RuntimeException("DrawRectangle height must be positive.", token);
+        if (Math.Abs(dirX) > 1 || Math.Abs(dirY) > 1) throw new CodeException(TypeError.Execution,"DrawRectangle directions (dirX, dirY) must be -1, 0, or 1.", token);
+        if (distance < 0) throw new CodeException(TypeError.Execution,"DrawRectangle distance cannot be negative.", token);
+        if (width <= 0) throw new CodeException(TypeError.Execution,"DrawRectangle width must be positive.", token);
+        if (height <= 0) throw new CodeException(TypeError.Execution,"DrawRectangle height must be positive.", token);
     
         int centerX = _walleX + dirX * distance;
         int centerY = _walleY + dirY * distance;
         int canvasSize = _texture.width;
 
         if (centerX < 0 || centerX >= canvasSize || centerY < 0 || centerY >= canvasSize) {
-            throw new RuntimeException($"Wall-E position is outside canvas bounds ({_walleX},{_walleY}) after DrawRectangle.", token);
+            throw new CodeException(TypeError.Execution,$"Wall-E position is outside canvas bounds ({_walleX},{_walleY}) after DrawRectangle.", token);
         }
 
         int halfWidth = width / 2;
@@ -317,7 +317,7 @@ public partial class Interpreter
         int x1 = (int)args[1], y1 = (int)args[2],x2 = (int)args[3],y2 = (int)args[4];
 
         if (!InterpreterHelpers.TryParseColor(countColorName, _levelTheme, out Color countTargetColor)) {
-            throw new RuntimeException($"Invalid color name '{countColorName}' in GetColorCount.", funcToken);
+            throw new CodeException(TypeError.Execution,$"Invalid color name '{countColorName}' in GetColorCount.", funcToken);
         }
 
         int cSize = _texture.width;

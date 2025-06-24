@@ -57,7 +57,7 @@ public partial class Interpreter : IAstVisitor<object>
             _texture.Apply();
             return _texture;
         }
-        catch (RuntimeException ex)
+        catch (CodeException ex)
         {
             errors.Add(ex.Message);
         }
@@ -90,7 +90,7 @@ public partial class Interpreter : IAstVisitor<object>
 
         if (cx < 0 || cx >= canvasSize || cy < 0 || cy >= canvasSize)
         {
-            throw new RuntimeException($"Attempted to draw outside canvas bounds at ({cx},{cy}).", commandToken);
+            throw new CodeException(TypeError.Execution,$"Attempted to draw outside canvas bounds at ({cx},{cy}).", commandToken);
         }
 
         for (int offsetY = -halfBrush; offsetY <= halfBrush; offsetY++)
@@ -104,7 +104,7 @@ public partial class Interpreter : IAstVisitor<object>
                     _texture.SetPixel(px, py, _currentBrushColor);
                     //continue;
                 }
-                //throw new RuntimeException($"Attempted to draw outside canvas bounds at ({px},{py}).", commandToken);
+                //throw new CodeException(TypeError.Execution,$"Attempted to draw outside canvas bounds at ({px},{py}).", commandToken);
             }
         }
     }

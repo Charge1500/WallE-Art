@@ -18,7 +18,7 @@ namespace Interprete
             {
                 return type;
             }
-            throw new SemanticException($"Variable '{nameToken.Value}' is not defined in the current scope.", nameToken);
+            throw new CodeException(TypeError.Semantic,$"Variable '{nameToken.Value}' is not defined in the current scope.", nameToken);
         }
 
         public bool IsVariableDefined(string name)
@@ -30,7 +30,7 @@ namespace Interprete
         {
             if (_labels.ContainsKey(labelToken.Value))
             {
-                throw new SemanticException($"Duplicate label definition: '{labelToken.Value}'.", labelToken);
+                throw new CodeException(TypeError.Semantic,$"Duplicate label definition: '{labelToken.Value}'.", labelToken);
             }
             _labels.Add(labelToken.Value, labelToken);
         }
@@ -39,7 +39,7 @@ namespace Interprete
         {
             if (!_labels.ContainsKey(labelToken.Value))
             {
-                throw new SemanticException($"Undefined label: '{labelToken.Value}'.", labelToken);
+                throw new CodeException(TypeError.Semantic,$"Undefined label: '{labelToken.Value}'.", labelToken);
             }
         }
     }

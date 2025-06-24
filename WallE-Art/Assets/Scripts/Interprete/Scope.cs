@@ -18,7 +18,7 @@ public class Scope
         {
             return value;
         }
-        throw new RuntimeException($"Undefined variable '{nameToken.Value}'.", nameToken);
+        throw new CodeException(TypeError.Execution,$"Undefined variable '{nameToken.Value}'.", nameToken);
     }
 
     public bool IsVariableDefined(string name)
@@ -29,7 +29,7 @@ public class Scope
     {
         if (_labels.ContainsKey(labelToken.Value))
         {
-            throw new RuntimeException($"Duplicate label definition: '{labelToken.Value}'.", labelToken);
+            throw new CodeException(TypeError.Execution,$"Duplicate label definition: '{labelToken.Value}'.", labelToken);
         }
         _labels[labelToken.Value] = statementIndex;
          // Debug.Log($"Label defined: {labelToken.Value} at index {statementIndex}");
@@ -41,6 +41,6 @@ public class Scope
         {
             return index;
         }
-        throw new RuntimeException($"Undefined label: '{labelToken.Value}'.", labelToken);
+        throw new CodeException(TypeError.Execution,$"Undefined label: '{labelToken.Value}'.", labelToken);
     }
 }

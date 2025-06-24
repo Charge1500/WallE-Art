@@ -35,7 +35,7 @@ namespace Interprete{
 
                     ConsumeEndOfLineOrFile();
                 }
-                catch (ParseException ex)
+                catch (CodeException ex)
                 {
                     errors.Add(ex.Message);
                     Synchronize();
@@ -77,7 +77,7 @@ namespace Interprete{
             }
             else
             {
-                throw new ParseException($"Unexpected token. Expected a command, assignment, label, or GoTo.", currentToken);
+                throw new CodeException(TypeError.Parse,$"Unexpected token. Expected a command, assignment, label, or GoTo.", currentToken);
             }
         }
 
@@ -135,7 +135,7 @@ namespace Interprete{
             {
                 if (expectedArgs == 0)
                 {
-                    throw new ParseException($"Function '{keywordToken.Value}' does not take any arguments.", Peek());
+                    throw new CodeException(TypeError.Parse,$"Function '{keywordToken.Value}' does not take any arguments.", Peek());
                 }
                 do
                 {
@@ -147,7 +147,7 @@ namespace Interprete{
 
             if (args.Count != expectedArgs)
             {
-                throw new ParseException($"'{keywordToken.Value}' expects {expectedArgs} arguments, but got {args.Count}.", keywordToken);
+                throw new CodeException(TypeError.Parse,$"'{keywordToken.Value}' expects {expectedArgs} arguments, but got {args.Count}.", keywordToken);
             }
 
             return (keywordToken, args);
@@ -262,7 +262,7 @@ namespace Interprete{
                     return new LiteralNode<int>(intValue, numToken);
                 }
                 else {
-                    throw new ParseException($"Invalid integer number format: {numToken.Value}", numToken);
+                    throw new CodeException(TypeError.Parse,$"Invalid integer number format: {numToken.Value}", numToken);
                 }
             }
 
@@ -283,7 +283,7 @@ namespace Interprete{
                 if (CheckNext(TokenType.LeftParen)) {
                     return ParseFunctionCall();
                 } else {
-                    throw new ParseException($"Expected '(' after function name '{Peek().Value}'.", Peek());
+                    throw new CodeException(TypeError.Parse,$"Expected '(' after function name '{Peek().Value}'.", Peek());
                 }
             }
 
@@ -293,7 +293,7 @@ namespace Interprete{
                 Consume(TokenType.RightParen, "Expected ')' after expression in parentheses.");
                 return expr;
             }
-            throw new ParseException($"Expected expression (number, string, variable, function call, or parentheses).", Peek());
+            throw new CodeException(TypeError.Parse,$"Expected expression (number, string, variable, function call, or parentheses).", Peek());
         }
 
         private bool IsAtEnd()
@@ -359,7 +359,7 @@ namespace Interprete{
         private Token Consume(TokenType type, string errorMessage)
         {
             if (Check(type)) return Advance();
-            throw new ParseException(errorMessage, Peek());
+            throw new CodeException(TypeError.Parse,errorMessage, Peek());
         }
 
         private void ConsumeEndOfLineOrFile()
@@ -375,7 +375,7 @@ namespace Interprete{
             }
             else if (!IsAtEnd()) 
             {
-                throw new ParseException("Expected newline after statement.", Peek());
+                throw new CodeException(TypeError.Parse,"Expected newline after statement.", Peek());
             }
         }
 
@@ -383,7 +383,7 @@ namespace Interprete{
         {
             if (args.Count != expectedCount)
             {
-                throw new ParseException($"'{commandOrFunction.Value}' expects {expectedCount} arguments, but got {args.Count}.", commandOrFunction);
+                throw new CodeException(TypeError.Parse,$"'{commandOrFunction.Value}' expects {expectedCount} arguments, but got {args.Count}.", commandOrFunction);
             }
         }
 
@@ -405,13 +405,13 @@ namespace Interprete{
         {
             _spawn = true;
             if (_tokens == null || _tokens.Count == 0 || _tokens[0].Type == TokenType.EndOfFile) {
-                throw new ParseException("[Line 1:1] Parse Error: Source code cannot be empty. Must start with 'Spawn'.");
+                throw new CodeException(TypeError.Parse,"[Line 1:1]Source code cannot be empty. Must start with 'Spawn'.");
             }
             while(Check(TokenType.EndOfLine) && !IsAtEnd()) {
                 Advance();
             }
-            if (IsAtEnd()) throw new ParseException("Parse Error: Source code cannot be empty. Must start with 'Spawn'.");
-            if(!Check(TokenType.SpawnKeyword)) throw new ParseException("Parse Error: Source must start with 'Spawn'.");
+            if (IsAtEnd()) throw new CodeException(TypeError.Parse,"Source code cannot be empty. Must start with 'Spawn'.");
+            if(!Check(TokenType.SpawnKeyword)) throw new CodeException(TypeError.Parse,"Source must start with 'Spawn'.");
             return;       
         }
     }

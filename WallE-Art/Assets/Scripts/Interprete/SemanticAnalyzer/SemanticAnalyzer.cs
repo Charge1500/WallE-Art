@@ -20,7 +20,7 @@ namespace Interprete
                     }
                 }
             }
-            catch(SemanticException ex) { errors.Add(ex.Message); }
+            catch(CodeException ex) { errors.Add(ex.Message); }
 
             foreach (StatementNode statement in program.Statements)
             {
@@ -30,7 +30,7 @@ namespace Interprete
                 {
                     statement.Accept(this);
                 }
-                catch (SemanticException ex) { errors.Add(ex.Message); }
+                catch (CodeException ex) { errors.Add(ex.Message); }
                 catch (Exception ex) { errors.Add($"Unexpected Analyzer Error: {ex.GetType().Name} - {ex.Message}"); }
             }
         }
@@ -53,7 +53,7 @@ namespace Interprete
 
             if (valueType == ValueType.Void)
             {
-                throw new SemanticException($"Cannot assign a void value to a variable.", node.VariableNameToken);
+                throw new CodeException(TypeError.Semantic,$"Cannot assign a void value to a variable.", node.VariableNameToken);
             }
             
             if (_symbols.IsVariableDefined(variableName))
@@ -61,7 +61,7 @@ namespace Interprete
                 ValueType existingType = _symbols.GetVariableType(node.VariableNameToken);
                 if (existingType != valueType)
                 {
-                    throw new SemanticException($"Cannot assign a value of type {valueType} to variable '{variableName}' which is of type {existingType}.", node.VariableNameToken);
+                    throw new CodeException(TypeError.Semantic,$"Cannot assign a value of type {valueType} to variable '{variableName}' which is of type {existingType}.", node.VariableNameToken);
                 }
             }
             else
@@ -79,7 +79,7 @@ namespace Interprete
             ValueType conditionType = node.Condition.Accept(this);
             if (conditionType != ValueType.Boolean)
             {
-                throw new SemanticException("GoTo condition must evaluate to a boolean.", node.TargetLabelToken);
+                throw new CodeException(TypeError.Semantic,"GoTo condition must evaluate to a boolean.", node.TargetLabelToken);
             }
             return ValueType.Void;
         }
@@ -89,7 +89,7 @@ namespace Interprete
             if (node.Value is int) return ValueType.Number;
             if (node.Value is string) return ValueType.String;
             if (node.Value is bool) return ValueType.Boolean;
-            throw new SemanticException($"Unknown literal type: {node.Value.GetType().Name}", node.Token);
+            throw new CodeException(TypeError.Semantic,$"Unknown literal type: {node.Value.GetType().Name}", node.Token);
         }
         
         public ValueType VisitVariableNode(VariableNode node)
@@ -105,14 +105,14 @@ namespace Interprete
             {
                 case TokenType.MinusOperator:
                     if (operandType != ValueType.Number)
-                        throw new SemanticException($"Unary '-' operator can only be applied to numbers, not {operandType}.", node.OperatorToken);
+                        throw new CodeException(TypeError.Semantic,$"Unary '-' operator can only be applied to numbers, not {operandType}.", node.OperatorToken);
                     return ValueType.Number;
                 case TokenType.NotOperator:
                     if (operandType != ValueType.Boolean)
-                        throw new SemanticException($"'!' operator can only be applied to booleans, not {operandType}.", node.OperatorToken);
+                        throw new CodeException(TypeError.Semantic,$"'!' operator can only be applied to booleans, not {operandType}.", node.OperatorToken);
                     return ValueType.Boolean;
             }
-            throw new SemanticException($"Invalid unary operator '{node.OperatorToken.Value}'.", node.OperatorToken);
+            throw new CodeException(TypeError.Semantic,$"Invalid unary operator '{node.OperatorToken.Value}'.", node.OperatorToken);
         }
         
         public ValueType VisitBinaryOpNode(BinaryOpNode node)
@@ -125,26 +125,26 @@ namespace Interprete
                 case TokenType.PlusOperator: case TokenType.MinusOperator: case TokenType.MultiplyOperator:
                 case TokenType.DivideOperator: case TokenType.ModuloOperator: case TokenType.PowerOperator:
                     if (leftType != ValueType.Number || rightType != ValueType.Number)
-                        throw new SemanticException($"Operator '{node.OperatorToken.Value}' can only be used with numbers.", node.OperatorToken);
+                        throw new CodeException(TypeError.Semantic,$"Operator '{node.OperatorToken.Value}' can only be used with numbers.", node.OperatorToken);
                     return ValueType.Number;
 
                 case TokenType.GreaterOperator: case TokenType.GreaterEqualOperator:
                 case TokenType.LessOperator: case TokenType.LessEqualOperator:
                     if (leftType != ValueType.Number || rightType != ValueType.Number)
-                        throw new SemanticException($"Operator '{node.OperatorToken.Value}' can only compare numbers.", node.OperatorToken);
+                        throw new CodeException(TypeError.Semantic,$"Operator '{node.OperatorToken.Value}' can only compare numbers.", node.OperatorToken);
                     return ValueType.Boolean;
 
                 case TokenType.EqualOperator: case TokenType.NotEqualOperator:
                     if (leftType != rightType)
-                         throw new SemanticException($"Cannot compare values of different types: {leftType} and {rightType}.", node.OperatorToken);
+                         throw new CodeException(TypeError.Semantic,$"Cannot compare values of different types: {leftType} and {rightType}.", node.OperatorToken);
                     return ValueType.Boolean;
                 
                 case TokenType.AndOperator: case TokenType.OrOperator:
                     if (leftType != ValueType.Boolean || rightType != ValueType.Boolean)
-                        throw new SemanticException($"Operator '{node.OperatorToken.Value}' can only be used with booleans.", node.OperatorToken);
+                        throw new CodeException(TypeError.Semantic,$"Operator '{node.OperatorToken.Value}' can only be used with booleans.", node.OperatorToken);
                     return ValueType.Boolean;
             }
-            throw new SemanticException($"Invalid binary operator '{node.OperatorToken.Value}'.", node.OperatorToken);
+            throw new CodeException(TypeError.Semantic,$"Invalid binary operator '{node.OperatorToken.Value}'.", node.OperatorToken);
         }
 
         public ValueType VisitCommandNode(CommandNode node)
@@ -167,7 +167,7 @@ namespace Interprete
         {
             if (args.Count != expected)
             {
-                throw new SemanticException($"'{token.Value}' expects {expected} arguments, but got {args.Count}.", token);
+                throw new CodeException(TypeError.Semantic,$"'{token.Value}' expects {expected} arguments, but got {args.Count}.", token);
             }
         }
 
@@ -179,7 +179,7 @@ namespace Interprete
                 ValueType actualType = args[i].Accept(this);
                 if (actualType != expectedTypes[i])
                 {
-                    throw new SemanticException($"Argument {i + 1} for '{token.Value}' should be of type {expectedTypes[i]}, but got {actualType}.", token);
+                    throw new CodeException(TypeError.Semantic,$"Argument {i + 1} for '{token.Value}' should be of type {expectedTypes[i]}, but got {actualType}.", token);
                 }
             }
         }

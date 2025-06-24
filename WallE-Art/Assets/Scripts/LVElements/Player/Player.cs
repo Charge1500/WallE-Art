@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     
     void Awake()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         components.InitializeComponents(gameObject);
         movement.Initialize(transform, components.rb);
         groundDetector.Initialize(transform.Find("GroundCheck"), groundLayer);
