@@ -15,8 +15,8 @@ public class CanvasController : MonoBehaviour
         canvasTexture = new Texture2D(size, size);
         currentSize = size;
 
-        // Configure texture settings for pixel art
-        // Point filtering prevents blurring when scaled
+
+        // El filtrado de puntos previene el desenfoque al escalar
         canvasTexture.filterMode = FilterMode.Point;
         // Clamp wrap mode prevents texture edges from bleeding
         canvasTexture.wrapMode = TextureWrapMode.Clamp;
